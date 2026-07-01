@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sweet Pies — The Pie Atlas</title>
+<meta name="description" content="Fruit pies, custard pies, and cream pies — the full dessert case, every recipe printable on one sheet.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%23E3A857%22/><circle cx=%2250%22 cy=%2250%22 r=%2234%22 fill=%22%23A8324A%22/></svg>">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a class="brand" href="index.html">
+      <svg class="mark" viewBox="0 0 100 100"><use href="#pie-lattice" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#A8324A"/></svg>
+      <span>The Pie Atlas<small>Est. whenever the first crust met the first fire</small></span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="historical.html">Historical</a>
+      <a href="savory.html">Savory</a>
+      <a href="sweet.html" class="active">Sweet</a>
+      <a href="regional.html">Regional</a>
+      <a href="world.html">World</a>
+      <a href="holidays.html">Holidays</a>
+    </nav>
+  </div>
+</header>
+<svg style="display:none" aria-hidden="true">
+<defs>
+
+<!-- ===== PIE GLYPHS (the site's signature illustrations) ===== -->
+
+<symbol id="pie-lattice" viewBox="0 0 100 100">
+  <clipPath id="clipL"><circle cx="50" cy="50" r="34"/></clipPath>
+  <circle cx="50" cy="50" r="45" fill="var(--crust,#E3A857)"/>
+  <g fill="var(--crustdark,#B97F3A)">
+    <circle cx="50" cy="6" r="3.4"/><circle cx="68" cy="10" r="3.4"/><circle cx="83" cy="21" r="3.4"/>
+    <circle cx="93" cy="37" r="3.4"/><circle cx="96" cy="55" r="3.4"/><circle cx="92" cy="73" r="3.4"/>
+    <circle cx="80" cy="87" r="3.4"/><circle cx="64" cy="95" r="3.4"/><circle cx="46" cy="96" r="3.4"/>
+    <circle cx="29" cy="92" r="3.4"/><circle cx="15" cy="81" r="3.4"/><circle cx="6" cy="66" r="3.4"/>
+    <circle cx="4" cy="48" r="3.4"/><circle cx="9" cy="31" r="3.4"/><circle cx="20" cy="17" r="3.4"/><circle cx="35" cy="8" r="3.4"/>
+  </g>
+  <circle cx="50" cy="50" r="34" fill="var(--filling,#A8324A)"/>
+  <g clip-path="url(#clipL)" stroke="var(--crust,#E3A857)" stroke-width="6.5" opacity=".92">
+    <line x1="4" y1="16" x2="96" y2="70"/><line x1="4" y1="40" x2="96" y2="94"/>
+    <line x1="4" y1="64" x2="70" y2="100"/><line x1="30" y1="4" x2="96" y2="46"/>
+    <line x1="4" y1="70" x2="96" y2="16"/><line x1="4" y1="94" x2="96" y2="40"/>
+    <line x1="4" y1="46" x2="70" y2="4"/><line x1="30" y1="100" x2="96" y2="64"/>
+  </g>
+</symbol>
+
+<symbol id="pie-solid" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="45" fill="var(--crustdark,#B97F3A)"/>
+  <g fill="var(--crust,#E3A857)">
+    <circle cx="50" cy="6" r="3.4"/><circle cx="68" cy="10" r="3.4"/><circle cx="83" cy="21" r="3.4"/>
+    <circle cx="93" cy="37" r="3.4"/><circle cx="96" cy="55" r="3.4"/><circle cx="92" cy="73" r="3.4"/>
+    <circle cx="80" cy="87" r="3.4"/><circle cx="64" cy="95" r="3.4"/><circle cx="46" cy="96" r="3.4"/>
+    <circle cx="29" cy="92" r="3.4"/><circle cx="15" cy="81" r="3.4"/><circle cx="6" cy="66" r="3.4"/>
+    <circle cx="4" cy="48" r="3.4"/><circle cx="9" cy="31" r="3.4"/><circle cx="20" cy="17" r="3.4"/><circle cx="35" cy="8" r="3.4"/>
+  </g>
+  <circle cx="50" cy="50" r="34" fill="var(--crust,#E3A857)"/>
+  <g stroke="var(--filling,#7C8B5E)" stroke-width="3.4" stroke-linecap="round" opacity=".85">
+    <line x1="50" y1="26" x2="43" y2="52"/><line x1="50" y1="26" x2="50" y2="54"/><line x1="50" y1="26" x2="57" y2="52"/>
+  </g>
+</symbol>
+
+<symbol id="pie-slice" viewBox="0 0 100 100">
+  <path d="M50 92 L10 30 A46 46 0 0 1 90 30 Z" fill="var(--crust,#E3A857)"/>
+  <path d="M50 78 L20 32 A38 38 0 0 1 80 32 Z" fill="var(--filling,#F4C95D)"/>
+  <path d="M50 30 L34 33 A18 8 0 0 0 66 33 Z" fill="var(--topping,#FBF3E7)"/>
+  <path d="M18 30 A46 46 0 0 1 82 30" fill="none" stroke="var(--crustdark,#B97F3A)" stroke-width="5" stroke-linecap="round"/>
+</symbol>
+
+<symbol id="pie-hand" viewBox="0 0 100 100">
+  <path d="M8 60 A46 40 0 0 1 92 60 A50 34 0 0 1 8 60 Z" fill="var(--crust,#E3A857)"/>
+  <path d="M18 58 A36 30 0 0 1 82 58 A40 26 0 0 1 18 58 Z" fill="var(--filling,#A8324A)"/>
+  <g fill="var(--crustdark,#B97F3A)">
+    <circle cx="14" cy="55" r="3"/><circle cx="24" cy="66" r="3"/><circle cx="36" cy="72" r="3"/>
+    <circle cx="50" cy="74" r="3"/><circle cx="64" cy="72" r="3"/><circle cx="76" cy="66" r="3"/><circle cx="86" cy="55" r="3"/>
+  </g>
+</symbol>
+
+<symbol id="pie-star" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="45" fill="var(--crust,#E3A857)"/>
+  <circle cx="50" cy="50" r="34" fill="var(--filling,#C9A24A)"/>
+  <g fill="var(--fish,#8A9BA8)" stroke="var(--crustdark,#B97F3A)" stroke-width="1.5">
+    <path d="M50 50 L58 30 Q50 26 42 30 Z"/>
+    <path d="M50 50 L70 42 Q72 50 68 58 Z"/>
+    <path d="M50 50 L58 70 Q50 74 42 70 Z"/>
+    <path d="M50 50 L30 58 Q28 50 32 42 Z"/>
+  </g>
+  <g fill="var(--crustdark,#B97F3A)">
+    <circle cx="54" cy="31" r="1.5"/><circle cx="67" cy="45" r="1.5"/><circle cx="54" cy="69" r="1.5"/><circle cx="33" cy="55" r="1.5"/>
+  </g>
+</symbol>
+
+<!-- ===== category marks (home tiles) ===== -->
+<symbol id="mark-history" viewBox="0 0 48 48">
+  <circle cx="24" cy="24" r="19" fill="none" stroke="currentColor" stroke-width="2.4"/>
+  <path d="M24 13v11l8 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+<symbol id="mark-savory" viewBox="0 0 48 48">
+  <path d="M14 10v14M18 10v14M14 24c0 2 4 2 4 0M16 24v14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M34 10c-5 3-5 10 0 14v14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+<symbol id="mark-sweet" viewBox="0 0 48 48">
+  <path d="M8 30 A16 13 0 0 1 40 30 Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M8 30h32" stroke="currentColor" stroke-width="2.4"/>
+  <circle cx="24" cy="12" r="3.4" fill="none" stroke="currentColor" stroke-width="2.2"/>
+  <path d="M24 8V4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+</symbol>
+<symbol id="mark-holiday" viewBox="0 0 48 48">
+  <path d="M24 6l4.2 9.4 10.2 1.2-7.6 7 2 10.1L24 28.6l-8.8 5.1 2-10.1-7.6-7 10.2-1.2z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+</symbol>
+<symbol id="mark-region" viewBox="0 0 48 48">
+  <path d="M24 4C16 4 10 10 10 18c0 10 14 26 14 26s14-16 14-26c0-8-6-14-14-14z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+  <circle cx="24" cy="18" r="5" fill="none" stroke="currentColor" stroke-width="2.4"/>
+</symbol>
+<symbol id="pie-canoe" viewBox="0 0 100 100">
+  <path d="M10 50 Q50 20 90 50 Q50 62 10 50 Z" fill="var(--crust,#E3A857)"/>
+  <path d="M24 50 Q50 34 76 50 Q50 56 24 50 Z" fill="var(--filling,#F3E7C9)"/>
+  <g fill="var(--crustdark,#B97F3A)">
+    <path d="M14 49 l4 -4 M22 46 l3 -4 M32 43 l3 -3 M50 41 l0 -4 M68 43 l-3 -3 M78 46 l-3 -4 M86 49 l-4 -4" stroke="var(--crustdark,#B97F3A)" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+</symbol>
+<symbol id="pie-tart" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="42" fill="var(--crustdark,#B97F3A)"/>
+  <circle cx="50" cy="50" r="42" fill="none" stroke="var(--crust,#E3A857)" stroke-width="6" stroke-dasharray="4 5"/>
+  <circle cx="50" cy="50" r="33" fill="var(--filling,#E8C24E)"/>
+  <circle cx="50" cy="50" r="12" fill="var(--center,#A8324A)"/>
+</symbol>
+
+<!-- ===== holiday line icons ===== -->
+<symbol id="ic-star" viewBox="0 0 48 48"><path d="M24 6l4.2 9.4 10.2 1.2-7.6 7 2 10.1L24 28.6l-8.8 5.1 2-10.1-7.6-7 10.2-1.2z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+<symbol id="ic-pi" viewBox="0 0 48 48"><circle cx="24" cy="24" r="19" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15 18h18M19 18v14M29 18l-2 10c0 2.6 2 3.6 4 2.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="ic-heart" viewBox="0 0 48 48"><path d="M24 40s-13-8.4-18-16.6C2.4 17 5 9 12 9c4 0 7 2.4 8.4 4.8C21.8 11.4 24.8 9 28.8 9c7 0 9.6 8 6.2 14.4C30 31.6 24 40 24 40z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+<symbol id="ic-shamrock" viewBox="0 0 48 48"><circle cx="18" cy="18" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="30" cy="18" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="24" cy="27" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M24 33v9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+<symbol id="ic-egg" viewBox="0 0 48 48"><path d="M24 8c8 8 14 18.4 14 26a14 14 0 0 1-28 0c0-7.6 6-18 14-26z" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M13 30l5 3-3 3 6 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="ic-sun" viewBox="0 0 48 48"><circle cx="24" cy="24" r="9" fill="none" stroke="currentColor" stroke-width="2.2"/><g stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="24" y1="4" x2="24" y2="10"/><line x1="24" y1="38" x2="24" y2="44"/><line x1="4" y1="24" x2="10" y2="24"/><line x1="38" y1="24" x2="44" y2="24"/><line x1="9" y1="9" x2="13" y2="13"/><line x1="35" y1="35" x2="39" y2="39"/><line x1="9" y1="39" x2="13" y2="35"/><line x1="35" y1="13" x2="39" y2="9"/></g></symbol>
+<symbol id="ic-flower" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.2"><ellipse cx="24" cy="13" rx="6" ry="9"/><ellipse cx="24" cy="35" rx="6" ry="9"/><ellipse cx="13" cy="24" rx="9" ry="6"/><ellipse cx="35" cy="24" rx="9" ry="6"/><circle cx="24" cy="24" r="4"/></g></symbol>
+<symbol id="ic-flag" viewBox="0 0 48 48"><path d="M12 6v36" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M12 8h26l-6 7 6 7H12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+<symbol id="ic-fireworks" viewBox="0 0 48 48"><g stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="24" y1="6" x2="24" y2="16"/><line x1="24" y1="32" x2="24" y2="42"/><line x1="6" y1="24" x2="16" y2="24"/><line x1="32" y1="24" x2="42" y2="24"/><line x1="11" y1="11" x2="18" y2="18"/><line x1="30" y1="30" x2="37" y2="37"/><line x1="11" y1="37" x2="18" y2="30"/><line x1="30" y1="18" x2="37" y2="11"/></g><circle cx="24" cy="24" r="4.5" fill="currentColor"/></symbol>
+<symbol id="ic-tools" viewBox="0 0 48 48"><rect x="8" y="18" width="32" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M17 18v-4a7 7 0 0 1 14 0v4" fill="none" stroke="currentColor" stroke-width="2.2"/></symbol>
+<symbol id="ic-apple" viewBox="0 0 48 48"><path d="M24 16c7-6 16-2 16 8 0 10-8 18-16 18S8 34 8 24c0-10 9-14 16-8z" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M24 16V9M24 9c2-3 6-3 7-1" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+<symbol id="ic-pumpkin" viewBox="0 0 48 48"><path d="M24 16c-9 0-15 7-15 15s6 11 15 11 15-4 15-11-6-15-15-15z" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M24 16v26M14 20c3 4 3 18 0 21M34 20c-3 4-3 18 0 21" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M24 16v-6M24 10c2-2 5-2 6 0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+<symbol id="ic-diya" viewBox="0 0 48 48"><path d="M8 30c0 6 7 10 16 10s16-4 16-10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M6 28c4 3 10 4 18 4s14-1 18-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M24 22c-3-4-1-8 0-10 1 2 3 6 0 10z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+<symbol id="ic-maple" viewBox="0 0 48 48"><path d="M24 6l3 9 8-5-3 9 9-1-7 7 8 4-9 2 3 9-8-5-4 8-4-8-8 5 3-9-9-2 8-4-7-7 9 1-3-9 8 5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+<symbol id="ic-menorah" viewBox="0 0 48 48"><g stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="24" y1="18" x2="24" y2="38"/><line x1="10" y1="38" x2="38" y2="38"/><line x1="16" y1="42" x2="32" y2="42"/><path d="M24 10v8M18 14v4M12 18v4M30 14v4M36 18v4" fill="none"/></g></symbol>
+<symbol id="ic-tree" viewBox="0 0 48 48"><path d="M24 6l8 12h-5l8 10h-6l7 10H12l7-10h-6l8-10h-5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><rect x="21" y="38" width="6" height="6" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="ic-candle" viewBox="0 0 48 48"><rect x="19" y="18" width="10" height="24" rx="1.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M24 18c-2-4 0-7 2-9-1 3 1 5 2 7 1 2-1 4-4 2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M15 42h18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+<symbol id="ic-gift" viewBox="0 0 48 48"><rect x="8" y="18" width="32" height="22" rx="1.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M8 26h32" stroke="currentColor" stroke-width="2.2"/><path d="M24 18v22" stroke="currentColor" stroke-width="2.2"/><path d="M24 18c-2-8-12-8-12-2 0 3 5 2 12 2zM24 18c2-8 12-8 12-2 0 3-5 2-12 2z" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="ic-clock" viewBox="0 0 48 48"><circle cx="24" cy="24" r="19" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M24 13v11l8 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+</defs>
+</svg>
+<section class="section" style="padding-bottom:0">
+  <div class="wrap">
+    <span class="eyebrow">Section three</span>
+    <h1>Sweet Pies</h1>
+    <p class="prose narrow" style="font-size:1.08rem;color:#463527">The full dessert case: fruit, custard, cream, and the icebox. Twenty-two recipes, every one of them printable on a single sheet.</p>
+    <div class="tab-row">
+      <a href="#fruit">Fruit Pies</a>
+      <a href="#custard">Custard &amp; Nut Pies</a>
+      <a href="#cream">Cream Pies</a>
+      <a href="#frozen">Frozen &amp; Icebox</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0" id="fruit">
+  <div class="wrap">
+    <div class="subsection-head"><h2>Fruit Pies</h2><span class="tally">5 recipes</span></div>
+    <p class="subsection-blurb">Unsweetened until sugar became affordable in the 1600s — now the whole point.</p>
+    <div class="recipe-grid">
+
+      <article class="recipe-card" id="apple-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#C9781F"><use href="#pie-lattice"/></svg>
+          <div class="recipe-title-wrap"><h3>Classic Apple Pie</h3><span class="recipe-tag sweet">Sweet · United States</span></div>
+        </div>
+        <p class="recipe-blurb">First recorded in 14th-century England, adopted and sweetened in America — cinnamon-spiced apples under a golden lattice.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 30 min</span><span class="m">Bake 50 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">6–7</span> baking apples, peeled, sliced</li>
+              <li><span class="amt">¾ cup</span> sugar</li>
+              <li><span class="amt">2 tbsp</span> flour</li>
+              <li><span class="amt">1 tsp</span> cinnamon</li>
+              <li><span class="amt">¼ tsp</span> nutmeg</li>
+              <li><span class="amt">1 tbsp</span> lemon juice</li>
+              <li><span class="amt">2 tbsp</span> butter, cubed</li>
+              <li><span class="amt">2</span> double pie crusts</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Toss apples with sugar, flour, cinnamon, nutmeg, and lemon juice.</li>
+              <li>Fill a crust-lined dish; dot with butter.</li>
+              <li>Weave a lattice top (or use a full top crust with vents) and crimp the edge.</li>
+              <li>Bake at 425°F (220°C) for 20 minutes, then reduce to 375°F (190°C) and bake 30 minutes more until bubbling.</li>
+              <li>Cool at least 2 hours before slicing so the filling sets.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('apple-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="cherry-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#A8324A"><use href="#pie-lattice"/></svg>
+          <div class="recipe-title-wrap"><h3>Cherry Pie</h3><span class="recipe-tag sweet">Sweet · United States</span></div>
+        </div>
+        <p class="recipe-blurb">Tart, deep-red sour cherries balanced with just enough sugar — a Midwestern and Michigan-orchard classic.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 25 min</span><span class="m">Bake 50 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">5 cups</span> pitted sour cherries</li>
+              <li><span class="amt">1 cup</span> sugar</li>
+              <li><span class="amt">3 tbsp</span> cornstarch</li>
+              <li><span class="amt">1 tbsp</span> lemon juice</li>
+              <li><span class="amt">¼ tsp</span> almond extract</li>
+              <li><span class="amt">2</span> double pie crusts</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Toss cherries with sugar, cornstarch, lemon juice, and almond extract; let sit 15 minutes.</li>
+              <li>Fill a crust-lined dish and top with a lattice or full crust; crimp edges.</li>
+              <li>Bake at 400°F (200°C) for 45–50 minutes until the filling bubbles thickly through the vents.</li>
+              <li>Cool fully — at least 3 hours — before slicing for clean pieces.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('cherry-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="blueberry-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#3D4A7A"><use href="#pie-lattice"/></svg>
+          <div class="recipe-title-wrap"><h3>Blueberry Pie</h3><span class="recipe-tag sweet">Sweet · New England, United States</span></div>
+        </div>
+        <p class="recipe-blurb">A summer pie built on wild Maine blueberries and a splash of lemon to keep the sweetness in check.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 20 min</span><span class="m">Bake 50 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">6 cups</span> blueberries</li>
+              <li><span class="amt">¾ cup</span> sugar</li>
+              <li><span class="amt">3 tbsp</span> cornstarch</li>
+              <li><span class="amt">1 tbsp</span> lemon juice, plus zest</li>
+              <li><span class="amt">Pinch</span> cinnamon</li>
+              <li><span class="amt">2</span> double pie crusts</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Toss blueberries with sugar, cornstarch, lemon juice and zest, and cinnamon.</li>
+              <li>Fill a crust-lined dish and top with lattice or a vented crust.</li>
+              <li>Bake at 400°F (200°C) for 45–50 minutes until thick purple juice bubbles through the vents.</li>
+              <li>Cool at least 3 hours before slicing.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('blueberry-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="peach-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#E8944A"><use href="#pie-lattice"/></svg>
+          <div class="recipe-title-wrap"><h3>Peach Pie</h3><span class="recipe-tag sweet">Sweet · Southern United States</span></div>
+        </div>
+        <p class="recipe-blurb">Ripe summer peaches, barely thickened, so the filling stays loose and juicy rather than jammy.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 25 min</span><span class="m">Bake 50 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">6 cups</span> sliced ripe peaches</li>
+              <li><span class="amt">⅔ cup</span> sugar</li>
+              <li><span class="amt">3 tbsp</span> cornstarch</li>
+              <li><span class="amt">1 tbsp</span> lemon juice</li>
+              <li><span class="amt">½ tsp</span> cinnamon</li>
+              <li><span class="amt">2</span> double pie crusts</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Toss peaches with sugar, cornstarch, lemon juice, and cinnamon; rest 15 minutes.</li>
+              <li>Fill a crust-lined dish and top with lattice.</li>
+              <li>Bake at 400°F (200°C) for 20 minutes, then reduce to 375°F (190°C) for 25–30 minutes more.</li>
+              <li>Cool at least 2 hours before slicing.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('peach-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="strawberry-rhubarb-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#C93B54"><use href="#pie-lattice"/></svg>
+          <div class="recipe-title-wrap"><h3>Strawberry-Rhubarb Pie</h3><span class="recipe-tag sweet">Sweet · United States/Britain</span></div>
+        </div>
+        <p class="recipe-blurb">Tart rhubarb and sweet strawberries in the classic early-summer pairing sometimes called "pie plant pie."</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 25 min</span><span class="m">Bake 50 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">3 cups</span> rhubarb, chopped</li>
+              <li><span class="amt">3 cups</span> strawberries, halved</li>
+              <li><span class="amt">1 cup</span> sugar</li>
+              <li><span class="amt">3 tbsp</span> cornstarch</li>
+              <li><span class="amt">1 tbsp</span> orange zest</li>
+              <li><span class="amt">2</span> double pie crusts</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Toss rhubarb and strawberries with sugar, cornstarch, and orange zest; rest 20 minutes.</li>
+              <li>Fill a crust-lined dish and top with lattice.</li>
+              <li>Bake at 400°F (200°C) for 20 minutes, then reduce to 375°F (190°C) for 30 minutes more until thickly bubbling.</li>
+              <li>Cool fully before slicing.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('strawberry-rhubarb-pie')">🖶 Print recipe</button></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+<div class="lattice-divider"></div>
+
+<section class="section" id="custard">
+  <div class="wrap">
+    <div class="subsection-head"><h2>Custard &amp; Nut Pies</h2><span class="tally">6 recipes</span></div>
+    <p class="subsection-blurb">Eggs and dairy (or corn syrup) do the work here instead of fruit — the backbone of the Thanksgiving table and the Southern pie safe alike.</p>
+    <div class="recipe-grid">
+
+      <article class="recipe-card" id="pumpkin-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#C9781F"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Pumpkin Pie</h3><span class="recipe-tag sweet">Sweet · United States</span></div>
+        </div>
+        <p class="recipe-blurb">Silky spiced pumpkin custard — absent from the actual first Thanksgiving, but essential to every one since the early 1800s.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 15 min</span><span class="m">Bake 55 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">15 oz</span> pumpkin purée</li>
+              <li><span class="amt">¾ cup</span> sugar</li>
+              <li><span class="amt">2</span> eggs</li>
+              <li><span class="amt">1 cup</span> evaporated milk</li>
+              <li><span class="amt">1 tsp</span> cinnamon</li>
+              <li><span class="amt">½ tsp</span> ginger</li>
+              <li><span class="amt">¼ tsp</span> cloves</li>
+              <li><span class="amt">1</span> single pie crust</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Whisk pumpkin, sugar, eggs, evaporated milk, and spices until smooth.</li>
+              <li>Pour into an unbaked crust.</li>
+              <li>Bake at 425°F (220°C) for 15 minutes, then reduce to 350°F (175°C) for 40 minutes more, until the center barely jiggles.</li>
+              <li>Cool fully before slicing.</li>
+            </ol>
+          </div>
+        </div>
+        <p class="recipe-note"><b>See also:</b> the full tradition on the <a href="holidays.html#thanksgiving">Thanksgiving</a> page.</p>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('pumpkin-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="pecan-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#B97F3A;--crustdark:#8C5A2E;--filling:#6B3F2A"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Pecan Pie</h3><span class="recipe-tag sweet">Sweet · Southern United States</span></div>
+        </div>
+        <p class="recipe-blurb">A deep, glossy corn-syrup filling packed with toasted pecans — popularized in the 1930s after corn syrup makers printed the recipe on the bottle.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 15 min</span><span class="m">Bake 50 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1 cup</span> corn syrup</li>
+              <li><span class="amt">¾ cup</span> brown sugar</li>
+              <li><span class="amt">3</span> eggs</li>
+              <li><span class="amt">3 tbsp</span> butter, melted</li>
+              <li><span class="amt">1 tsp</span> vanilla</li>
+              <li><span class="amt">1½ cups</span> pecan halves</li>
+              <li><span class="amt">1</span> single pie crust</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Whisk corn syrup, brown sugar, eggs, melted butter, and vanilla until smooth.</li>
+              <li>Arrange pecans in the crust and pour the filling over them.</li>
+              <li>Bake at 350°F (175°C) for 45–50 minutes until the center is set with a slight jiggle.</li>
+              <li>Cool at least 2 hours before slicing.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('pecan-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="sweet-potato-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#D97B3D"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Sweet Potato Pie</h3><span class="recipe-tag sweet">Sweet · Southern United States</span></div>
+        </div>
+        <p class="recipe-blurb">A Southern holiday staple with deep roots in African American culinary tradition — spiced mashed sweet potato in place of pumpkin.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 20 min</span><span class="m">Bake 50 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">2 cups</span> mashed cooked sweet potato</li>
+              <li><span class="amt">¾ cup</span> sugar</li>
+              <li><span class="amt">½ cup</span> evaporated milk</li>
+              <li><span class="amt">2</span> eggs</li>
+              <li><span class="amt">4 tbsp</span> butter, melted</li>
+              <li><span class="amt">1 tsp</span> cinnamon</li>
+              <li><span class="amt">½ tsp</span> nutmeg</li>
+              <li><span class="amt">1</span> single pie crust</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Beat sweet potato with sugar, milk, eggs, butter, cinnamon, and nutmeg until smooth.</li>
+              <li>Pour into an unbaked crust.</li>
+              <li>Bake at 350°F (175°C) for 45–50 minutes until set with a slight jiggle at the center.</li>
+              <li>Cool before slicing; serve with whipped cream if you like.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('sweet-potato-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="chess-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E8C24E;--crustdark:#C9962C;--filling:#F1D77E"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Chess Pie</h3><span class="recipe-tag sweet">Sweet · Southern United States</span></div>
+        </div>
+        <p class="recipe-blurb">Butter, sugar, and egg, barely more complicated than that — a little cornmeal gives the filling its faint, distinctive grit. The name's origin is genuinely disputed; the leading folk story is a Southern cook shrugging "it's jes' pie."</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 10 min</span><span class="m">Bake 45 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1½ cups</span> sugar</li>
+              <li><span class="amt">1 tbsp</span> cornmeal</li>
+              <li><span class="amt">4</span> eggs</li>
+              <li><span class="amt">½ cup</span> butter, melted</li>
+              <li><span class="amt">¼ cup</span> buttermilk</li>
+              <li><span class="amt">1 tbsp</span> white vinegar</li>
+              <li><span class="amt">1 tsp</span> vanilla</li>
+              <li><span class="amt">1</span> single pie crust</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Whisk sugar and cornmeal, then beat in eggs one at a time.</li>
+              <li>Stir in melted butter, buttermilk, vinegar, and vanilla until smooth.</li>
+              <li>Pour into an unbaked crust.</li>
+              <li>Bake at 350°F (175°C) for 40–45 minutes until golden brown and just set.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('chess-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="buttermilk-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E8C24E;--crustdark:#C9962C;--filling:#F1E7C9"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Buttermilk Pie</h3><span class="recipe-tag sweet">Sweet · Southern United States</span></div>
+        </div>
+        <p class="recipe-blurb">A close cousin of chess pie, built around tangy buttermilk for a custard that's slightly less sweet and a little more complex.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 10 min</span><span class="m">Bake 45 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1½ cups</span> sugar</li>
+              <li><span class="amt">3 tbsp</span> flour</li>
+              <li><span class="amt">3</span> eggs</li>
+              <li><span class="amt">½ cup</span> butter, melted</li>
+              <li><span class="amt">1 cup</span> buttermilk</li>
+              <li><span class="amt">1 tsp</span> vanilla</li>
+              <li><span class="amt">1</span> single pie crust</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Whisk sugar and flour, then beat in eggs.</li>
+              <li>Stir in melted butter, buttermilk, and vanilla.</li>
+              <li>Pour into an unbaked crust.</li>
+              <li>Bake at 350°F (175°C) for 40–45 minutes until golden and set with a slight wobble.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('buttermilk-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="shoofly-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#B97F3A;--crustdark:#8C5A2E;--filling:#5C3A1E"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Shoofly Pie</h3><span class="recipe-tag sweet">Sweet · Pennsylvania Dutch</span></div>
+        </div>
+        <p class="recipe-blurb">A dense molasses pie topped with a crumbly streusel, sweet enough that legend says you have to shoo the flies away — hence the name.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 15 min</span><span class="m">Bake 40 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1 cup</span> molasses</li>
+              <li><span class="amt">1 tsp</span> baking soda</li>
+              <li><span class="amt">¾ cup</span> boiling water</li>
+              <li><span class="amt">1½ cups</span> flour</li>
+              <li><span class="amt">¾ cup</span> brown sugar</li>
+              <li><span class="amt">¼ cup</span> cold butter, cubed</li>
+              <li><span class="amt">1</span> single pie crust</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Whisk molasses and baking soda into boiling water until foamy; pour into the crust.</li>
+              <li>Rub flour, brown sugar, and butter together into coarse crumbs; scatter over the molasses layer.</li>
+              <li>Bake at 350°F (175°C) for 35–40 minutes until the top is set and crumbly.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('shoofly-pie')">🖶 Print recipe</button></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+<div class="lattice-divider"></div>
+
+<section class="section" id="cream">
+  <div class="wrap">
+    <div class="subsection-head"><h2>Cream Pies</h2><span class="tally">5 recipes</span></div>
+    <p class="subsection-blurb">No baking the filling required — just a stovetop custard, a cool crust, and (usually) a cloud of whipped cream or meringue.</p>
+    <div class="recipe-grid">
+
+      <article class="recipe-card" id="key-lime-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#D8C79A;--crustdark:#B39A5E;--filling:#DDE87A;--topping:#FBF3E7"><use href="#pie-slice"/></svg>
+          <div class="recipe-title-wrap"><h3>Key Lime Pie</h3><span class="recipe-tag sweet">Sweet · Florida Keys, United States</span></div>
+        </div>
+        <p class="recipe-blurb">Tart Key lime juice and sweetened condensed milk set into a graham cracker crust — a Florida original dating to the 1850s, once sweetened milk became shelf-stable.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 15 min</span><span class="m">Bake 15 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1½ cups</span> graham cracker crumbs</li>
+              <li><span class="amt">6 tbsp</span> butter, melted</li>
+              <li><span class="amt">2 cans (14 oz)</span> sweetened condensed milk</li>
+              <li><span class="amt">4</span> egg yolks</li>
+              <li><span class="amt">⅔ cup</span> Key lime juice</li>
+              <li><span class="amt">1 cup</span> whipped cream, to finish</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Mix graham crumbs with melted butter; press into a pie dish and bake at 350°F (175°C) for 8 minutes.</li>
+              <li>Whisk condensed milk, egg yolks, and lime juice until smooth; pour into the crust.</li>
+              <li>Bake 15 minutes until just set at the edges with a slight center wobble.</li>
+              <li>Chill at least 3 hours, then top with whipped cream before serving.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('key-lime-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="banana-cream-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#D8C79A;--crustdark:#B39A5E;--filling:#F1E0A0;--topping:#FBF3E7"><use href="#pie-slice"/></svg>
+          <div class="recipe-title-wrap"><h3>Banana Cream Pie</h3><span class="recipe-tag sweet">Sweet · United States</span></div>
+        </div>
+        <p class="recipe-blurb">Layers of sliced banana and vanilla custard in a baked crust, crowned with whipped cream — a diner-counter classic.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 25 min</span><span class="m">Chill 3 hr</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">⅔ cup</span> sugar</li>
+              <li><span class="amt">¼ cup</span> cornstarch</li>
+              <li><span class="amt">2½ cups</span> milk</li>
+              <li><span class="amt">4</span> egg yolks</li>
+              <li><span class="amt">2 tbsp</span> butter</li>
+              <li><span class="amt">1 tsp</span> vanilla</li>
+              <li><span class="amt">3</span> bananas, sliced</li>
+              <li><span class="amt">1</span> single pie crust, blind-baked</li>
+              <li><span class="amt">1 cup</span> whipped cream, to finish</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Whisk sugar and cornstarch, then whisk in milk and egg yolks.</li>
+              <li>Cook over medium heat, stirring constantly, until thick; remove from heat and stir in butter and vanilla.</li>
+              <li>Layer banana slices in the baked crust, pour custard over, and press plastic wrap onto the surface.</li>
+              <li>Chill at least 3 hours; top with whipped cream just before serving.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('banana-cream-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="chocolate-cream-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#D8C79A;--crustdark:#B39A5E;--filling:#5C3A28;--topping:#FBF3E7"><use href="#pie-slice"/></svg>
+          <div class="recipe-title-wrap"><h3>Chocolate Cream Pie</h3><span class="recipe-tag sweet">Sweet · United States</span></div>
+        </div>
+        <p class="recipe-blurb">A deep, dark chocolate custard under whipped cream — rich enough that a thin slice is genuinely plenty.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 25 min</span><span class="m">Chill 3 hr</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1 cup</span> sugar</li>
+              <li><span class="amt">⅓ cup</span> cornstarch</li>
+              <li><span class="amt">3 tbsp</span> cocoa powder</li>
+              <li><span class="amt">2½ cups</span> milk</li>
+              <li><span class="amt">4</span> egg yolks</li>
+              <li><span class="amt">4 oz</span> dark chocolate, chopped</li>
+              <li><span class="amt">2 tbsp</span> butter</li>
+              <li><span class="amt">1</span> single pie crust, blind-baked</li>
+              <li><span class="amt">1 cup</span> whipped cream, to finish</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Whisk sugar, cornstarch, and cocoa, then whisk in milk and egg yolks.</li>
+              <li>Cook over medium heat, stirring, until thick; off heat, stir in chocolate and butter until smooth.</li>
+              <li>Pour into the baked crust and press plastic wrap onto the surface.</li>
+              <li>Chill at least 3 hours; top with whipped cream before serving.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('chocolate-cream-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="coconut-cream-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#D8C79A;--crustdark:#B39A5E;--filling:#F8F2E0;--topping:#FBF3E7"><use href="#pie-slice"/></svg>
+          <div class="recipe-title-wrap"><h3>Coconut Cream Pie</h3><span class="recipe-tag sweet">Sweet · United States</span></div>
+        </div>
+        <p class="recipe-blurb">Toasted coconut folded into vanilla custard, with more toasted coconut scattered over the whipped cream on top.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 25 min</span><span class="m">Chill 3 hr</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">⅔ cup</span> sugar</li>
+              <li><span class="amt">¼ cup</span> cornstarch</li>
+              <li><span class="amt">2½ cups</span> milk</li>
+              <li><span class="amt">4</span> egg yolks</li>
+              <li><span class="amt">1 cup</span> shredded coconut, toasted, divided</li>
+              <li><span class="amt">1 tsp</span> vanilla</li>
+              <li><span class="amt">1</span> single pie crust, blind-baked</li>
+              <li><span class="amt">1 cup</span> whipped cream, to finish</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Whisk sugar and cornstarch, then whisk in milk and egg yolks.</li>
+              <li>Cook over medium heat, stirring, until thick; stir in ¾ cup toasted coconut and vanilla.</li>
+              <li>Pour into the baked crust and press plastic wrap onto the surface; chill at least 3 hours.</li>
+              <li>Top with whipped cream and the remaining toasted coconut before serving.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('coconut-cream-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="lemon-meringue-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#D8C79A;--crustdark:#B39A5E;--filling:#F1D34E;--topping:#FBF3E7"><use href="#pie-slice"/></svg>
+          <div class="recipe-title-wrap"><h3>Lemon Meringue Pie</h3><span class="recipe-tag sweet">Sweet · United States</span></div>
+        </div>
+        <p class="recipe-blurb">Sharp lemon curd under a tall, torch-browned meringue — a showpiece pie that's really two separate techniques stacked on one crust.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 25 min</span><span class="m">Bake 12 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1 cup</span> sugar</li>
+              <li><span class="amt">⅓ cup</span> cornstarch</li>
+              <li><span class="amt">1½ cups</span> water</li>
+              <li><span class="amt">4</span> egg yolks (reserve whites)</li>
+              <li><span class="amt">⅓ cup</span> lemon juice, plus zest</li>
+              <li><span class="amt">2 tbsp</span> butter</li>
+              <li><span class="amt">4</span> egg whites (reserved)</li>
+              <li><span class="amt">½ cup</span> sugar, for meringue</li>
+              <li><span class="amt">1</span> single pie crust, blind-baked</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Whisk 1 cup sugar and cornstarch with water; cook over medium heat, stirring, until thick.</li>
+              <li>Temper in egg yolks, then cook 2 minutes more; stir in lemon juice, zest, and butter. Pour into the baked crust.</li>
+              <li>Beat egg whites to soft peaks, gradually adding ½ cup sugar until glossy stiff peaks form.</li>
+              <li>Spread meringue over the hot filling, sealing to the crust edge, and bake at 375°F (190°C) for 10–12 minutes until golden.</li>
+              <li>Cool at room temperature, then chill before slicing with a wet knife.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('lemon-meringue-pie')">🖶 Print recipe</button></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+<div class="lattice-divider"></div>
+
+<section class="section" id="frozen">
+  <div class="wrap">
+    <div class="subsection-head"><h2>Frozen &amp; icebox pies</h2><span class="tally">6 recipes</span></div>
+    <p class="subsection-blurb">No oven required for the filling — just a mixer, a freezer, and patience. Most of these trace to a specific mid-century home cook or restaurant, which makes them some of the best-documented pies on the whole site.</p>
+    <div class="recipe-grid">
+
+      <article class="recipe-card" id="french-silk-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#D8C79A;--crustdark:#B39A5E;--filling:#3A2818;--topping:#FBF3E7"><use href="#pie-slice"/></svg>
+          <div class="recipe-title-wrap"><h3>French Silk Pie</h3><span class="recipe-tag sweet">Sweet · Maryland, 1951</span></div>
+        </div>
+        <p class="recipe-blurb">Not French at all — a whipped, mousse-like chocolate filling invented by home baker Betty Cooper of Kensington, Maryland, who entered it in the third annual Pillsbury Bake-Off in 1951. The name is generally thought to describe the filling's silky texture, not its origin.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 30 min</span><span class="m">Chill 6 hr</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">4 oz</span> unsweetened chocolate, melted</li>
+              <li><span class="amt">1 cup</span> butter, softened</li>
+              <li><span class="amt">1½ cups</span> sugar</li>
+              <li><span class="amt">4</span> eggs, pasteurized</li>
+              <li><span class="amt">1 tsp</span> vanilla</li>
+              <li><span class="amt">1</span> single pie crust, blind-baked</li>
+              <li><span class="amt">1½ cups</span> whipped cream, to finish</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Melt the chocolate and let cool slightly.</li>
+              <li>Beat butter and sugar until light and fluffy, about 3 minutes.</li>
+              <li>Beat in melted chocolate and vanilla, then add eggs one at a time, beating 2 full minutes after each addition, until the filling is pale and mousse-like.</li>
+              <li>Pour into the baked crust and chill at least 6 hours, or overnight.</li>
+              <li>Top with whipped cream and chocolate curls before serving.</li>
+            </ol>
+          </div>
+        </div>
+        <p class="recipe-note"><b>Historical note:</b> This is an "icebox pie" in the true sense — chilled rather than baked or frozen solid, a category of dessert that boomed in the 1950s as home refrigerators became standard kitchen equipment.</p>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('french-silk-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="grasshopper-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#3A2A22;--crustdark:#241812;--filling:#8BC97A;--topping:#FBF3E7"><use href="#pie-slice"/></svg>
+          <div class="recipe-title-wrap"><h3>Grasshopper Pie</h3><span class="recipe-tag sweet">Sweet · America, late 1940s</span></div>
+        </div>
+        <p class="recipe-blurb">A pastel-green, no-bake pie built on the flavors of the Grasshopper cocktail — mint and chocolate liqueur. As the story goes, the cocktail's own inventor, a chemist at a liqueur distillery, had a wife who thickened the drink with melted marshmallows and froze it in a chocolate crumb crust.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 25 min</span><span class="m">Freeze 4 hr</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1½ cups</span> chocolate cookie crumbs</li>
+              <li><span class="amt">6 tbsp</span> butter, melted</li>
+              <li><span class="amt">24</span> large marshmallows</li>
+              <li><span class="amt">½ cup</span> milk</li>
+              <li><span class="amt">¼ cup</span> crème de menthe</li>
+              <li><span class="amt">¼ cup</span> white crème de cacao</li>
+              <li><span class="amt">1½ cups</span> heavy cream, whipped</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Mix cookie crumbs and melted butter; press into a pie dish and chill.</li>
+              <li>Melt marshmallows with milk over low heat, stirring until smooth; cool completely.</li>
+              <li>Stir in the crème de menthe and crème de cacao.</li>
+              <li>Fold in the whipped cream, then pour into the crust.</li>
+              <li>Freeze at least 4 hours until firm.</li>
+            </ol>
+          </div>
+        </div>
+        <p class="recipe-note"><b>Historical note:</b> The Grasshopper cocktail itself is usually traced to either a 1940s liqueur-company chemist or an early-1900s New Orleans bartender — accounts differ, but both agree the pie followed the drink, not the other way around.</p>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('grasshopper-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="frozen-key-lime-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#D8C79A;--crustdark:#B39A5E;--filling:#DDE87A;--topping:#FBF3E7"><use href="#pie-slice"/></svg>
+          <div class="recipe-title-wrap"><h3>Frozen Key Lime Pie</h3><span class="recipe-tag sweet">Sweet · Florida</span></div>
+        </div>
+        <p class="recipe-blurb">A true-frozen cousin of the baked Key Lime Pie on the Sweet page's cream pie shelf — the same tart, condensed-milk filling, but churned into a soft-set, sliceable ice cream instead of baked into a custard.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 15 min</span><span class="m">Freeze 6 hr</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1½ cups</span> graham cracker crumbs</li>
+              <li><span class="amt">6 tbsp</span> butter, melted</li>
+              <li><span class="amt">2 cans (14 oz)</span> sweetened condensed milk</li>
+              <li><span class="amt">1 cup</span> heavy cream</li>
+              <li><span class="amt">⅔ cup</span> Key lime juice</li>
+              <li><span class="amt">1 tbsp</span> lime zest</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Mix graham crumbs and melted butter; press into a pie dish and freeze 15 minutes.</li>
+              <li>Whisk condensed milk with lime juice and zest until thickened slightly.</li>
+              <li>Whip the cream to soft peaks and fold into the lime mixture.</li>
+              <li>Pour into the crust and freeze at least 6 hours, or until firm.</li>
+              <li>Let stand 10 minutes at room temperature before slicing.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('frozen-key-lime-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="frozen-mud-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#3A2A22;--crustdark:#241812;--filling:#8C5A2E;--topping:#5C3A28"><use href="#pie-slice"/></svg>
+          <div class="recipe-title-wrap"><h3>Frozen Mud Pie</h3><span class="recipe-tag sweet">Sweet · San Francisco, 1957</span></div>
+        </div>
+        <p class="recipe-blurb">Coffee ice cream, fudge, and an Oreo crust — reportedly invented in 1957 by Joanna Droeger at her Brighton Express restaurant in San Francisco, after she read that a newlywed Barbra Streisand kept a freezer of coffee ice cream under her bed. A customer watching her hand-press ice cream into a crust asked what she was making; "just making mud pies," she said, and the name stuck.</p>
+        <div class="meta-row"><span class="m">Serves 10</span><span class="m">Prep 25 min</span><span class="m">Freeze 4 hr</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">24</span> chocolate sandwich cookies, crushed</li>
+              <li><span class="amt">6 tbsp</span> butter, melted</li>
+              <li><span class="amt">1½ qt</span> coffee ice cream, softened</li>
+              <li><span class="amt">¾ cup</span> hot fudge sauce</li>
+              <li><span class="amt">½ cup</span> toffee bits, chopped</li>
+              <li><span class="amt">1 cup</span> whipped cream, to finish</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Mix cookie crumbs and melted butter; press into a pie dish and freeze 15 minutes.</li>
+              <li>Spread half the softened coffee ice cream into the crust; freeze 10 minutes.</li>
+              <li>Spoon fudge sauce over the ice cream and scatter with toffee; freeze 10 minutes.</li>
+              <li>Add the remaining ice cream on top and freeze at least 4 hours until firm.</li>
+              <li>Top with whipped cream just before serving.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('frozen-mud-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="peanut-butter-icebox-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#3A2A22;--crustdark:#241812;--filling:#C9962C;--topping:#FBF3E7"><use href="#pie-slice"/></svg>
+          <div class="recipe-title-wrap"><h3>Peanut Butter Icebox Pie</h3><span class="recipe-tag sweet">Sweet · Southern United States</span></div>
+        </div>
+        <p class="recipe-blurb">A no-bake Southern favorite: sweetened cream cheese and peanut butter whipped light, piled into a crumb crust, and chilled until sliceable — a close cousin of the region's chess and buttermilk pies, but built for a hot kitchen with the oven staying off.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 20 min</span><span class="m">Chill 4 hr</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1½ cups</span> graham cracker crumbs</li>
+              <li><span class="amt">6 tbsp</span> butter, melted</li>
+              <li><span class="amt">8 oz</span> cream cheese, softened</li>
+              <li><span class="amt">1 cup</span> creamy peanut butter</li>
+              <li><span class="amt">1 cup</span> powdered sugar</li>
+              <li><span class="amt">2 cups</span> whipped cream, divided</li>
+              <li><span class="amt">¼ cup</span> chopped peanuts, to finish</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Mix graham crumbs and melted butter; press into a pie dish and chill.</li>
+              <li>Beat cream cheese, peanut butter, and powdered sugar until smooth and fluffy.</li>
+              <li>Fold in half the whipped cream, then spread into the crust.</li>
+              <li>Top with the remaining whipped cream and scatter with chopped peanuts.</li>
+              <li>Chill at least 4 hours before slicing.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('peanut-butter-icebox-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="baked-alaska-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#D8C79A;--crustdark:#B39A5E;--filling:#F8F2E0;--topping:#FBF3E7"><use href="#pie-slice"/></svg>
+          <div class="recipe-title-wrap"><h3>Baked Alaska Pie</h3><span class="recipe-tag sweet">Sweet · New York, 1867</span></div>
+        </div>
+        <p class="recipe-blurb">A frozen ice cream pie wrapped in torched meringue — hot outside, cold inside. Chef Charles Ranhofer of Delmonico's in New York is credited with the concept shortly after the 1867 U.S. purchase of Alaska, originally naming the dish "Alaska, Florida" to play on the contrast between the frozen north and warm south.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 30 min</span><span class="m">Freeze 4 hr</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1</span> single pie crust or cookie crust, baked</li>
+              <li><span class="amt">1½ qt</span> vanilla ice cream, softened</li>
+              <li><span class="amt">4</span> egg whites</li>
+              <li><span class="amt">½ cup</span> sugar</li>
+              <li><span class="amt">¼ tsp</span> cream of tartar</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Pack the softened ice cream into the baked crust and freeze at least 4 hours until very firm.</li>
+              <li>Beat egg whites with cream of tartar to soft peaks, then gradually add sugar, beating to stiff, glossy peaks.</li>
+              <li>Working quickly, spread the meringue over the frozen pie, covering it completely and sealing to the crust edge.</li>
+              <li>Brown the meringue with a kitchen torch, or under a hot broiler for 1–2 minutes, watching closely.</li>
+              <li>Serve immediately.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('baked-alaska-pie')">🖶 Print recipe</button></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="brand" style="color:var(--butter)">
+        <svg class="mark" viewBox="0 0 100 100"><use href="#pie-lattice" style="--crust:#F4C95D;--crustdark:#D9A93C;--filling:#A8324A"/></svg>
+        The Pie Atlas
+      </div>
+      <p class="fine">A field guide to pie: where it came from, how it's made, and why every<br>holiday on the calendar deserves a slice.</p>
+    </div>
+    <div>
+      <p class="fine">EVERY RECIPE PRINTS ON A SINGLE, IMAGE-FREE SHEET —<br>LOOK FOR THE <strong>PRINT RECIPE</strong> BUTTON ON ANY CARD.</p>
+      <p class="fine">&copy; <span id="year"></span> The Pie Atlas · built for people who believe dessert is a filing system.</p>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

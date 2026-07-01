@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Savory Pies — The Pie Atlas</title>
+<meta name="description" content="Meat, vegetable, and cheese pies from around the world: pot pies, tourtière, quiche, empanadas, pasties, and more.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%23E3A857%22/><circle cx=%2250%22 cy=%2250%22 r=%2234%22 fill=%22%23A8324A%22/></svg>">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a class="brand" href="index.html">
+      <svg class="mark" viewBox="0 0 100 100"><use href="#pie-lattice" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#A8324A"/></svg>
+      <span>The Pie Atlas<small>Est. whenever the first crust met the first fire</small></span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="historical.html">Historical</a>
+      <a href="savory.html" class="active">Savory</a>
+      <a href="sweet.html">Sweet</a>
+      <a href="regional.html">Regional</a>
+      <a href="world.html">World</a>
+      <a href="holidays.html">Holidays</a>
+    </nav>
+  </div>
+</header>
+<svg style="display:none" aria-hidden="true">
+<defs>
+
+<!-- ===== PIE GLYPHS (the site's signature illustrations) ===== -->
+
+<symbol id="pie-lattice" viewBox="0 0 100 100">
+  <clipPath id="clipL"><circle cx="50" cy="50" r="34"/></clipPath>
+  <circle cx="50" cy="50" r="45" fill="var(--crust,#E3A857)"/>
+  <g fill="var(--crustdark,#B97F3A)">
+    <circle cx="50" cy="6" r="3.4"/><circle cx="68" cy="10" r="3.4"/><circle cx="83" cy="21" r="3.4"/>
+    <circle cx="93" cy="37" r="3.4"/><circle cx="96" cy="55" r="3.4"/><circle cx="92" cy="73" r="3.4"/>
+    <circle cx="80" cy="87" r="3.4"/><circle cx="64" cy="95" r="3.4"/><circle cx="46" cy="96" r="3.4"/>
+    <circle cx="29" cy="92" r="3.4"/><circle cx="15" cy="81" r="3.4"/><circle cx="6" cy="66" r="3.4"/>
+    <circle cx="4" cy="48" r="3.4"/><circle cx="9" cy="31" r="3.4"/><circle cx="20" cy="17" r="3.4"/><circle cx="35" cy="8" r="3.4"/>
+  </g>
+  <circle cx="50" cy="50" r="34" fill="var(--filling,#A8324A)"/>
+  <g clip-path="url(#clipL)" stroke="var(--crust,#E3A857)" stroke-width="6.5" opacity=".92">
+    <line x1="4" y1="16" x2="96" y2="70"/><line x1="4" y1="40" x2="96" y2="94"/>
+    <line x1="4" y1="64" x2="70" y2="100"/><line x1="30" y1="4" x2="96" y2="46"/>
+    <line x1="4" y1="70" x2="96" y2="16"/><line x1="4" y1="94" x2="96" y2="40"/>
+    <line x1="4" y1="46" x2="70" y2="4"/><line x1="30" y1="100" x2="96" y2="64"/>
+  </g>
+</symbol>
+
+<symbol id="pie-solid" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="45" fill="var(--crustdark,#B97F3A)"/>
+  <g fill="var(--crust,#E3A857)">
+    <circle cx="50" cy="6" r="3.4"/><circle cx="68" cy="10" r="3.4"/><circle cx="83" cy="21" r="3.4"/>
+    <circle cx="93" cy="37" r="3.4"/><circle cx="96" cy="55" r="3.4"/><circle cx="92" cy="73" r="3.4"/>
+    <circle cx="80" cy="87" r="3.4"/><circle cx="64" cy="95" r="3.4"/><circle cx="46" cy="96" r="3.4"/>
+    <circle cx="29" cy="92" r="3.4"/><circle cx="15" cy="81" r="3.4"/><circle cx="6" cy="66" r="3.4"/>
+    <circle cx="4" cy="48" r="3.4"/><circle cx="9" cy="31" r="3.4"/><circle cx="20" cy="17" r="3.4"/><circle cx="35" cy="8" r="3.4"/>
+  </g>
+  <circle cx="50" cy="50" r="34" fill="var(--crust,#E3A857)"/>
+  <g stroke="var(--filling,#7C8B5E)" stroke-width="3.4" stroke-linecap="round" opacity=".85">
+    <line x1="50" y1="26" x2="43" y2="52"/><line x1="50" y1="26" x2="50" y2="54"/><line x1="50" y1="26" x2="57" y2="52"/>
+  </g>
+</symbol>
+
+<symbol id="pie-slice" viewBox="0 0 100 100">
+  <path d="M50 92 L10 30 A46 46 0 0 1 90 30 Z" fill="var(--crust,#E3A857)"/>
+  <path d="M50 78 L20 32 A38 38 0 0 1 80 32 Z" fill="var(--filling,#F4C95D)"/>
+  <path d="M50 30 L34 33 A18 8 0 0 0 66 33 Z" fill="var(--topping,#FBF3E7)"/>
+  <path d="M18 30 A46 46 0 0 1 82 30" fill="none" stroke="var(--crustdark,#B97F3A)" stroke-width="5" stroke-linecap="round"/>
+</symbol>
+
+<symbol id="pie-hand" viewBox="0 0 100 100">
+  <path d="M8 60 A46 40 0 0 1 92 60 A50 34 0 0 1 8 60 Z" fill="var(--crust,#E3A857)"/>
+  <path d="M18 58 A36 30 0 0 1 82 58 A40 26 0 0 1 18 58 Z" fill="var(--filling,#A8324A)"/>
+  <g fill="var(--crustdark,#B97F3A)">
+    <circle cx="14" cy="55" r="3"/><circle cx="24" cy="66" r="3"/><circle cx="36" cy="72" r="3"/>
+    <circle cx="50" cy="74" r="3"/><circle cx="64" cy="72" r="3"/><circle cx="76" cy="66" r="3"/><circle cx="86" cy="55" r="3"/>
+  </g>
+</symbol>
+
+<symbol id="pie-star" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="45" fill="var(--crust,#E3A857)"/>
+  <circle cx="50" cy="50" r="34" fill="var(--filling,#C9A24A)"/>
+  <g fill="var(--fish,#8A9BA8)" stroke="var(--crustdark,#B97F3A)" stroke-width="1.5">
+    <path d="M50 50 L58 30 Q50 26 42 30 Z"/>
+    <path d="M50 50 L70 42 Q72 50 68 58 Z"/>
+    <path d="M50 50 L58 70 Q50 74 42 70 Z"/>
+    <path d="M50 50 L30 58 Q28 50 32 42 Z"/>
+  </g>
+  <g fill="var(--crustdark,#B97F3A)">
+    <circle cx="54" cy="31" r="1.5"/><circle cx="67" cy="45" r="1.5"/><circle cx="54" cy="69" r="1.5"/><circle cx="33" cy="55" r="1.5"/>
+  </g>
+</symbol>
+
+<!-- ===== category marks (home tiles) ===== -->
+<symbol id="mark-history" viewBox="0 0 48 48">
+  <circle cx="24" cy="24" r="19" fill="none" stroke="currentColor" stroke-width="2.4"/>
+  <path d="M24 13v11l8 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+<symbol id="mark-savory" viewBox="0 0 48 48">
+  <path d="M14 10v14M18 10v14M14 24c0 2 4 2 4 0M16 24v14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M34 10c-5 3-5 10 0 14v14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+<symbol id="mark-sweet" viewBox="0 0 48 48">
+  <path d="M8 30 A16 13 0 0 1 40 30 Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M8 30h32" stroke="currentColor" stroke-width="2.4"/>
+  <circle cx="24" cy="12" r="3.4" fill="none" stroke="currentColor" stroke-width="2.2"/>
+  <path d="M24 8V4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+</symbol>
+<symbol id="mark-holiday" viewBox="0 0 48 48">
+  <path d="M24 6l4.2 9.4 10.2 1.2-7.6 7 2 10.1L24 28.6l-8.8 5.1 2-10.1-7.6-7 10.2-1.2z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+</symbol>
+<symbol id="mark-region" viewBox="0 0 48 48">
+  <path d="M24 4C16 4 10 10 10 18c0 10 14 26 14 26s14-16 14-26c0-8-6-14-14-14z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+  <circle cx="24" cy="18" r="5" fill="none" stroke="currentColor" stroke-width="2.4"/>
+</symbol>
+<symbol id="pie-canoe" viewBox="0 0 100 100">
+  <path d="M10 50 Q50 20 90 50 Q50 62 10 50 Z" fill="var(--crust,#E3A857)"/>
+  <path d="M24 50 Q50 34 76 50 Q50 56 24 50 Z" fill="var(--filling,#F3E7C9)"/>
+  <g fill="var(--crustdark,#B97F3A)">
+    <path d="M14 49 l4 -4 M22 46 l3 -4 M32 43 l3 -3 M50 41 l0 -4 M68 43 l-3 -3 M78 46 l-3 -4 M86 49 l-4 -4" stroke="var(--crustdark,#B97F3A)" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+</symbol>
+<symbol id="pie-tart" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="42" fill="var(--crustdark,#B97F3A)"/>
+  <circle cx="50" cy="50" r="42" fill="none" stroke="var(--crust,#E3A857)" stroke-width="6" stroke-dasharray="4 5"/>
+  <circle cx="50" cy="50" r="33" fill="var(--filling,#E8C24E)"/>
+  <circle cx="50" cy="50" r="12" fill="var(--center,#A8324A)"/>
+</symbol>
+
+<!-- ===== holiday line icons ===== -->
+<symbol id="ic-star" viewBox="0 0 48 48"><path d="M24 6l4.2 9.4 10.2 1.2-7.6 7 2 10.1L24 28.6l-8.8 5.1 2-10.1-7.6-7 10.2-1.2z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+<symbol id="ic-pi" viewBox="0 0 48 48"><circle cx="24" cy="24" r="19" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15 18h18M19 18v14M29 18l-2 10c0 2.6 2 3.6 4 2.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="ic-heart" viewBox="0 0 48 48"><path d="M24 40s-13-8.4-18-16.6C2.4 17 5 9 12 9c4 0 7 2.4 8.4 4.8C21.8 11.4 24.8 9 28.8 9c7 0 9.6 8 6.2 14.4C30 31.6 24 40 24 40z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+<symbol id="ic-shamrock" viewBox="0 0 48 48"><circle cx="18" cy="18" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="30" cy="18" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="24" cy="27" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M24 33v9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+<symbol id="ic-egg" viewBox="0 0 48 48"><path d="M24 8c8 8 14 18.4 14 26a14 14 0 0 1-28 0c0-7.6 6-18 14-26z" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M13 30l5 3-3 3 6 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="ic-sun" viewBox="0 0 48 48"><circle cx="24" cy="24" r="9" fill="none" stroke="currentColor" stroke-width="2.2"/><g stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="24" y1="4" x2="24" y2="10"/><line x1="24" y1="38" x2="24" y2="44"/><line x1="4" y1="24" x2="10" y2="24"/><line x1="38" y1="24" x2="44" y2="24"/><line x1="9" y1="9" x2="13" y2="13"/><line x1="35" y1="35" x2="39" y2="39"/><line x1="9" y1="39" x2="13" y2="35"/><line x1="35" y1="13" x2="39" y2="9"/></g></symbol>
+<symbol id="ic-flower" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.2"><ellipse cx="24" cy="13" rx="6" ry="9"/><ellipse cx="24" cy="35" rx="6" ry="9"/><ellipse cx="13" cy="24" rx="9" ry="6"/><ellipse cx="35" cy="24" rx="9" ry="6"/><circle cx="24" cy="24" r="4"/></g></symbol>
+<symbol id="ic-flag" viewBox="0 0 48 48"><path d="M12 6v36" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M12 8h26l-6 7 6 7H12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+<symbol id="ic-fireworks" viewBox="0 0 48 48"><g stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="24" y1="6" x2="24" y2="16"/><line x1="24" y1="32" x2="24" y2="42"/><line x1="6" y1="24" x2="16" y2="24"/><line x1="32" y1="24" x2="42" y2="24"/><line x1="11" y1="11" x2="18" y2="18"/><line x1="30" y1="30" x2="37" y2="37"/><line x1="11" y1="37" x2="18" y2="30"/><line x1="30" y1="18" x2="37" y2="11"/></g><circle cx="24" cy="24" r="4.5" fill="currentColor"/></symbol>
+<symbol id="ic-tools" viewBox="0 0 48 48"><rect x="8" y="18" width="32" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M17 18v-4a7 7 0 0 1 14 0v4" fill="none" stroke="currentColor" stroke-width="2.2"/></symbol>
+<symbol id="ic-apple" viewBox="0 0 48 48"><path d="M24 16c7-6 16-2 16 8 0 10-8 18-16 18S8 34 8 24c0-10 9-14 16-8z" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M24 16V9M24 9c2-3 6-3 7-1" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+<symbol id="ic-pumpkin" viewBox="0 0 48 48"><path d="M24 16c-9 0-15 7-15 15s6 11 15 11 15-4 15-11-6-15-15-15z" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M24 16v26M14 20c3 4 3 18 0 21M34 20c-3 4-3 18 0 21" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M24 16v-6M24 10c2-2 5-2 6 0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+<symbol id="ic-diya" viewBox="0 0 48 48"><path d="M8 30c0 6 7 10 16 10s16-4 16-10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M6 28c4 3 10 4 18 4s14-1 18-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M24 22c-3-4-1-8 0-10 1 2 3 6 0 10z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+<symbol id="ic-maple" viewBox="0 0 48 48"><path d="M24 6l3 9 8-5-3 9 9-1-7 7 8 4-9 2 3 9-8-5-4 8-4-8-8 5 3-9-9-2 8-4-7-7 9 1-3-9 8 5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+<symbol id="ic-menorah" viewBox="0 0 48 48"><g stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="24" y1="18" x2="24" y2="38"/><line x1="10" y1="38" x2="38" y2="38"/><line x1="16" y1="42" x2="32" y2="42"/><path d="M24 10v8M18 14v4M12 18v4M30 14v4M36 18v4" fill="none"/></g></symbol>
+<symbol id="ic-tree" viewBox="0 0 48 48"><path d="M24 6l8 12h-5l8 10h-6l7 10H12l7-10h-6l8-10h-5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><rect x="21" y="38" width="6" height="6" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="ic-candle" viewBox="0 0 48 48"><rect x="19" y="18" width="10" height="24" rx="1.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M24 18c-2-4 0-7 2-9-1 3 1 5 2 7 1 2-1 4-4 2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M15 42h18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+<symbol id="ic-gift" viewBox="0 0 48 48"><rect x="8" y="18" width="32" height="22" rx="1.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M8 26h32" stroke="currentColor" stroke-width="2.2"/><path d="M24 18v22" stroke="currentColor" stroke-width="2.2"/><path d="M24 18c-2-8-12-8-12-2 0 3 5 2 12 2zM24 18c2-8 12-8 12-2 0 3-5 2-12 2z" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="ic-clock" viewBox="0 0 48 48"><circle cx="24" cy="24" r="19" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M24 13v11l8 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+</defs>
+</svg>
+<section class="section" style="padding-bottom:0">
+  <div class="wrap">
+    <span class="eyebrow">Section two</span>
+    <h1>Savory Pies</h1>
+    <p class="prose narrow" style="font-size:1.08rem;color:#463527">Dinner, encased in pastry — and the oldest use pie was ever put to. Twenty recipes: start with eight savory pies traced through history, from a Roman fish pie to a hand-raised Melton Mowbray, then travel by region.</p>
+    <div class="tab-row">
+      <a href="#history">Through History</a>
+      <a href="#british">British Isles</a>
+      <a href="#north-america">North America</a>
+      <a href="#europe">Continental Europe</a>
+      <a href="#latin-america">Latin America &amp; Caribbean</a>
+    </div>
+  </div>
+</section>
+<section class="section" style="padding-top:0" id="history">
+  <div class="wrap">
+    <div class="subsection-head"><h2>Savory pies through history</h2><span class="tally">8 recipes</span></div>
+    <p class="subsection-blurb">Before pie meant dessert, it meant dinner. For most of its 2,000-year history the pie was a savory object — a way to cook, carry, and preserve meat. These eight trace that line from Rome to the Victorian hunt table. (More medieval and colonial savory pies live on the <a href="historical.html#hist-rare">Historical</a> page.)</p>
+    <div class="recipe-grid">
+
+      <article class="recipe-card" id="roman-fish-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#D9A93C;--crustdark:#8C5A2E;--filling:#8A9BA8"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Roman Patina de Piscibus</h3><span class="recipe-tag">Savory · Rome, 1st century AD</span></div>
+        </div>
+        <p class="recipe-blurb">A fish-and-shellfish pie in the spirit of <em>Apicius</em>, the 1st-century Roman recipe collection — white fish, mussels, and oysters bound with egg and the fermented fish sauce <em>garum</em>, baked in a plain flour-and-oil crust. The Romans are credited with the first true top-and-bottom pies.</p>
+        <div class="meta-row"><span class="m">Serves 6</span><span class="m">Prep 30 min</span><span class="m">Bake 40 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1 lb</span> white fish, cubed</li>
+              <li><span class="amt">1 cup</span> cooked mussels &amp; oysters</li>
+              <li><span class="amt">4</span> eggs</li>
+              <li><span class="amt">2 tbsp</span> fish sauce (garum) or anchovy paste</li>
+              <li><span class="amt">2 tbsp</span> olive oil</li>
+              <li><span class="amt">1 tsp</span> lovage or celery leaf, ½ tsp pepper</li>
+              <li><span class="amt">2 cups</span> flour + ⅓ cup olive oil (crust)</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Make a rough dough from flour, olive oil, and a little water; line a dish.</li>
+              <li>Poach the fish briefly, then layer with the shellfish in the crust.</li>
+              <li>Beat eggs with fish sauce, lovage, and pepper; pour over the seafood.</li>
+              <li>Bake at 350°F (175°C) for 35–40 minutes until set. Serve warm — the Romans would finish it with more pepper.</li>
+            </ol>
+          </div>
+        </div>
+        <p class="recipe-note"><b>Historical note:</b> <em>Apicius</em> recorded seafood-in-pastry dishes but rarely gave quantities — cooks were assumed to be professionals who already knew the proportions.</p>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('roman-fish-pie')">🖶 Print recipe</button><span class="origin-note">recreated from Apicius, c. 1st century AD</span></div>
+      </article>
+
+      <article class="recipe-card" id="medieval-eel-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#C9A24A;--crustdark:#8C5A2E;--filling:#6B7A55"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Medieval Eel &amp; Lamprey Pie</h3><span class="recipe-tag">Savory · England, 15th century</span></div>
+        </div>
+        <p class="recipe-blurb">Fish pies filled the many meatless "fasting" days of the medieval calendar, and eel and lamprey were favorites — spiced with ginger and saffron in a tall coffyn crust. Lamprey pie was such a delicacy that the city of Gloucester sent one to the monarch at Christmas for centuries.</p>
+        <div class="meta-row"><span class="m">Serves 6</span><span class="m">Prep 35 min</span><span class="m">Bake 45 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1½ lb</span> eel (or firm white fish), in pieces</li>
+              <li><span class="amt">1 tsp</span> ground ginger</li>
+              <li><span class="amt">Pinch</span> saffron</li>
+              <li><span class="amt">½ tsp</span> cinnamon</li>
+              <li><span class="amt">3 tbsp</span> butter</li>
+              <li><span class="amt">2 tbsp</span> currants</li>
+              <li><span class="amt">2</span> double pie crusts</li>
+              <li><span class="amt">1 tbsp</span> verjuice or white wine vinegar</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Season the fish with ginger, saffron, cinnamon, and salt.</li>
+              <li>Line a deep dish with crust; add the fish, dot with butter, and scatter currants and verjuice.</li>
+              <li>Seal with a top crust and cut a vent.</li>
+              <li>Bake at 375°F (190°C) for 40–45 minutes. Traditionally eaten cold.</li>
+            </ol>
+          </div>
+        </div>
+        <p class="recipe-note"><b>Historical note:</b> Gloucester's tradition of sending a lamprey pie to the Crown dates to at least the 12th century and continues on rare royal occasions to this day.</p>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('medieval-eel-pie')">🖶 Print recipe</button><span class="origin-note">recreated from 15th-century English fasting-day pies</span></div>
+      </article>
+
+      <article class="recipe-card" id="tudor-christmas-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#8C5A2E"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Tudor Christmas Pie</h3><span class="recipe-tag">Savory · England, 16th century</span></div>
+        </div>
+        <p class="recipe-blurb">A rich game pie of mixed birds — partridge, chicken, and goose, joined after 1523 by the newly imported turkey — spiced and baked in a sturdy raised crust. The ancestor of the nested "yard-of-birds" showpieces later served at grand houses.</p>
+        <div class="meta-row"><span class="m">Serves 10</span><span class="m">Prep 50 min</span><span class="m">Bake 90 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1 lb</span> turkey, boned and cubed</li>
+              <li><span class="amt">½ lb</span> chicken, boned</li>
+              <li><span class="amt">½ lb</span> goose or duck, boned</li>
+              <li><span class="amt">1 tsp</span> mace, 1 tsp pepper</li>
+              <li><span class="amt">½ tsp</span> ground cloves</li>
+              <li><span class="amt">6 tbsp</span> butter</li>
+              <li><span class="amt">1</span> hot water crust (4 cups flour, 1 cup lard, 1¼ cups water)</li>
+              <li><span class="amt">1</span> egg, beaten</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Toss all the meats with mace, pepper, cloves, and salt.</li>
+              <li>Make a hot water crust; mold two-thirds up the sides of a tall, lined tin.</li>
+              <li>Pack in the meats, dot generously with butter, and seal with a crust lid; glaze and vent.</li>
+              <li>Bake at 350°F (175°C) for 1½ hours, covering the top if it browns too fast. Cool before slicing.</li>
+            </ol>
+          </div>
+        </div>
+        <p class="recipe-note"><b>Historical note:</b> Turkey reached England from the New World around 1523 and was folded into the existing Christmas game pie almost immediately.</p>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('tudor-christmas-pie')">🖶 Print recipe</button><span class="origin-note">recreated from 16th-century English game pies</span></div>
+      </article>
+
+      <article class="recipe-card" id="pigeon-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#7A5A4A"><use href="#pie-lattice"/></svg>
+          <div class="recipe-title-wrap"><h3>Pigeon Pie</h3><span class="recipe-tag">Savory · England/France, from 1575</span></div>
+        </div>
+        <p class="recipe-blurb">Once one of the most common English pies — young pigeons (squab) spiced with nutmeg and cloves, sealed in butter so the cold pie kept for days. An early recipe appears in <em>A Proper Newe Booke of Cokerye</em> (1575); Samuel Pepys recorded a 1667 dinner of "nothing but pigeon-pyes."</p>
+        <div class="meta-row"><span class="m">Serves 6</span><span class="m">Prep 30 min</span><span class="m">Bake 60 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">4</span> squab or 6 chicken thighs, boned</li>
+              <li><span class="amt">4 oz</span> bacon or salt pork, diced</li>
+              <li><span class="amt">½ tsp</span> nutmeg, ½ tsp cloves</li>
+              <li><span class="amt">1 tsp</span> pepper</li>
+              <li><span class="amt">4 tbsp</span> butter</li>
+              <li><span class="amt">2</span> hard-boiled eggs, quartered</li>
+              <li><span class="amt">1 cup</span> stock</li>
+              <li><span class="amt">2</span> double pie crusts</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Season the meat with nutmeg, cloves, pepper, and salt.</li>
+              <li>Layer with bacon and egg in a crust-lined dish; dot with butter and add the stock.</li>
+              <li>Top with a second crust; seal and vent.</li>
+              <li>Bake at 375°F (190°C) for 55–60 minutes until golden. Good hot or cold.</li>
+            </ol>
+          </div>
+        </div>
+        <p class="recipe-note"><b>Historical note:</b> Early French-Canadian tourtière was likely made with passenger pigeon (<em>tourte</em>) before the bird was hunted to extinction.</p>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('pigeon-pie')">🖶 Print recipe</button><span class="origin-note">recreated from A Proper Newe Booke of Cokerye, 1575</span></div>
+      </article>
+
+      <article class="recipe-card" id="melton-mowbray-pork-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E8C77A;--crustdark:#B97F3A;--filling:#C9968A"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Melton Mowbray Pork Pie</h3><span class="recipe-tag">Savory · Leicestershire, 1700s</span></div>
+        </div>
+        <p class="recipe-blurb">The definitive English raised pork pie: hand-formed hot water crust around uncured, coarsely chopped pork (grey when cooked, not pink), with savory jelly poured in through the top after baking. Protected by the EU since 2008 — the real thing must be made near Melton Mowbray.</p>
+        <div class="meta-row"><span class="m">Serves 6</span><span class="m">Prep 50 min</span><span class="m">Bake 90 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1½ lb</span> pork shoulder &amp; belly, hand-chopped</li>
+              <li><span class="amt">1 tsp</span> salt, 1 tsp pepper</li>
+              <li><span class="amt">½ tsp</span> ground mace or nutmeg</li>
+              <li><span class="amt">3 cups</span> flour</li>
+              <li><span class="amt">¾ cup</span> lard</li>
+              <li><span class="amt">¾ cup</span> water (crust)</li>
+              <li><span class="amt">1½ cups</span> pork stock + 1 tsp gelatin (jelly)</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Season the chopped pork with salt, pepper, and mace.</li>
+              <li>Boil lard and water, stir into the flour, and knead into a hot water crust; mold two-thirds around a jar or tin while warm.</li>
+              <li>Pack in the pork, add a crust lid, seal, glaze, and cut a central hole.</li>
+              <li>Bake at 350°F (175°C) for 1½ hours. Once cooled, pour warm jellied stock through the hole; chill until set.</li>
+            </ol>
+          </div>
+        </div>
+        <p class="recipe-note"><b>Historical note:</b> Melton's pork pie trade grew from local Stilton cheesemaking — surplus whey fattened the pigs — and from the town's place in prime fox-hunting country.</p>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('melton-mowbray-pork-pie')">🖶 Print recipe</button><span class="origin-note">recreated from the traditional Leicestershire raised pie</span></div>
+      </article>
+
+      <article class="recipe-card" id="battalia-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#8C5A2E"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Battalia Pie</h3><span class="recipe-tag">Savory · England, 17th–18th century</span></div>
+        </div>
+        <p class="recipe-blurb">A lavish banquet pie of small delicacies — chicken, pigeon, and rabbit pieces with cockscombs and savory forcemeat balls, bathed in a claret-and-anchovy sauce. Its name is a corruption of the French <em>béatilles</em> ("little tidbits"); Disraeli described one as a "gorgeous sepulchre."</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 60 min</span><span class="m">Bake 70 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1 lb</span> mixed chicken, rabbit &amp; pigeon, in pieces</li>
+              <li><span class="amt">12</span> small forcemeat balls</li>
+              <li><span class="amt">4 oz</span> mushrooms</li>
+              <li><span class="amt">2</span> hard-boiled egg yolks</li>
+              <li><span class="amt">½ cup</span> claret (red wine)</li>
+              <li><span class="amt">1 tbsp</span> anchovy paste</li>
+              <li><span class="amt">4 tbsp</span> butter</li>
+              <li><span class="amt">2</span> double pie crusts</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Brown the meats and forcemeat balls lightly; arrange with mushrooms and egg yolks in a crust-lined dish.</li>
+              <li>Simmer claret, anchovy paste, and butter into a rich sauce; pour over.</li>
+              <li>Top with a decorated crust; seal and vent.</li>
+              <li>Bake at 375°F (190°C) for 60–70 minutes until deep gold.</li>
+            </ol>
+          </div>
+        </div>
+        <p class="recipe-note"><b>Historical note:</b> Battalia pie descends from an elaborate medieval <em>Forme of Cury</em> pie with pastry "battlements" — the crenellated crust that gave the dish its warlike-sounding name.</p>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('battalia-pie')">🖶 Print recipe</button><span class="origin-note">recreated from 17th–18th century English banquet pies</span></div>
+      </article>
+
+      <article class="recipe-card" id="scotch-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#D9A93C;--crustdark:#8C5A2E;--filling:#7A4A3A"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Scotch Pie (Mutton Pie)</h3><span class="recipe-tag">Savory · Scotland, 18th–19th century</span></div>
+        </div>
+        <p class="recipe-blurb">A small, straight-sided double-crust pie of highly peppered minced mutton in hot water pastry, its top set low to hold gravy, beans, or mash. Grew from the "penny mutton pies" sold to working men; now a football-terrace institution with its own annual world championship.</p>
+        <div class="meta-row"><span class="m">Makes 6</span><span class="m">Prep 40 min</span><span class="m">Bake 45 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1 lb</span> minced mutton or lamb</li>
+              <li><span class="amt">½ tsp</span> ground mace</li>
+              <li><span class="amt">1 tsp</span> pepper, 1 tsp salt</li>
+              <li><span class="amt">⅓ cup</span> stock or gravy</li>
+              <li><span class="amt">3 cups</span> flour</li>
+              <li><span class="amt">⅔ cup</span> lard or beef dripping</li>
+              <li><span class="amt">¾ cup</span> water (crust)</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Mix the mutton with mace, pepper, salt, and a little stock.</li>
+              <li>Make a hot water crust; line six small round tins, keeping a third back for lids.</li>
+              <li>Fill each with meat and top with a pastry lid set slightly below the rim; make a small central hole.</li>
+              <li>Bake at 375°F (190°C) for 40–45 minutes. Serve hot, the well on top filled with gravy or beans.</li>
+            </ol>
+          </div>
+        </div>
+        <p class="recipe-note"><b>Historical note:</b> Now legally defined — a 1967 UK regulation specifies a Scotch pie's size and mince-and-cereal filling; mutton gave the traditional version its characteristic sweetness.</p>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('scotch-pie')">🖶 Print recipe</button><span class="origin-note">recreated from the Scottish penny mutton pie</span></div>
+      </article>
+
+      <article class="recipe-card" id="moroccan-bastilla">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E8D9A0;--crustdark:#C9B26C;--filling:#B07A4E"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Moroccan Bastilla</h3><span class="recipe-tag">Sweet-savory · Morocco</span></div>
+        </div>
+        <p class="recipe-blurb">A spectacular Moroccan celebration pie that walks the sweet-savory line: spiced pigeon or chicken and almonds layered in crackling warqa (phyllo-like) pastry, dusted with cinnamon and powdered sugar. A cousin of the pigeon pie carried along Mediterranean trade routes.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 60 min</span><span class="m">Bake 30 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">2 lb</span> chicken thighs (or pigeon)</li>
+              <li><span class="amt">2</span> onions, grated</li>
+              <li><span class="amt">1 tsp</span> each ginger, cinnamon, saffron</li>
+              <li><span class="amt">6</span> eggs, beaten</li>
+              <li><span class="amt">1 cup</span> toasted almonds, ground</li>
+              <li><span class="amt">1 package</span> phyllo (or warqa)</li>
+              <li><span class="amt">½ cup</span> butter, melted</li>
+              <li><span class="amt">Powdered sugar &amp; cinnamon</span>, to finish</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Simmer chicken with onion and spices until tender; shred the meat and set aside.</li>
+              <li>Reduce the cooking liquid, then scramble the eggs into it until just set.</li>
+              <li>Layer buttered phyllo in a round dish; add the egg mixture, shredded meat, and ground almonds, then wrap in more buttered phyllo.</li>
+              <li>Bake at 375°F (190°C) for 25–30 minutes until golden. Dust with powdered sugar and cinnamon before serving.</li>
+            </ol>
+          </div>
+        </div>
+        <p class="recipe-note"><b>Historical note:</b> Bastilla (also <em>b'stilla</em> or <em>pastilla</em>) reflects centuries of Andalusian and Arab influence on Moroccan cuisine; it's traditionally served at weddings and feasts.</p>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('moroccan-bastilla')">🖶 Print recipe</button><span class="origin-note">recreated from the traditional Moroccan celebration pie</span></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="british">
+  <div class="wrap">
+    <div class="subsection-head"><h2>British Isles</h2><span class="tally">3 recipes</span></div>
+    <p class="subsection-blurb">Where the savory pie tradition never really stopped: pub classics built for a cold night.</p>
+    <div class="recipe-grid">
+
+      <article class="recipe-card" id="steak-and-ale-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crustdark:#8C5A2E;--crust:#C99A4E;--filling:#5C7248"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Steak &amp; Ale Pie</h3><span class="recipe-tag">Savory · England</span></div>
+        </div>
+        <p class="recipe-blurb">Chunks of beef braised low and slow in dark ale until the gravy turns glossy and deeply savory, under a puff pastry lid.</p>
+        <div class="meta-row"><span class="m">Serves 6</span><span class="m">Prep 30 min</span><span class="m">Braise 2 hr</span><span class="m">Bake 30 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">2 lb</span> beef chuck, cubed</li>
+              <li><span class="amt">2 tbsp</span> flour</li>
+              <li><span class="amt">2</span> onions, sliced</li>
+              <li><span class="amt">2</span> carrots, chopped</li>
+              <li><span class="amt">12 oz</span> dark ale or stout</li>
+              <li><span class="amt">1 cup</span> beef stock</li>
+              <li><span class="amt">1 tbsp</span> Worcestershire sauce</li>
+              <li><span class="amt">2</span> bay leaves</li>
+              <li><span class="amt">1 sheet</span> puff pastry</li>
+              <li><span class="amt">1</span> egg, beaten</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Toss beef in flour; brown well in batches, then set aside.</li>
+              <li>Soften onions and carrots in the same pot, then return beef.</li>
+              <li>Add ale, stock, Worcestershire, and bay leaves; cover and braise at 325°F (165°C) for 1¾–2 hours until fork-tender. Cool the filling.</li>
+              <li>Transfer filling to a pie dish, top with puff pastry, brush with egg, and cut a steam vent.</li>
+              <li>Bake at 400°F (200°C) for 25–30 minutes until the pastry is puffed and deep gold.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('steak-and-ale-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="shepherds-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crustdark:#D8C79A;--crust:#F1E7C9;--filling:#6B7A45"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Shepherd's Pie</h3><span class="recipe-tag">Savory · Britain/Ireland</span></div>
+        </div>
+        <p class="recipe-blurb">Ground lamb (beef makes this "cottage pie") simmered with vegetables and gravy, topped with a thick layer of buttery mashed potato instead of pastry.</p>
+        <div class="meta-row"><span class="m">Serves 6</span><span class="m">Prep 25 min</span><span class="m">Bake 30 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1½ lb</span> ground lamb</li>
+              <li><span class="amt">1</span> onion, diced</li>
+              <li><span class="amt">2</span> carrots, diced</li>
+              <li><span class="amt">1 cup</span> peas</li>
+              <li><span class="amt">2 tbsp</span> tomato paste</li>
+              <li><span class="amt">1 cup</span> beef or lamb stock</li>
+              <li><span class="amt">2 lb</span> potatoes, peeled</li>
+              <li><span class="amt">4 tbsp</span> butter</li>
+              <li><span class="amt">¼ cup</span> milk</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Brown lamb with onion and carrots; drain excess fat.</li>
+              <li>Stir in tomato paste and stock; simmer 15 minutes, then fold in peas.</li>
+              <li>Boil potatoes until tender, then mash with butter and milk until smooth.</li>
+              <li>Spread meat filling in a baking dish, top with mashed potato, and rough up the surface with a fork.</li>
+              <li>Bake at 400°F (200°C) for 25–30 minutes until the top is golden in spots.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('shepherds-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="cornish-pasty">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#8C7A4E"><use href="#pie-hand"/></svg>
+          <div class="recipe-title-wrap"><h3>Cornish Pasty</h3><span class="recipe-tag">Savory · Cornwall, England</span></div>
+        </div>
+        <p class="recipe-blurb">A hand-held half-moon of beef, potato, swede (rutabaga), and onion, crimped along one edge — designed so a Cornish tin miner could hold it by the crust and eat the rest without washing up.</p>
+        <div class="meta-row"><span class="m">Makes 6</span><span class="m">Prep 30 min</span><span class="m">Bake 50 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1 lb</span> beef skirt or chuck, diced small</li>
+              <li><span class="amt">2</span> potatoes, diced small</li>
+              <li><span class="amt">1</span> small rutabaga, diced small</li>
+              <li><span class="amt">1</span> onion, diced</li>
+              <li><span class="amt">2</span> double pie crusts</li>
+              <li><span class="amt">2 tbsp</span> butter, cubed</li>
+              <li><span class="amt">1</span> egg, beaten</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Combine raw beef, potato, rutabaga, and onion; season generously with salt and pepper.</li>
+              <li>Cut crust into six circles. Mound filling on one half of each, dot with butter.</li>
+              <li>Fold dough over into a half-moon and crimp the curved edge firmly by hand.</li>
+              <li>Brush with egg and bake at 400°F (200°C) for 45–50 minutes until deep golden.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('cornish-pasty')">🖶 Print recipe</button></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<div class="lattice-divider"></div>
+
+<section class="section" id="north-america">
+  <div class="wrap">
+    <div class="subsection-head"><h2>North America</h2><span class="tally">3 recipes</span></div>
+    <p class="subsection-blurb">The diner-counter and church-potluck classics.</p>
+    <div class="recipe-grid">
+
+      <article class="recipe-card" id="chicken-pot-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E8C77A;--crustdark:#C9A24A;--filling:#7C8B5E"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Chicken Pot Pie</h3><span class="recipe-tag">Savory · United States</span></div>
+        </div>
+        <p class="recipe-blurb">Shredded chicken, carrots, peas, and celery bound in a rich, thyme-scented gravy, sealed under a flaky double crust.</p>
+        <div class="meta-row"><span class="m">Serves 6</span><span class="m">Prep 25 min</span><span class="m">Bake 40 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">3 cups</span> cooked chicken, shredded</li>
+              <li><span class="amt">4 tbsp</span> butter</li>
+              <li><span class="amt">⅓ cup</span> flour</li>
+              <li><span class="amt">2 cups</span> chicken stock</li>
+              <li><span class="amt">⅔ cup</span> milk</li>
+              <li><span class="amt">2</span> carrots, diced</li>
+              <li><span class="amt">2</span> celery stalks, diced</li>
+              <li><span class="amt">¾ cup</span> peas</li>
+              <li><span class="amt">1 tsp</span> thyme</li>
+              <li><span class="amt">2</span> double pie crusts</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Melt butter, whisk in flour, and cook 1 minute. Whisk in stock and milk until smooth and thickened.</li>
+              <li>Add carrots and celery; simmer 8–10 minutes until just tender.</li>
+              <li>Stir in chicken, peas, and thyme; season to taste and cool slightly.</li>
+              <li>Fill a crust-lined dish, top with a second crust, seal, and cut steam vents.</li>
+              <li>Bake at 400°F (200°C) for 35–40 minutes until deeply golden.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('chicken-pot-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="tourtiere">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#D9A93C;--crustdark:#8C5A2E;--filling:#7A4A2E"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Tourtière</h3><span class="recipe-tag">Savory · Québec, Canada</span></div>
+        </div>
+        <p class="recipe-blurb">A warmly spiced ground pork (often mixed with beef) pie, traditionally served after midnight Mass on Christmas Eve — <em>le réveillon</em> — in French-Canadian households.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 25 min</span><span class="m">Bake 45 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1 lb</span> ground pork</li>
+              <li><span class="amt">½ lb</span> ground beef</li>
+              <li><span class="amt">1</span> onion, minced</li>
+              <li><span class="amt">2</span> cloves garlic, minced</li>
+              <li><span class="amt">½ cup</span> mashed potato</li>
+              <li><span class="amt">½ tsp</span> ground cloves</li>
+              <li><span class="amt">½ tsp</span> cinnamon</li>
+              <li><span class="amt">¼ tsp</span> nutmeg</li>
+              <li><span class="amt">2</span> double pie crusts</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Cook pork, beef, onion, and garlic together until browned; drain excess fat.</li>
+              <li>Stir in mashed potato and spices; simmer 10 minutes until thick enough to hold its shape.</li>
+              <li>Cool, then fill a crust-lined dish and top with a second crust; seal and vent.</li>
+              <li>Bake at 375°F (190°C) for 40–45 minutes until golden.</li>
+            </ol>
+          </div>
+        </div>
+        <p class="recipe-note"><b>See also:</b> the full holiday tradition on the <a href="holidays.html#christmas">Christmas</a> page.</p>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('tourtiere')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="tamale-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E8C24E;--crustdark:#C9962C;--filling:#A8324A"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Tamale Pie</h3><span class="recipe-tag">Savory · American Southwest</span></div>
+        </div>
+        <p class="recipe-blurb">A Depression-era Tex-Mex casserole-pie: chili-spiced ground beef and corn under a cornbread "crust," inspired by tamale flavors but built for a weeknight.</p>
+        <div class="meta-row"><span class="m">Serves 6</span><span class="m">Prep 20 min</span><span class="m">Bake 30 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1 lb</span> ground beef</li>
+              <li><span class="amt">1</span> onion, diced</li>
+              <li><span class="amt">2 tbsp</span> chili powder</li>
+              <li><span class="amt">1 can (15 oz)</span> tomatoes, diced</li>
+              <li><span class="amt">1 cup</span> corn kernels</li>
+              <li><span class="amt">1 cup</span> cornmeal</li>
+              <li><span class="amt">1 cup</span> milk</li>
+              <li><span class="amt">1</span> egg</li>
+              <li><span class="amt">1 cup</span> shredded cheddar</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Brown beef with onion and chili powder; stir in tomatoes and corn, simmer 10 minutes.</li>
+              <li>Whisk cornmeal, milk, and egg into a loose batter.</li>
+              <li>Spread meat mixture in a baking dish, pour cornmeal batter over the top.</li>
+              <li>Bake at 375°F (190°C) for 25–30 minutes; scatter cheese on top for the last 5 minutes.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('tamale-pie')">🖶 Print recipe</button></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<div class="lattice-divider"></div>
+
+<section class="section" id="europe">
+  <div class="wrap">
+    <div class="subsection-head"><h2>Continental Europe</h2><span class="tally">3 recipes</span></div>
+    <p class="subsection-blurb">Custard, cheese, and greens — pie without much meat at all.</p>
+    <div class="recipe-grid">
+
+      <article class="recipe-card" id="quiche-lorraine">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#F1E0B0;--crustdark:#D8B96C;--filling:#F4C95D"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Quiche Lorraine</h3><span class="recipe-tag">Savory · Lorraine, France</span></div>
+        </div>
+        <p class="recipe-blurb">A silky egg-and-cream custard studded with smoky lardons, baked in a single crust — no cheese in the original Lorraine version, though most modern recipes add a little gruyère.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 20 min</span><span class="m">Bake 35 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">8 oz</span> bacon or lardons, diced</li>
+              <li><span class="amt">4</span> eggs</li>
+              <li><span class="amt">1½ cups</span> heavy cream</li>
+              <li><span class="amt">¼ tsp</span> nutmeg</li>
+              <li><span class="amt">½ cup</span> gruyère, grated (optional)</li>
+              <li><span class="amt">1</span> single pie crust, blind-baked</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Cook bacon until crisp; drain and scatter over the blind-baked crust.</li>
+              <li>Whisk eggs, cream, nutmeg, and salt together; pour over the bacon.</li>
+              <li>Top with gruyère if using.</li>
+              <li>Bake at 350°F (175°C) for 30–35 minutes until just set with a slight wobble in the center.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('quiche-lorraine')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="spanakopita">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E8D9A0;--crustdark:#C9B26C;--filling:#5C7248"><use href="#pie-lattice"/></svg>
+          <div class="recipe-title-wrap"><h3>Spanakopita</h3><span class="recipe-tag">Savory · Greece</span></div>
+        </div>
+        <p class="recipe-blurb">Spinach and tangy feta wrapped in paper-thin, butter-brushed layers of phyllo, baked until shatteringly crisp.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 35 min</span><span class="m">Bake 35 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1½ lb</span> spinach, wilted and squeezed dry</li>
+              <li><span class="amt">8 oz</span> feta, crumbled</li>
+              <li><span class="amt">3</span> scallions, chopped</li>
+              <li><span class="amt">2</span> eggs</li>
+              <li><span class="amt">1 tbsp</span> fresh dill</li>
+              <li><span class="amt">1 package</span> phyllo dough</li>
+              <li><span class="amt">½ cup</span> butter, melted</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Mix spinach, feta, scallions, eggs, and dill.</li>
+              <li>Layer half the phyllo sheets in a baking dish, brushing each with melted butter.</li>
+              <li>Spread the spinach filling evenly, then layer the remaining phyllo on top, buttering each sheet.</li>
+              <li>Score the top into squares and bake at 375°F (190°C) for 30–35 minutes until golden and crisp.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('spanakopita')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="torta-pasqualina">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E8D9A0;--crustdark:#C9B26C;--filling:#6B7A45"><use href="#pie-lattice"/></svg>
+          <div class="recipe-title-wrap"><h3>Torta Pasqualina</h3><span class="recipe-tag">Savory · Liguria, Italy</span></div>
+        </div>
+        <p class="recipe-blurb">An Easter tradition from Genoa: layers of thin pastry around a spinach-and-ricotta filling with whole eggs nestled inside, sliced to reveal a golden yolk in every piece.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 40 min</span><span class="m">Bake 45 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">2 lb</span> spinach or chard, wilted and chopped</li>
+              <li><span class="amt">15 oz</span> ricotta</li>
+              <li><span class="amt">½ cup</span> parmesan, grated</li>
+              <li><span class="amt">2</span> eggs, for the filling</li>
+              <li><span class="amt">6</span> whole eggs, for nestling</li>
+              <li><span class="amt">2</span> double pie crusts or 6 thin pastry sheets</li>
+              <li><span class="amt">3 tbsp</span> olive oil</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Mix spinach, ricotta, parmesan, and 2 eggs into a thick filling.</li>
+              <li>Layer half the pastry sheets into a dish, brushing each with olive oil.</li>
+              <li>Spread half the filling, make 6 shallow wells, and crack a whole egg into each; cover with remaining filling.</li>
+              <li>Layer the rest of the pastry on top, sealing the edges well.</li>
+              <li>Bake at 375°F (190°C) for 40–45 minutes until deep golden; cool slightly so the eggs finish setting before slicing.</li>
+            </ol>
+          </div>
+        </div>
+        <p class="recipe-note"><b>See also:</b> more Easter dishes on the <a href="holidays.html#easter">Easter</a> page.</p>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('torta-pasqualina')">🖶 Print recipe</button></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<div class="lattice-divider"></div>
+
+<section class="section" id="latin-america">
+  <div class="wrap">
+    <div class="subsection-head"><h2>Latin America &amp; Caribbean</h2><span class="tally">3 recipes</span></div>
+    <p class="subsection-blurb">Hand pies, patties, and one very good corn topping.</p>
+    <div class="recipe-grid">
+
+      <article class="recipe-card" id="beef-empanadas">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#8C4A2E"><use href="#pie-hand"/></svg>
+          <div class="recipe-title-wrap"><h3>Argentine Beef Empanadas</h3><span class="recipe-tag">Savory · Argentina</span></div>
+        </div>
+        <p class="recipe-blurb">Hand pies filled with chopped beef, onion, olives, and a hit of cumin and paprika, crimped into a rope edge and baked or fried until crackling.</p>
+        <div class="meta-row"><span class="m">Makes 12</span><span class="m">Prep 30 min</span><span class="m">Bake 25 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1 lb</span> ground or finely chopped beef</li>
+              <li><span class="amt">1</span> onion, diced</li>
+              <li><span class="amt">1 tsp</span> cumin</li>
+              <li><span class="amt">1 tsp</span> smoked paprika</li>
+              <li><span class="amt">½ cup</span> green olives, chopped</li>
+              <li><span class="amt">2</span> hard-boiled eggs, chopped</li>
+              <li><span class="amt">12</span> empanada dough rounds</li>
+              <li><span class="amt">1</span> egg, beaten</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Cook beef and onion with cumin and paprika until browned; cool completely.</li>
+              <li>Stir in olives and chopped egg.</li>
+              <li>Fill each dough round, fold in half, and crimp the edge into a tight rope pattern.</li>
+              <li>Brush with beaten egg and bake at 400°F (200°C) for 20–25 minutes until golden.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('beef-empanadas')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="jamaican-beef-patties">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E8C24E;--crustdark:#C9962C;--filling:#A8324A"><use href="#pie-hand"/></svg>
+          <div class="recipe-title-wrap"><h3>Jamaican Beef Patties</h3><span class="recipe-tag">Savory · Jamaica</span></div>
+        </div>
+        <p class="recipe-blurb">Spiced ground beef in a strikingly yellow, turmeric-tinted crust, sold from bakery windows across Jamaica and its diaspora.</p>
+        <div class="meta-row"><span class="m">Makes 10</span><span class="m">Prep 30 min</span><span class="m">Bake 30 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1 lb</span> ground beef</li>
+              <li><span class="amt">1</span> onion, minced</li>
+              <li><span class="amt">1</span> scotch bonnet or jalapeño, minced</li>
+              <li><span class="amt">1 tbsp</span> curry powder</li>
+              <li><span class="amt">1 tsp</span> thyme</li>
+              <li><span class="amt">½ cup</span> breadcrumbs</li>
+              <li><span class="amt">2½ cups</span> flour</li>
+              <li><span class="amt">1 tbsp</span> turmeric</li>
+              <li><span class="amt">1 cup</span> cold butter, cubed</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Cook beef, onion, chile, curry powder, and thyme until browned; stir in breadcrumbs to bind, then cool.</li>
+              <li>Combine flour and turmeric; cut in butter and enough cold water to form a firm dough.</li>
+              <li>Roll dough, cut into circles, fill half of each, fold over, and crimp with a fork.</li>
+              <li>Bake at 400°F (200°C) for 25–30 minutes until firm and golden.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('jamaican-beef-patties')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="pastel-de-choclo">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#F1D77E;--crustdark:#D8B347;--filling:#8C4A2E"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Pastel de Choclo</h3><span class="recipe-tag">Savory · Chile</span></div>
+        </div>
+        <p class="recipe-blurb">A crustless "pie" in the loosest sense: a sweet, thick corn purée baked over a savory beef, olive, and hard-boiled-egg filling until the top turns a deep, caramelized gold.</p>
+        <div class="meta-row"><span class="m">Serves 6</span><span class="m">Prep 30 min</span><span class="m">Bake 40 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1 lb</span> ground beef</li>
+              <li><span class="amt">1</span> onion, diced</li>
+              <li><span class="amt">½ cup</span> black olives</li>
+              <li><span class="amt">2</span> hard-boiled eggs, sliced</li>
+              <li><span class="amt">4 cups</span> corn kernels (fresh or frozen)</li>
+              <li><span class="amt">1 cup</span> milk</li>
+              <li><span class="amt">2 tbsp</span> butter</li>
+              <li><span class="amt">1 tbsp</span> sugar</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Brown beef with onion; season, then spread in a baking dish with olives and sliced egg on top.</li>
+              <li>Blend corn with milk, butter, and sugar until thick and coarse-pureed; cook in a pan, stirring, until it thickens further.</li>
+              <li>Spread the corn mixture over the meat layer.</li>
+              <li>Bake at 400°F (200°C) for 30–35 minutes until the top is caramelized and golden at the edges.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('pastel-de-choclo')">🖶 Print recipe</button></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="brand" style="color:var(--butter)">
+        <svg class="mark" viewBox="0 0 100 100"><use href="#pie-lattice" style="--crust:#F4C95D;--crustdark:#D9A93C;--filling:#A8324A"/></svg>
+        The Pie Atlas
+      </div>
+      <p class="fine">A field guide to pie: where it came from, how it's made, and why every<br>holiday on the calendar deserves a slice.</p>
+    </div>
+    <div>
+      <p class="fine">EVERY RECIPE PRINTS ON A SINGLE, IMAGE-FREE SHEET —<br>LOOK FOR THE <strong>PRINT RECIPE</strong> BUTTON ON ANY CARD.</p>
+      <p class="fine">&copy; <span id="year"></span> The Pie Atlas · built for people who believe dessert is a filing system.</p>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

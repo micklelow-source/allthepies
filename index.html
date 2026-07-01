@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Pie Atlas — A Comprehensive Guide to Pie</title>
+<meta name="description" content="The most comprehensive site on pies: history, savory, sweet, and a pie for every holiday on the calendar. Every recipe prints on one sheet.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%23E3A857%22/><circle cx=%2250%22 cy=%2250%22 r=%2234%22 fill=%22%23A8324A%22/></svg>">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a class="brand" href="index.html">
+      <svg class="mark" viewBox="0 0 100 100"><use href="#pie-lattice" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#A8324A"/></svg>
+      <span>The Pie Atlas<small>Est. whenever the first crust met the first fire</small></span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="historical.html">Historical</a>
+      <a href="savory.html">Savory</a>
+      <a href="sweet.html">Sweet</a>
+      <a href="regional.html">Regional</a>
+      <a href="world.html">World</a>
+      <a href="holidays.html">Holidays</a>
+    </nav>
+  </div>
+</header>
+<svg style="display:none" aria-hidden="true">
+<defs>
+
+<!-- ===== PIE GLYPHS (the site's signature illustrations) ===== -->
+
+<symbol id="pie-lattice" viewBox="0 0 100 100">
+  <clipPath id="clipL"><circle cx="50" cy="50" r="34"/></clipPath>
+  <circle cx="50" cy="50" r="45" fill="var(--crust,#E3A857)"/>
+  <g fill="var(--crustdark,#B97F3A)">
+    <circle cx="50" cy="6" r="3.4"/><circle cx="68" cy="10" r="3.4"/><circle cx="83" cy="21" r="3.4"/>
+    <circle cx="93" cy="37" r="3.4"/><circle cx="96" cy="55" r="3.4"/><circle cx="92" cy="73" r="3.4"/>
+    <circle cx="80" cy="87" r="3.4"/><circle cx="64" cy="95" r="3.4"/><circle cx="46" cy="96" r="3.4"/>
+    <circle cx="29" cy="92" r="3.4"/><circle cx="15" cy="81" r="3.4"/><circle cx="6" cy="66" r="3.4"/>
+    <circle cx="4" cy="48" r="3.4"/><circle cx="9" cy="31" r="3.4"/><circle cx="20" cy="17" r="3.4"/><circle cx="35" cy="8" r="3.4"/>
+  </g>
+  <circle cx="50" cy="50" r="34" fill="var(--filling,#A8324A)"/>
+  <g clip-path="url(#clipL)" stroke="var(--crust,#E3A857)" stroke-width="6.5" opacity=".92">
+    <line x1="4" y1="16" x2="96" y2="70"/><line x1="4" y1="40" x2="96" y2="94"/>
+    <line x1="4" y1="64" x2="70" y2="100"/><line x1="30" y1="4" x2="96" y2="46"/>
+    <line x1="4" y1="70" x2="96" y2="16"/><line x1="4" y1="94" x2="96" y2="40"/>
+    <line x1="4" y1="46" x2="70" y2="4"/><line x1="30" y1="100" x2="96" y2="64"/>
+  </g>
+</symbol>
+
+<symbol id="pie-solid" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="45" fill="var(--crustdark,#B97F3A)"/>
+  <g fill="var(--crust,#E3A857)">
+    <circle cx="50" cy="6" r="3.4"/><circle cx="68" cy="10" r="3.4"/><circle cx="83" cy="21" r="3.4"/>
+    <circle cx="93" cy="37" r="3.4"/><circle cx="96" cy="55" r="3.4"/><circle cx="92" cy="73" r="3.4"/>
+    <circle cx="80" cy="87" r="3.4"/><circle cx="64" cy="95" r="3.4"/><circle cx="46" cy="96" r="3.4"/>
+    <circle cx="29" cy="92" r="3.4"/><circle cx="15" cy="81" r="3.4"/><circle cx="6" cy="66" r="3.4"/>
+    <circle cx="4" cy="48" r="3.4"/><circle cx="9" cy="31" r="3.4"/><circle cx="20" cy="17" r="3.4"/><circle cx="35" cy="8" r="3.4"/>
+  </g>
+  <circle cx="50" cy="50" r="34" fill="var(--crust,#E3A857)"/>
+  <g stroke="var(--filling,#7C8B5E)" stroke-width="3.4" stroke-linecap="round" opacity=".85">
+    <line x1="50" y1="26" x2="43" y2="52"/><line x1="50" y1="26" x2="50" y2="54"/><line x1="50" y1="26" x2="57" y2="52"/>
+  </g>
+</symbol>
+
+<symbol id="pie-slice" viewBox="0 0 100 100">
+  <path d="M50 92 L10 30 A46 46 0 0 1 90 30 Z" fill="var(--crust,#E3A857)"/>
+  <path d="M50 78 L20 32 A38 38 0 0 1 80 32 Z" fill="var(--filling,#F4C95D)"/>
+  <path d="M50 30 L34 33 A18 8 0 0 0 66 33 Z" fill="var(--topping,#FBF3E7)"/>
+  <path d="M18 30 A46 46 0 0 1 82 30" fill="none" stroke="var(--crustdark,#B97F3A)" stroke-width="5" stroke-linecap="round"/>
+</symbol>
+
+<symbol id="pie-hand" viewBox="0 0 100 100">
+  <path d="M8 60 A46 40 0 0 1 92 60 A50 34 0 0 1 8 60 Z" fill="var(--crust,#E3A857)"/>
+  <path d="M18 58 A36 30 0 0 1 82 58 A40 26 0 0 1 18 58 Z" fill="var(--filling,#A8324A)"/>
+  <g fill="var(--crustdark,#B97F3A)">
+    <circle cx="14" cy="55" r="3"/><circle cx="24" cy="66" r="3"/><circle cx="36" cy="72" r="3"/>
+    <circle cx="50" cy="74" r="3"/><circle cx="64" cy="72" r="3"/><circle cx="76" cy="66" r="3"/><circle cx="86" cy="55" r="3"/>
+  </g>
+</symbol>
+
+<symbol id="pie-star" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="45" fill="var(--crust,#E3A857)"/>
+  <circle cx="50" cy="50" r="34" fill="var(--filling,#C9A24A)"/>
+  <g fill="var(--fish,#8A9BA8)" stroke="var(--crustdark,#B97F3A)" stroke-width="1.5">
+    <path d="M50 50 L58 30 Q50 26 42 30 Z"/>
+    <path d="M50 50 L70 42 Q72 50 68 58 Z"/>
+    <path d="M50 50 L58 70 Q50 74 42 70 Z"/>
+    <path d="M50 50 L30 58 Q28 50 32 42 Z"/>
+  </g>
+  <g fill="var(--crustdark,#B97F3A)">
+    <circle cx="54" cy="31" r="1.5"/><circle cx="67" cy="45" r="1.5"/><circle cx="54" cy="69" r="1.5"/><circle cx="33" cy="55" r="1.5"/>
+  </g>
+</symbol>
+
+<!-- ===== category marks (home tiles) ===== -->
+<symbol id="mark-history" viewBox="0 0 48 48">
+  <circle cx="24" cy="24" r="19" fill="none" stroke="currentColor" stroke-width="2.4"/>
+  <path d="M24 13v11l8 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+<symbol id="mark-savory" viewBox="0 0 48 48">
+  <path d="M14 10v14M18 10v14M14 24c0 2 4 2 4 0M16 24v14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M34 10c-5 3-5 10 0 14v14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+<symbol id="mark-sweet" viewBox="0 0 48 48">
+  <path d="M8 30 A16 13 0 0 1 40 30 Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M8 30h32" stroke="currentColor" stroke-width="2.4"/>
+  <circle cx="24" cy="12" r="3.4" fill="none" stroke="currentColor" stroke-width="2.2"/>
+  <path d="M24 8V4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+</symbol>
+<symbol id="mark-holiday" viewBox="0 0 48 48">
+  <path d="M24 6l4.2 9.4 10.2 1.2-7.6 7 2 10.1L24 28.6l-8.8 5.1 2-10.1-7.6-7 10.2-1.2z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+</symbol>
+<symbol id="mark-region" viewBox="0 0 48 48">
+  <path d="M24 4C16 4 10 10 10 18c0 10 14 26 14 26s14-16 14-26c0-8-6-14-14-14z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+  <circle cx="24" cy="18" r="5" fill="none" stroke="currentColor" stroke-width="2.4"/>
+</symbol>
+<symbol id="pie-canoe" viewBox="0 0 100 100">
+  <path d="M10 50 Q50 20 90 50 Q50 62 10 50 Z" fill="var(--crust,#E3A857)"/>
+  <path d="M24 50 Q50 34 76 50 Q50 56 24 50 Z" fill="var(--filling,#F3E7C9)"/>
+  <g fill="var(--crustdark,#B97F3A)">
+    <path d="M14 49 l4 -4 M22 46 l3 -4 M32 43 l3 -3 M50 41 l0 -4 M68 43 l-3 -3 M78 46 l-3 -4 M86 49 l-4 -4" stroke="var(--crustdark,#B97F3A)" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+</symbol>
+<symbol id="pie-tart" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="42" fill="var(--crustdark,#B97F3A)"/>
+  <circle cx="50" cy="50" r="42" fill="none" stroke="var(--crust,#E3A857)" stroke-width="6" stroke-dasharray="4 5"/>
+  <circle cx="50" cy="50" r="33" fill="var(--filling,#E8C24E)"/>
+  <circle cx="50" cy="50" r="12" fill="var(--center,#A8324A)"/>
+</symbol>
+
+<!-- ===== holiday line icons ===== -->
+<symbol id="ic-star" viewBox="0 0 48 48"><path d="M24 6l4.2 9.4 10.2 1.2-7.6 7 2 10.1L24 28.6l-8.8 5.1 2-10.1-7.6-7 10.2-1.2z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+<symbol id="ic-pi" viewBox="0 0 48 48"><circle cx="24" cy="24" r="19" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15 18h18M19 18v14M29 18l-2 10c0 2.6 2 3.6 4 2.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="ic-heart" viewBox="0 0 48 48"><path d="M24 40s-13-8.4-18-16.6C2.4 17 5 9 12 9c4 0 7 2.4 8.4 4.8C21.8 11.4 24.8 9 28.8 9c7 0 9.6 8 6.2 14.4C30 31.6 24 40 24 40z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+<symbol id="ic-shamrock" viewBox="0 0 48 48"><circle cx="18" cy="18" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="30" cy="18" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="24" cy="27" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M24 33v9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+<symbol id="ic-egg" viewBox="0 0 48 48"><path d="M24 8c8 8 14 18.4 14 26a14 14 0 0 1-28 0c0-7.6 6-18 14-26z" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M13 30l5 3-3 3 6 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="ic-sun" viewBox="0 0 48 48"><circle cx="24" cy="24" r="9" fill="none" stroke="currentColor" stroke-width="2.2"/><g stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="24" y1="4" x2="24" y2="10"/><line x1="24" y1="38" x2="24" y2="44"/><line x1="4" y1="24" x2="10" y2="24"/><line x1="38" y1="24" x2="44" y2="24"/><line x1="9" y1="9" x2="13" y2="13"/><line x1="35" y1="35" x2="39" y2="39"/><line x1="9" y1="39" x2="13" y2="35"/><line x1="35" y1="13" x2="39" y2="9"/></g></symbol>
+<symbol id="ic-flower" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.2"><ellipse cx="24" cy="13" rx="6" ry="9"/><ellipse cx="24" cy="35" rx="6" ry="9"/><ellipse cx="13" cy="24" rx="9" ry="6"/><ellipse cx="35" cy="24" rx="9" ry="6"/><circle cx="24" cy="24" r="4"/></g></symbol>
+<symbol id="ic-flag" viewBox="0 0 48 48"><path d="M12 6v36" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M12 8h26l-6 7 6 7H12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+<symbol id="ic-fireworks" viewBox="0 0 48 48"><g stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="24" y1="6" x2="24" y2="16"/><line x1="24" y1="32" x2="24" y2="42"/><line x1="6" y1="24" x2="16" y2="24"/><line x1="32" y1="24" x2="42" y2="24"/><line x1="11" y1="11" x2="18" y2="18"/><line x1="30" y1="30" x2="37" y2="37"/><line x1="11" y1="37" x2="18" y2="30"/><line x1="30" y1="18" x2="37" y2="11"/></g><circle cx="24" cy="24" r="4.5" fill="currentColor"/></symbol>
+<symbol id="ic-tools" viewBox="0 0 48 48"><rect x="8" y="18" width="32" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M17 18v-4a7 7 0 0 1 14 0v4" fill="none" stroke="currentColor" stroke-width="2.2"/></symbol>
+<symbol id="ic-apple" viewBox="0 0 48 48"><path d="M24 16c7-6 16-2 16 8 0 10-8 18-16 18S8 34 8 24c0-10 9-14 16-8z" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M24 16V9M24 9c2-3 6-3 7-1" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+<symbol id="ic-pumpkin" viewBox="0 0 48 48"><path d="M24 16c-9 0-15 7-15 15s6 11 15 11 15-4 15-11-6-15-15-15z" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M24 16v26M14 20c3 4 3 18 0 21M34 20c-3 4-3 18 0 21" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M24 16v-6M24 10c2-2 5-2 6 0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+<symbol id="ic-diya" viewBox="0 0 48 48"><path d="M8 30c0 6 7 10 16 10s16-4 16-10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M6 28c4 3 10 4 18 4s14-1 18-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M24 22c-3-4-1-8 0-10 1 2 3 6 0 10z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+<symbol id="ic-maple" viewBox="0 0 48 48"><path d="M24 6l3 9 8-5-3 9 9-1-7 7 8 4-9 2 3 9-8-5-4 8-4-8-8 5 3-9-9-2 8-4-7-7 9 1-3-9 8 5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+<symbol id="ic-menorah" viewBox="0 0 48 48"><g stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="24" y1="18" x2="24" y2="38"/><line x1="10" y1="38" x2="38" y2="38"/><line x1="16" y1="42" x2="32" y2="42"/><path d="M24 10v8M18 14v4M12 18v4M30 14v4M36 18v4" fill="none"/></g></symbol>
+<symbol id="ic-tree" viewBox="0 0 48 48"><path d="M24 6l8 12h-5l8 10h-6l7 10H12l7-10h-6l8-10h-5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><rect x="21" y="38" width="6" height="6" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="ic-candle" viewBox="0 0 48 48"><rect x="19" y="18" width="10" height="24" rx="1.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M24 18c-2-4 0-7 2-9-1 3 1 5 2 7 1 2-1 4-4 2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M15 42h18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+<symbol id="ic-gift" viewBox="0 0 48 48"><rect x="8" y="18" width="32" height="22" rx="1.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M8 26h32" stroke="currentColor" stroke-width="2.2"/><path d="M24 18v22" stroke="currentColor" stroke-width="2.2"/><path d="M24 18c-2-8-12-8-12-2 0 3 5 2 12 2zM24 18c2-8 12-8 12-2 0 3-5 2-12 2z" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="ic-clock" viewBox="0 0 48 48"><circle cx="24" cy="24" r="19" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M24 13v11l8 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+</defs>
+</svg>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">A field guide to pie</span>
+      <h1>Every crust has a story. This is where we keep them.</h1>
+      <p class="lede">From the rock-hard "coffyn" of medieval England to the pecan pie on your Thanksgiving table, pie has spent 4,000 years being reinvented by whoever was hungry and had flour on hand. The Pie Atlas collects the history, the savory, the sweet, and a pie for every single holiday — with recipes built to print on one sheet of paper, no photos required.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="sweet.html">Browse sweet pies</a>
+        <a class="btn ghost" href="holidays.html">Find your holiday's pie</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <svg viewBox="0 0 100 100" style="overflow:visible">
+        <g class="steam"><path d="M35 8c-3 4 3 6 0 10" fill="none" stroke="#B97F3A" stroke-width="2" stroke-linecap="round" opacity=".6"/></g>
+        <g class="steam s2"><path d="M50 4c-3 4 3 6 0 10" fill="none" stroke="#B97F3A" stroke-width="2" stroke-linecap="round" opacity=".6"/></g>
+        <g class="steam s3"><path d="M65 8c-3 4 3 6 0 10" fill="none" stroke="#B97F3A" stroke-width="2" stroke-linecap="round" opacity=".6"/></g>
+        <use href="#pie-lattice" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#A8324A"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="lattice-divider"></div>
+
+<section class="stat-strip">
+  <div class="wrap">
+    <div class="stat"><b>~9500 BCE</b><span>earliest known pastry-wrapped food, Egypt</span></div>
+    <div class="stat"><b>5</b><span>sections: historical, savory, sweet, regional, holiday</span></div>
+    <div class="stat"><b>19</b><span>holidays, each with its own pie</span></div>
+    <div class="stat"><b>1</b><span>sheet of paper per printed recipe</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Start here</span>
+      <h2>Five ways into the crust</h2>
+      <p>Wander the timeline, raid the savory case, sink a fork into something sweet, travel by region, or jump straight to whatever's on the calendar this week.</p>
+    </div>
+    <div class="tile-grid">
+      <a class="tile" href="historical.html">
+        <svg class="icon" viewBox="0 0 48 48" style="color:var(--crumb)"><use href="#mark-history"/></svg>
+        <h3>Historical Pies</h3>
+        <p>Medieval "coffyn" pastry, Roman honey-cheese pies, desperation pies from the Depression, and the true story behind "American as apple pie."</p>
+        <span class="count">18 recreated recipes · timeline</span>
+      </a>
+      <a class="tile" href="savory.html">
+        <svg class="icon" viewBox="0 0 48 48" style="color:var(--sage)"><use href="#mark-savory"/></svg>
+        <h3>Savory Pies</h3>
+        <p>Pot pies, tourtière, quiche, empanadas, pasties, and shepherd's pie — plus eight savory pies traced through history, from Rome to the Victorian hunt table.</p>
+        <span class="count">20 recipes</span>
+      </a>
+      <a class="tile" href="sweet.html">
+        <svg class="icon" viewBox="0 0 48 48" style="color:var(--cherry)"><use href="#mark-sweet"/></svg>
+        <h3>Sweet Pies</h3>
+        <p>Fruit pies, custard pies, cream pies, and a run of frozen icebox pies — from classic apple to French silk to a proper key lime.</p>
+        <span class="count">22 recipes</span>
+      </a>
+      <a class="tile" href="holidays.html">
+        <svg class="icon" viewBox="0 0 48 48" style="color:var(--crust-dark)"><use href="#mark-holiday"/></svg>
+        <h3>Holiday Pies</h3>
+        <p>Every major holiday on the American calendar, matched with the pie that belongs on its table — and why.</p>
+        <span class="count">19 holidays</span>
+      </a>
+      <a class="tile" href="regional.html">
+        <svg class="icon" viewBox="0 0 48 48" style="color:var(--sage)"><use href="#mark-region"/></svg>
+        <h3>Regional Pies</h3>
+        <p>Pies tied to a specific place — Boston cream, Mississippi mud, Bakewell tart, pastel de nata — plus every one of the 50 states, matched to its own pie.</p>
+        <span class="count">38 recipes · USA, Europe &amp; all 50 states</span>
+      </a>
+      <a class="tile" href="world.html">
+        <svg class="icon" viewBox="0 0 48 48" style="color:var(--crumb)"><use href="#mark-history"/></svg>
+        <h3>World &amp; Historical Pies</h3>
+        <p>Khachapuri, butter tarts, samsa, salteñas, buko pie — pastry wrapped around a filling, reinvented independently across Europe, Canada, Asia, and Latin America.</p>
+        <span class="count">30 recipes · 30 countries &amp; regions</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="lattice-divider"></div>
+
+<section class="section">
+  <div class="wrap prose narrow">
+    <span class="eyebrow">Before you dig in</span>
+    <h2>Why "coffyn"?</h2>
+    <p>The word pie almost certainly comes from the magpie — a bird known for hoarding odds and ends in its nest, not unlike the miscellaneous fillings (pigeon, beef, dried fruit, whatever was on hand) stuffed into medieval pastry. That pastry was called a <strong>coffyn</strong>: a thick, deliberately inedible flour-and-water box, built to hold a filling together over an open fire the way a jar or a basket would. It's the reason pie exists at all — a piece of edible engineering that just happened to taste good along the way. The full story is on the <a href="historical.html">Historical Pies</a> page.</p>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="brand" style="color:var(--butter)">
+        <svg class="mark" viewBox="0 0 100 100"><use href="#pie-lattice" style="--crust:#F4C95D;--crustdark:#D9A93C;--filling:#A8324A"/></svg>
+        The Pie Atlas
+      </div>
+      <p class="fine">A field guide to pie: where it came from, how it's made, and why every<br>holiday on the calendar deserves a slice.</p>
+    </div>
+    <div>
+      <p class="fine">EVERY RECIPE PRINTS ON A SINGLE, IMAGE-FREE SHEET —<br>LOOK FOR THE <strong>PRINT RECIPE</strong> BUTTON ON ANY CARD.</p>
+      <p class="fine">&copy; <span id="year"></span> The Pie Atlas · built for people who believe dessert is a filing system.</p>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

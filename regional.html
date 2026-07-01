@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regional Pies of the USA &amp; Europe — The Pie Atlas</title>
+<meta name="description" content="Regional pies from across the United States and Europe: Boston cream, Derby, Mississippi mud, Bakewell tart, pastel de nata, Karelian pies and more.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%23E3A857%22/><circle cx=%2250%22 cy=%2250%22 r=%2234%22 fill=%22%23A8324A%22/></svg>">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a class="brand" href="index.html">
+      <svg class="mark" viewBox="0 0 100 100"><use href="#pie-lattice" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#A8324A"/></svg>
+      <span>The Pie Atlas<small>Est. whenever the first crust met the first fire</small></span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="historical.html">Historical</a>
+      <a href="savory.html">Savory</a>
+      <a href="sweet.html">Sweet</a>
+      <a href="regional.html" class="active">Regional</a>
+      <a href="world.html">World</a>
+      <a href="holidays.html">Holidays</a>
+    </nav>
+  </div>
+</header>
+<svg style="display:none" aria-hidden="true">
+<defs>
+
+<!-- ===== PIE GLYPHS (the site's signature illustrations) ===== -->
+
+<symbol id="pie-lattice" viewBox="0 0 100 100">
+  <clipPath id="clipL"><circle cx="50" cy="50" r="34"/></clipPath>
+  <circle cx="50" cy="50" r="45" fill="var(--crust,#E3A857)"/>
+  <g fill="var(--crustdark,#B97F3A)">
+    <circle cx="50" cy="6" r="3.4"/><circle cx="68" cy="10" r="3.4"/><circle cx="83" cy="21" r="3.4"/>
+    <circle cx="93" cy="37" r="3.4"/><circle cx="96" cy="55" r="3.4"/><circle cx="92" cy="73" r="3.4"/>
+    <circle cx="80" cy="87" r="3.4"/><circle cx="64" cy="95" r="3.4"/><circle cx="46" cy="96" r="3.4"/>
+    <circle cx="29" cy="92" r="3.4"/><circle cx="15" cy="81" r="3.4"/><circle cx="6" cy="66" r="3.4"/>
+    <circle cx="4" cy="48" r="3.4"/><circle cx="9" cy="31" r="3.4"/><circle cx="20" cy="17" r="3.4"/><circle cx="35" cy="8" r="3.4"/>
+  </g>
+  <circle cx="50" cy="50" r="34" fill="var(--filling,#A8324A)"/>
+  <g clip-path="url(#clipL)" stroke="var(--crust,#E3A857)" stroke-width="6.5" opacity=".92">
+    <line x1="4" y1="16" x2="96" y2="70"/><line x1="4" y1="40" x2="96" y2="94"/>
+    <line x1="4" y1="64" x2="70" y2="100"/><line x1="30" y1="4" x2="96" y2="46"/>
+    <line x1="4" y1="70" x2="96" y2="16"/><line x1="4" y1="94" x2="96" y2="40"/>
+    <line x1="4" y1="46" x2="70" y2="4"/><line x1="30" y1="100" x2="96" y2="64"/>
+  </g>
+</symbol>
+
+<symbol id="pie-solid" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="45" fill="var(--crustdark,#B97F3A)"/>
+  <g fill="var(--crust,#E3A857)">
+    <circle cx="50" cy="6" r="3.4"/><circle cx="68" cy="10" r="3.4"/><circle cx="83" cy="21" r="3.4"/>
+    <circle cx="93" cy="37" r="3.4"/><circle cx="96" cy="55" r="3.4"/><circle cx="92" cy="73" r="3.4"/>
+    <circle cx="80" cy="87" r="3.4"/><circle cx="64" cy="95" r="3.4"/><circle cx="46" cy="96" r="3.4"/>
+    <circle cx="29" cy="92" r="3.4"/><circle cx="15" cy="81" r="3.4"/><circle cx="6" cy="66" r="3.4"/>
+    <circle cx="4" cy="48" r="3.4"/><circle cx="9" cy="31" r="3.4"/><circle cx="20" cy="17" r="3.4"/><circle cx="35" cy="8" r="3.4"/>
+  </g>
+  <circle cx="50" cy="50" r="34" fill="var(--crust,#E3A857)"/>
+  <g stroke="var(--filling,#7C8B5E)" stroke-width="3.4" stroke-linecap="round" opacity=".85">
+    <line x1="50" y1="26" x2="43" y2="52"/><line x1="50" y1="26" x2="50" y2="54"/><line x1="50" y1="26" x2="57" y2="52"/>
+  </g>
+</symbol>
+
+<symbol id="pie-slice" viewBox="0 0 100 100">
+  <path d="M50 92 L10 30 A46 46 0 0 1 90 30 Z" fill="var(--crust,#E3A857)"/>
+  <path d="M50 78 L20 32 A38 38 0 0 1 80 32 Z" fill="var(--filling,#F4C95D)"/>
+  <path d="M50 30 L34 33 A18 8 0 0 0 66 33 Z" fill="var(--topping,#FBF3E7)"/>
+  <path d="M18 30 A46 46 0 0 1 82 30" fill="none" stroke="var(--crustdark,#B97F3A)" stroke-width="5" stroke-linecap="round"/>
+</symbol>
+
+<symbol id="pie-hand" viewBox="0 0 100 100">
+  <path d="M8 60 A46 40 0 0 1 92 60 A50 34 0 0 1 8 60 Z" fill="var(--crust,#E3A857)"/>
+  <path d="M18 58 A36 30 0 0 1 82 58 A40 26 0 0 1 18 58 Z" fill="var(--filling,#A8324A)"/>
+  <g fill="var(--crustdark,#B97F3A)">
+    <circle cx="14" cy="55" r="3"/><circle cx="24" cy="66" r="3"/><circle cx="36" cy="72" r="3"/>
+    <circle cx="50" cy="74" r="3"/><circle cx="64" cy="72" r="3"/><circle cx="76" cy="66" r="3"/><circle cx="86" cy="55" r="3"/>
+  </g>
+</symbol>
+
+<symbol id="pie-star" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="45" fill="var(--crust,#E3A857)"/>
+  <circle cx="50" cy="50" r="34" fill="var(--filling,#C9A24A)"/>
+  <g fill="var(--fish,#8A9BA8)" stroke="var(--crustdark,#B97F3A)" stroke-width="1.5">
+    <path d="M50 50 L58 30 Q50 26 42 30 Z"/>
+    <path d="M50 50 L70 42 Q72 50 68 58 Z"/>
+    <path d="M50 50 L58 70 Q50 74 42 70 Z"/>
+    <path d="M50 50 L30 58 Q28 50 32 42 Z"/>
+  </g>
+  <g fill="var(--crustdark,#B97F3A)">
+    <circle cx="54" cy="31" r="1.5"/><circle cx="67" cy="45" r="1.5"/><circle cx="54" cy="69" r="1.5"/><circle cx="33" cy="55" r="1.5"/>
+  </g>
+</symbol>
+
+<!-- ===== category marks (home tiles) ===== -->
+<symbol id="mark-history" viewBox="0 0 48 48">
+  <circle cx="24" cy="24" r="19" fill="none" stroke="currentColor" stroke-width="2.4"/>
+  <path d="M24 13v11l8 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+<symbol id="mark-savory" viewBox="0 0 48 48">
+  <path d="M14 10v14M18 10v14M14 24c0 2 4 2 4 0M16 24v14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M34 10c-5 3-5 10 0 14v14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+<symbol id="mark-sweet" viewBox="0 0 48 48">
+  <path d="M8 30 A16 13 0 0 1 40 30 Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M8 30h32" stroke="currentColor" stroke-width="2.4"/>
+  <circle cx="24" cy="12" r="3.4" fill="none" stroke="currentColor" stroke-width="2.2"/>
+  <path d="M24 8V4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+</symbol>
+<symbol id="mark-holiday" viewBox="0 0 48 48">
+  <path d="M24 6l4.2 9.4 10.2 1.2-7.6 7 2 10.1L24 28.6l-8.8 5.1 2-10.1-7.6-7 10.2-1.2z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+</symbol>
+<symbol id="mark-region" viewBox="0 0 48 48">
+  <path d="M24 4C16 4 10 10 10 18c0 10 14 26 14 26s14-16 14-26c0-8-6-14-14-14z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+  <circle cx="24" cy="18" r="5" fill="none" stroke="currentColor" stroke-width="2.4"/>
+</symbol>
+<symbol id="pie-canoe" viewBox="0 0 100 100">
+  <path d="M10 50 Q50 20 90 50 Q50 62 10 50 Z" fill="var(--crust,#E3A857)"/>
+  <path d="M24 50 Q50 34 76 50 Q50 56 24 50 Z" fill="var(--filling,#F3E7C9)"/>
+  <g fill="var(--crustdark,#B97F3A)">
+    <path d="M14 49 l4 -4 M22 46 l3 -4 M32 43 l3 -3 M50 41 l0 -4 M68 43 l-3 -3 M78 46 l-3 -4 M86 49 l-4 -4" stroke="var(--crustdark,#B97F3A)" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+</symbol>
+<symbol id="pie-tart" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="42" fill="var(--crustdark,#B97F3A)"/>
+  <circle cx="50" cy="50" r="42" fill="none" stroke="var(--crust,#E3A857)" stroke-width="6" stroke-dasharray="4 5"/>
+  <circle cx="50" cy="50" r="33" fill="var(--filling,#E8C24E)"/>
+  <circle cx="50" cy="50" r="12" fill="var(--center,#A8324A)"/>
+</symbol>
+
+<!-- ===== holiday line icons ===== -->
+<symbol id="ic-star" viewBox="0 0 48 48"><path d="M24 6l4.2 9.4 10.2 1.2-7.6 7 2 10.1L24 28.6l-8.8 5.1 2-10.1-7.6-7 10.2-1.2z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+<symbol id="ic-pi" viewBox="0 0 48 48"><circle cx="24" cy="24" r="19" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15 18h18M19 18v14M29 18l-2 10c0 2.6 2 3.6 4 2.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="ic-heart" viewBox="0 0 48 48"><path d="M24 40s-13-8.4-18-16.6C2.4 17 5 9 12 9c4 0 7 2.4 8.4 4.8C21.8 11.4 24.8 9 28.8 9c7 0 9.6 8 6.2 14.4C30 31.6 24 40 24 40z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+<symbol id="ic-shamrock" viewBox="0 0 48 48"><circle cx="18" cy="18" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="30" cy="18" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="24" cy="27" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M24 33v9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+<symbol id="ic-egg" viewBox="0 0 48 48"><path d="M24 8c8 8 14 18.4 14 26a14 14 0 0 1-28 0c0-7.6 6-18 14-26z" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M13 30l5 3-3 3 6 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="ic-sun" viewBox="0 0 48 48"><circle cx="24" cy="24" r="9" fill="none" stroke="currentColor" stroke-width="2.2"/><g stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="24" y1="4" x2="24" y2="10"/><line x1="24" y1="38" x2="24" y2="44"/><line x1="4" y1="24" x2="10" y2="24"/><line x1="38" y1="24" x2="44" y2="24"/><line x1="9" y1="9" x2="13" y2="13"/><line x1="35" y1="35" x2="39" y2="39"/><line x1="9" y1="39" x2="13" y2="35"/><line x1="35" y1="13" x2="39" y2="9"/></g></symbol>
+<symbol id="ic-flower" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.2"><ellipse cx="24" cy="13" rx="6" ry="9"/><ellipse cx="24" cy="35" rx="6" ry="9"/><ellipse cx="13" cy="24" rx="9" ry="6"/><ellipse cx="35" cy="24" rx="9" ry="6"/><circle cx="24" cy="24" r="4"/></g></symbol>
+<symbol id="ic-flag" viewBox="0 0 48 48"><path d="M12 6v36" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M12 8h26l-6 7 6 7H12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+<symbol id="ic-fireworks" viewBox="0 0 48 48"><g stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="24" y1="6" x2="24" y2="16"/><line x1="24" y1="32" x2="24" y2="42"/><line x1="6" y1="24" x2="16" y2="24"/><line x1="32" y1="24" x2="42" y2="24"/><line x1="11" y1="11" x2="18" y2="18"/><line x1="30" y1="30" x2="37" y2="37"/><line x1="11" y1="37" x2="18" y2="30"/><line x1="30" y1="18" x2="37" y2="11"/></g><circle cx="24" cy="24" r="4.5" fill="currentColor"/></symbol>
+<symbol id="ic-tools" viewBox="0 0 48 48"><rect x="8" y="18" width="32" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M17 18v-4a7 7 0 0 1 14 0v4" fill="none" stroke="currentColor" stroke-width="2.2"/></symbol>
+<symbol id="ic-apple" viewBox="0 0 48 48"><path d="M24 16c7-6 16-2 16 8 0 10-8 18-16 18S8 34 8 24c0-10 9-14 16-8z" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M24 16V9M24 9c2-3 6-3 7-1" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+<symbol id="ic-pumpkin" viewBox="0 0 48 48"><path d="M24 16c-9 0-15 7-15 15s6 11 15 11 15-4 15-11-6-15-15-15z" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M24 16v26M14 20c3 4 3 18 0 21M34 20c-3 4-3 18 0 21" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M24 16v-6M24 10c2-2 5-2 6 0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+<symbol id="ic-diya" viewBox="0 0 48 48"><path d="M8 30c0 6 7 10 16 10s16-4 16-10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M6 28c4 3 10 4 18 4s14-1 18-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M24 22c-3-4-1-8 0-10 1 2 3 6 0 10z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+<symbol id="ic-maple" viewBox="0 0 48 48"><path d="M24 6l3 9 8-5-3 9 9-1-7 7 8 4-9 2 3 9-8-5-4 8-4-8-8 5 3-9-9-2 8-4-7-7 9 1-3-9 8 5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+<symbol id="ic-menorah" viewBox="0 0 48 48"><g stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="24" y1="18" x2="24" y2="38"/><line x1="10" y1="38" x2="38" y2="38"/><line x1="16" y1="42" x2="32" y2="42"/><path d="M24 10v8M18 14v4M12 18v4M30 14v4M36 18v4" fill="none"/></g></symbol>
+<symbol id="ic-tree" viewBox="0 0 48 48"><path d="M24 6l8 12h-5l8 10h-6l7 10H12l7-10h-6l8-10h-5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><rect x="21" y="38" width="6" height="6" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="ic-candle" viewBox="0 0 48 48"><rect x="19" y="18" width="10" height="24" rx="1.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M24 18c-2-4 0-7 2-9-1 3 1 5 2 7 1 2-1 4-4 2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M15 42h18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+<symbol id="ic-gift" viewBox="0 0 48 48"><rect x="8" y="18" width="32" height="22" rx="1.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M8 26h32" stroke="currentColor" stroke-width="2.2"/><path d="M24 18v22" stroke="currentColor" stroke-width="2.2"/><path d="M24 18c-2-8-12-8-12-2 0 3 5 2 12 2zM24 18c2-8 12-8 12-2 0 3-5 2-12 2z" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="ic-clock" viewBox="0 0 48 48"><circle cx="24" cy="24" r="19" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M24 13v11l8 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+</defs>
+</svg>
+<section class="section" style="padding-bottom:0">
+  <div class="wrap">
+    <span class="eyebrow">Section five</span>
+    <h1>Regional Pies</h1>
+    <p class="prose narrow" style="font-size:1.08rem;color:#463527">Pie is a map. Every region bakes what it grows, what it can afford, and what its immigrants brought — so a pie can tell you where you are. Thirty recipes tied to specific places across the United States and Europe, plus a complete reference of all 50 states and D.C. — their official pie, their unofficial favorite, or the closest thing they've got. (Indiana's Hoosier Sugar Cream Pie and Ohio's Shaker Lemon Pie live on the <a href="historical.html#hist-depression">Historical</a> page; several other regional favorites are on the <a href="savory.html">Savory</a> and <a href="sweet.html">Sweet</a> pages.)</p>
+    <div class="tab-row">
+      <a href="#usa">United States</a>
+      <a href="#europe">Europe</a>
+      <a href="#states">All 50 States</a>
+    </div>
+<div class="map-menu-panel">
+  <div class="panel-head">
+    <div>
+      <h3>Jump straight to a state</h3>
+      <p class="panel-sub">Click a tile below, or use the menu — no scrolling required.</p>
+    </div>
+    <select class="jump-select" onchange="jumpFromSelect(this)">
+      <option value="">Jump to a state…</option>
+      <optgroup label="Northeast">
+        <option value="state-CT">Connecticut</option>
+        <option value="state-ME">Maine</option>
+        <option value="state-MA">Massachusetts</option>
+        <option value="state-NH">New Hampshire</option>
+        <option value="state-NJ">New Jersey</option>
+        <option value="state-NY">New York</option>
+        <option value="state-PA">Pennsylvania</option>
+        <option value="state-RI">Rhode Island</option>
+        <option value="state-VT">Vermont</option>
+      </optgroup>
+      <optgroup label="South">
+        <option value="state-AL">Alabama</option>
+        <option value="state-AR">Arkansas</option>
+        <option value="state-DE">Delaware</option>
+        <option value="state-FL">Florida</option>
+        <option value="state-GA">Georgia</option>
+        <option value="state-KY">Kentucky</option>
+        <option value="state-LA">Louisiana</option>
+        <option value="state-MD">Maryland</option>
+        <option value="state-MS">Mississippi</option>
+        <option value="state-NC">North Carolina</option>
+        <option value="state-OK">Oklahoma</option>
+        <option value="state-SC">South Carolina</option>
+        <option value="state-TN">Tennessee</option>
+        <option value="state-TX">Texas</option>
+        <option value="state-VA">Virginia</option>
+        <option value="state-DC">Washington, D.C.</option>
+        <option value="state-WV">West Virginia</option>
+      </optgroup>
+      <optgroup label="Midwest">
+        <option value="state-IL">Illinois</option>
+        <option value="state-IN">Indiana</option>
+        <option value="state-IA">Iowa</option>
+        <option value="state-KS">Kansas</option>
+        <option value="state-MI">Michigan</option>
+        <option value="state-MN">Minnesota</option>
+        <option value="state-MO">Missouri</option>
+        <option value="state-NE">Nebraska</option>
+        <option value="state-ND">North Dakota</option>
+        <option value="state-OH">Ohio</option>
+        <option value="state-SD">South Dakota</option>
+        <option value="state-WI">Wisconsin</option>
+      </optgroup>
+      <optgroup label="West">
+        <option value="state-AK">Alaska</option>
+        <option value="state-AZ">Arizona</option>
+        <option value="state-CA">California</option>
+        <option value="state-CO">Colorado</option>
+        <option value="state-HI">Hawaii</option>
+        <option value="state-ID">Idaho</option>
+        <option value="state-MT">Montana</option>
+        <option value="state-NV">Nevada</option>
+        <option value="state-NM">New Mexico</option>
+        <option value="state-OR">Oregon</option>
+        <option value="state-UT">Utah</option>
+        <option value="state-WA">Washington</option>
+        <option value="state-WY">Wyoming</option>
+      </optgroup>
+    </select>
+  </div>
+<svg class="us-map" viewBox="0 0 606.5 479.0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Map of the United States — click a state to jump to its pie">
+<g class="state-tile" data-state="state-WA" tabindex="0" role="button" aria-label="Washington" onclick="jumpToState('state-WA')" onkeypress="if(event.key==='Enter')jumpToState('state-WA')"><rect x="61.0" y="10.0" width="46" height="46" rx="9"/><text x="84.0" y="37.9" text-anchor="middle" font-size="14">WA</text></g>
+<g class="state-tile" data-state="state-MT" tabindex="0" role="button" aria-label="Montana" onclick="jumpToState('state-MT')" onkeypress="if(event.key==='Enter')jumpToState('state-MT')"><rect x="163.0" y="10.0" width="46" height="46" rx="9"/><text x="186.0" y="37.9" text-anchor="middle" font-size="14">MT</text></g>
+<g class="state-tile" data-state="state-ND" tabindex="0" role="button" aria-label="North Dakota" onclick="jumpToState('state-ND')" onkeypress="if(event.key==='Enter')jumpToState('state-ND')"><rect x="265.0" y="10.0" width="46" height="46" rx="9"/><text x="288.0" y="37.9" text-anchor="middle" font-size="14">ND</text></g>
+<g class="state-tile" data-state="state-MN" tabindex="0" role="button" aria-label="Minnesota" onclick="jumpToState('state-MN')" onkeypress="if(event.key==='Enter')jumpToState('state-MN')"><rect x="316.0" y="10.0" width="46" height="46" rx="9"/><text x="339.0" y="37.9" text-anchor="middle" font-size="14">MN</text></g>
+<g class="state-tile" data-state="state-VT" tabindex="0" role="button" aria-label="Vermont" onclick="jumpToState('state-VT')" onkeypress="if(event.key==='Enter')jumpToState('state-VT')"><rect x="469.0" y="10.0" width="46" height="46" rx="9"/><text x="492.0" y="37.9" text-anchor="middle" font-size="14">VT</text></g>
+<g class="state-tile" data-state="state-ME" tabindex="0" role="button" aria-label="Maine" onclick="jumpToState('state-ME')" onkeypress="if(event.key==='Enter')jumpToState('state-ME')"><rect x="520.0" y="10.0" width="46" height="46" rx="9"/><text x="543.0" y="37.9" text-anchor="middle" font-size="14">ME</text></g>
+<g class="state-tile" data-state="state-OR" tabindex="0" role="button" aria-label="Oregon" onclick="jumpToState('state-OR')" onkeypress="if(event.key==='Enter')jumpToState('state-OR')"><rect x="61.0" y="61.0" width="46" height="46" rx="9"/><text x="84.0" y="88.9" text-anchor="middle" font-size="14">OR</text></g>
+<g class="state-tile" data-state="state-ID" tabindex="0" role="button" aria-label="Idaho" onclick="jumpToState('state-ID')" onkeypress="if(event.key==='Enter')jumpToState('state-ID')"><rect x="112.0" y="61.0" width="46" height="46" rx="9"/><text x="135.0" y="88.9" text-anchor="middle" font-size="14">ID</text></g>
+<g class="state-tile" data-state="state-WY" tabindex="0" role="button" aria-label="Wyoming" onclick="jumpToState('state-WY')" onkeypress="if(event.key==='Enter')jumpToState('state-WY')"><rect x="163.0" y="61.0" width="46" height="46" rx="9"/><text x="186.0" y="88.9" text-anchor="middle" font-size="14">WY</text></g>
+<g class="state-tile" data-state="state-SD" tabindex="0" role="button" aria-label="South Dakota" onclick="jumpToState('state-SD')" onkeypress="if(event.key==='Enter')jumpToState('state-SD')"><rect x="265.0" y="61.0" width="46" height="46" rx="9"/><text x="288.0" y="88.9" text-anchor="middle" font-size="14">SD</text></g>
+<g class="state-tile" data-state="state-WI" tabindex="0" role="button" aria-label="Wisconsin" onclick="jumpToState('state-WI')" onkeypress="if(event.key==='Enter')jumpToState('state-WI')"><rect x="316.0" y="61.0" width="46" height="46" rx="9"/><text x="339.0" y="88.9" text-anchor="middle" font-size="14">WI</text></g>
+<g class="state-tile" data-state="state-MI" tabindex="0" role="button" aria-label="Michigan" onclick="jumpToState('state-MI')" onkeypress="if(event.key==='Enter')jumpToState('state-MI')"><rect x="367.0" y="61.0" width="46" height="46" rx="9"/><text x="390.0" y="88.9" text-anchor="middle" font-size="14">MI</text></g>
+<g class="state-tile" data-state="state-NH" tabindex="0" role="button" aria-label="New Hampshire" onclick="jumpToState('state-NH')" onkeypress="if(event.key==='Enter')jumpToState('state-NH')"><rect x="469.0" y="61.0" width="46" height="46" rx="9"/><text x="492.0" y="88.9" text-anchor="middle" font-size="14">NH</text></g>
+<g class="state-tile" data-state="state-MA" tabindex="0" role="button" aria-label="Massachusetts" onclick="jumpToState('state-MA')" onkeypress="if(event.key==='Enter')jumpToState('state-MA')"><rect x="520.0" y="61.0" width="46" height="46" rx="9"/><text x="543.0" y="88.9" text-anchor="middle" font-size="14">MA</text></g>
+<g class="state-tile" data-state="state-CA" tabindex="0" role="button" aria-label="California" onclick="jumpToState('state-CA')" onkeypress="if(event.key==='Enter')jumpToState('state-CA')"><rect x="10.0" y="112.0" width="46" height="46" rx="9"/><text x="33.0" y="139.9" text-anchor="middle" font-size="14">CA</text></g>
+<g class="state-tile" data-state="state-NV" tabindex="0" role="button" aria-label="Nevada" onclick="jumpToState('state-NV')" onkeypress="if(event.key==='Enter')jumpToState('state-NV')"><rect x="61.0" y="112.0" width="46" height="46" rx="9"/><text x="84.0" y="139.9" text-anchor="middle" font-size="14">NV</text></g>
+<g class="state-tile" data-state="state-UT" tabindex="0" role="button" aria-label="Utah" onclick="jumpToState('state-UT')" onkeypress="if(event.key==='Enter')jumpToState('state-UT')"><rect x="112.0" y="112.0" width="46" height="46" rx="9"/><text x="135.0" y="139.9" text-anchor="middle" font-size="14">UT</text></g>
+<g class="state-tile" data-state="state-CO" tabindex="0" role="button" aria-label="Colorado" onclick="jumpToState('state-CO')" onkeypress="if(event.key==='Enter')jumpToState('state-CO')"><rect x="163.0" y="112.0" width="46" height="46" rx="9"/><text x="186.0" y="139.9" text-anchor="middle" font-size="14">CO</text></g>
+<g class="state-tile" data-state="state-NE" tabindex="0" role="button" aria-label="Nebraska" onclick="jumpToState('state-NE')" onkeypress="if(event.key==='Enter')jumpToState('state-NE')"><rect x="265.0" y="112.0" width="46" height="46" rx="9"/><text x="288.0" y="139.9" text-anchor="middle" font-size="14">NE</text></g>
+<g class="state-tile" data-state="state-IA" tabindex="0" role="button" aria-label="Iowa" onclick="jumpToState('state-IA')" onkeypress="if(event.key==='Enter')jumpToState('state-IA')"><rect x="316.0" y="112.0" width="46" height="46" rx="9"/><text x="339.0" y="139.9" text-anchor="middle" font-size="14">IA</text></g>
+<g class="state-tile" data-state="state-IL" tabindex="0" role="button" aria-label="Illinois" onclick="jumpToState('state-IL')" onkeypress="if(event.key==='Enter')jumpToState('state-IL')"><rect x="367.0" y="112.0" width="46" height="46" rx="9"/><text x="390.0" y="139.9" text-anchor="middle" font-size="14">IL</text></g>
+<g class="state-tile" data-state="state-IN" tabindex="0" role="button" aria-label="Indiana" onclick="jumpToState('state-IN')" onkeypress="if(event.key==='Enter')jumpToState('state-IN')"><rect x="418.0" y="112.0" width="46" height="46" rx="9"/><text x="441.0" y="139.9" text-anchor="middle" font-size="14">IN</text></g>
+<g class="state-tile" data-state="state-NY" tabindex="0" role="button" aria-label="New York" onclick="jumpToState('state-NY')" onkeypress="if(event.key==='Enter')jumpToState('state-NY')"><rect x="469.0" y="112.0" width="46" height="46" rx="9"/><text x="492.0" y="139.9" text-anchor="middle" font-size="14">NY</text></g>
+<g class="state-tile" data-state="state-RI" tabindex="0" role="button" aria-label="Rhode Island" onclick="jumpToState('state-RI')" onkeypress="if(event.key==='Enter')jumpToState('state-RI')"><rect x="520.0" y="112.0" width="46" height="46" rx="9"/><text x="543.0" y="139.9" text-anchor="middle" font-size="14">RI</text></g>
+<g class="state-tile" data-state="state-AZ" tabindex="0" role="button" aria-label="Arizona" onclick="jumpToState('state-AZ')" onkeypress="if(event.key==='Enter')jumpToState('state-AZ')"><rect x="112.0" y="163.0" width="46" height="46" rx="9"/><text x="135.0" y="190.9" text-anchor="middle" font-size="14">AZ</text></g>
+<g class="state-tile" data-state="state-NM" tabindex="0" role="button" aria-label="New Mexico" onclick="jumpToState('state-NM')" onkeypress="if(event.key==='Enter')jumpToState('state-NM')"><rect x="163.0" y="163.0" width="46" height="46" rx="9"/><text x="186.0" y="190.9" text-anchor="middle" font-size="14">NM</text></g>
+<g class="state-tile" data-state="state-KS" tabindex="0" role="button" aria-label="Kansas" onclick="jumpToState('state-KS')" onkeypress="if(event.key==='Enter')jumpToState('state-KS')"><rect x="265.0" y="163.0" width="46" height="46" rx="9"/><text x="288.0" y="190.9" text-anchor="middle" font-size="14">KS</text></g>
+<g class="state-tile" data-state="state-MO" tabindex="0" role="button" aria-label="Missouri" onclick="jumpToState('state-MO')" onkeypress="if(event.key==='Enter')jumpToState('state-MO')"><rect x="316.0" y="163.0" width="46" height="46" rx="9"/><text x="339.0" y="190.9" text-anchor="middle" font-size="14">MO</text></g>
+<g class="state-tile" data-state="state-KY" tabindex="0" role="button" aria-label="Kentucky" onclick="jumpToState('state-KY')" onkeypress="if(event.key==='Enter')jumpToState('state-KY')"><rect x="367.0" y="163.0" width="46" height="46" rx="9"/><text x="390.0" y="190.9" text-anchor="middle" font-size="14">KY</text></g>
+<g class="state-tile" data-state="state-OH" tabindex="0" role="button" aria-label="Ohio" onclick="jumpToState('state-OH')" onkeypress="if(event.key==='Enter')jumpToState('state-OH')"><rect x="418.0" y="163.0" width="46" height="46" rx="9"/><text x="441.0" y="190.9" text-anchor="middle" font-size="14">OH</text></g>
+<g class="state-tile" data-state="state-PA" tabindex="0" role="button" aria-label="Pennsylvania" onclick="jumpToState('state-PA')" onkeypress="if(event.key==='Enter')jumpToState('state-PA')"><rect x="469.0" y="163.0" width="46" height="46" rx="9"/><text x="492.0" y="190.9" text-anchor="middle" font-size="14">PA</text></g>
+<g class="state-tile" data-state="state-CT" tabindex="0" role="button" aria-label="Connecticut" onclick="jumpToState('state-CT')" onkeypress="if(event.key==='Enter')jumpToState('state-CT')"><rect x="520.0" y="163.0" width="46" height="46" rx="9"/><text x="543.0" y="190.9" text-anchor="middle" font-size="14">CT</text></g>
+<g class="state-tile" data-state="state-OK" tabindex="0" role="button" aria-label="Oklahoma" onclick="jumpToState('state-OK')" onkeypress="if(event.key==='Enter')jumpToState('state-OK')"><rect x="214.0" y="214.0" width="46" height="46" rx="9"/><text x="237.0" y="241.9" text-anchor="middle" font-size="14">OK</text></g>
+<g class="state-tile" data-state="state-AR" tabindex="0" role="button" aria-label="Arkansas" onclick="jumpToState('state-AR')" onkeypress="if(event.key==='Enter')jumpToState('state-AR')"><rect x="316.0" y="214.0" width="46" height="46" rx="9"/><text x="339.0" y="241.9" text-anchor="middle" font-size="14">AR</text></g>
+<g class="state-tile" data-state="state-TN" tabindex="0" role="button" aria-label="Tennessee" onclick="jumpToState('state-TN')" onkeypress="if(event.key==='Enter')jumpToState('state-TN')"><rect x="367.0" y="214.0" width="46" height="46" rx="9"/><text x="390.0" y="241.9" text-anchor="middle" font-size="14">TN</text></g>
+<g class="state-tile" data-state="state-WV" tabindex="0" role="button" aria-label="West Virginia" onclick="jumpToState('state-WV')" onkeypress="if(event.key==='Enter')jumpToState('state-WV')"><rect x="418.0" y="214.0" width="46" height="46" rx="9"/><text x="441.0" y="241.9" text-anchor="middle" font-size="14">WV</text></g>
+<g class="state-tile" data-state="state-VA" tabindex="0" role="button" aria-label="Virginia" onclick="jumpToState('state-VA')" onkeypress="if(event.key==='Enter')jumpToState('state-VA')"><rect x="469.0" y="214.0" width="46" height="46" rx="9"/><text x="492.0" y="241.9" text-anchor="middle" font-size="14">VA</text></g>
+<g class="state-tile" data-state="state-NJ" tabindex="0" role="button" aria-label="New Jersey" onclick="jumpToState('state-NJ')" onkeypress="if(event.key==='Enter')jumpToState('state-NJ')"><rect x="520.0" y="214.0" width="46" height="46" rx="9"/><text x="543.0" y="241.9" text-anchor="middle" font-size="14">NJ</text></g>
+<g class="state-tile dc-tile" data-state="state-DC" tabindex="0" role="button" aria-label="Washington, D.C." onclick="jumpToState('state-DC')" onkeypress="if(event.key==='Enter')jumpToState('state-DC')"><rect x="545.5" y="239.5" width="27.599999999999998" height="27.599999999999998" rx="5"/><text x="559.3" y="256.8" text-anchor="middle" font-size="10">DC</text></g>
+<g class="state-tile" data-state="state-TX" tabindex="0" role="button" aria-label="Texas" onclick="jumpToState('state-TX')" onkeypress="if(event.key==='Enter')jumpToState('state-TX')"><rect x="214.0" y="265.0" width="46" height="46" rx="9"/><text x="237.0" y="292.9" text-anchor="middle" font-size="14">TX</text></g>
+<g class="state-tile" data-state="state-LA" tabindex="0" role="button" aria-label="Louisiana" onclick="jumpToState('state-LA')" onkeypress="if(event.key==='Enter')jumpToState('state-LA')"><rect x="316.0" y="265.0" width="46" height="46" rx="9"/><text x="339.0" y="292.9" text-anchor="middle" font-size="14">LA</text></g>
+<g class="state-tile" data-state="state-MS" tabindex="0" role="button" aria-label="Mississippi" onclick="jumpToState('state-MS')" onkeypress="if(event.key==='Enter')jumpToState('state-MS')"><rect x="367.0" y="265.0" width="46" height="46" rx="9"/><text x="390.0" y="292.9" text-anchor="middle" font-size="14">MS</text></g>
+<g class="state-tile" data-state="state-AL" tabindex="0" role="button" aria-label="Alabama" onclick="jumpToState('state-AL')" onkeypress="if(event.key==='Enter')jumpToState('state-AL')"><rect x="418.0" y="265.0" width="46" height="46" rx="9"/><text x="441.0" y="292.9" text-anchor="middle" font-size="14">AL</text></g>
+<g class="state-tile" data-state="state-NC" tabindex="0" role="button" aria-label="North Carolina" onclick="jumpToState('state-NC')" onkeypress="if(event.key==='Enter')jumpToState('state-NC')"><rect x="469.0" y="265.0" width="46" height="46" rx="9"/><text x="492.0" y="292.9" text-anchor="middle" font-size="14">NC</text></g>
+<g class="state-tile" data-state="state-MD" tabindex="0" role="button" aria-label="Maryland" onclick="jumpToState('state-MD')" onkeypress="if(event.key==='Enter')jumpToState('state-MD')"><rect x="520.0" y="265.0" width="46" height="46" rx="9"/><text x="543.0" y="292.9" text-anchor="middle" font-size="14">MD</text></g>
+<g class="state-tile" data-state="state-GA" tabindex="0" role="button" aria-label="Georgia" onclick="jumpToState('state-GA')" onkeypress="if(event.key==='Enter')jumpToState('state-GA')"><rect x="418.0" y="316.0" width="46" height="46" rx="9"/><text x="441.0" y="343.9" text-anchor="middle" font-size="14">GA</text></g>
+<g class="state-tile" data-state="state-SC" tabindex="0" role="button" aria-label="South Carolina" onclick="jumpToState('state-SC')" onkeypress="if(event.key==='Enter')jumpToState('state-SC')"><rect x="469.0" y="316.0" width="46" height="46" rx="9"/><text x="492.0" y="343.9" text-anchor="middle" font-size="14">SC</text></g>
+<g class="state-tile" data-state="state-DE" tabindex="0" role="button" aria-label="Delaware" onclick="jumpToState('state-DE')" onkeypress="if(event.key==='Enter')jumpToState('state-DE')"><rect x="520.0" y="316.0" width="46" height="46" rx="9"/><text x="543.0" y="343.9" text-anchor="middle" font-size="14">DE</text></g>
+<g class="state-tile" data-state="state-FL" tabindex="0" role="button" aria-label="Florida" onclick="jumpToState('state-FL')" onkeypress="if(event.key==='Enter')jumpToState('state-FL')"><rect x="469.0" y="367.0" width="46" height="46" rx="9"/><text x="492.0" y="394.9" text-anchor="middle" font-size="14">FL</text></g>
+<g class="state-tile" data-state="state-AK" tabindex="0" role="button" aria-label="Alaska" onclick="jumpToState('state-AK')" onkeypress="if(event.key==='Enter')jumpToState('state-AK')"><rect x="10.0" y="418.0" width="46" height="46" rx="9"/><text x="33.0" y="445.9" text-anchor="middle" font-size="14">AK</text></g>
+<g class="state-tile" data-state="state-HI" tabindex="0" role="button" aria-label="Hawaii" onclick="jumpToState('state-HI')" onkeypress="if(event.key==='Enter')jumpToState('state-HI')"><rect x="61.0" y="418.0" width="46" height="46" rx="9"/><text x="84.0" y="445.9" text-anchor="middle" font-size="14">HI</text></g>
+</svg>
+</div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0" id="usa">
+  <div class="wrap">
+    <div class="subsection-head"><h2>United States</h2><span class="tally">8 recipes</span></div>
+    <p class="subsection-blurb">From a Boston hotel to the banks of the Mississippi — pies that a single town, state, or river made its own.</p>
+    <div class="recipe-grid">
+
+      <article class="recipe-card" id="boston-cream-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E8C77A;--crustdark:#8C5A2E;--filling:#F1E3B8;--topping:#5C3A28"><use href="#pie-slice"/></svg>
+          <div class="recipe-title-wrap"><h3>Boston Cream Pie</h3><span class="recipe-tag sweet">Sweet · Massachusetts, 1856</span></div>
+        </div>
+        <p class="recipe-blurb">Technically a cake, but "pie" by tradition — two sponge layers around vanilla custard, glazed with chocolate. Created at Boston's Parker House hotel in 1856 and the official dessert of Massachusetts.</p>
+        <div class="meta-row"><span class="m">Serves 10</span><span class="m">Prep 40 min</span><span class="m">Bake 25 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1½ cups</span> flour</li>
+              <li><span class="amt">1 cup</span> sugar</li>
+              <li><span class="amt">4</span> eggs</li>
+              <li><span class="amt">1½ tsp</span> baking powder</li>
+              <li><span class="amt">½ cup</span> milk</li>
+              <li><span class="amt">2 cups</span> vanilla pastry cream</li>
+              <li><span class="amt">4 oz</span> dark chocolate</li>
+              <li><span class="amt">½ cup</span> cream, for glaze</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Beat eggs and sugar until pale; fold in flour, baking powder, and milk. Divide between two 9-inch pans.</li>
+              <li>Bake at 350°F (175°C) for 20–25 minutes; cool completely.</li>
+              <li>Spread pastry cream over one layer and top with the second.</li>
+              <li>Warm chocolate with cream into a smooth glaze; pour over the top and let it drip down the sides.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('boston-cream-pie')">🖶 Print recipe</button><span class="origin-note">Parker House, Boston, 1856</span></div>
+      </article>
+
+      <article class="recipe-card" id="derby-style-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#8C5A2E;--filling:#5C3A28"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Kentucky Chocolate-Walnut Pie</h3><span class="recipe-tag sweet">Sweet · Kentucky, 1950s</span></div>
+        </div>
+        <p class="recipe-blurb">A bourbon-spiked chocolate and walnut pie in the style made famous for the Kentucky Derby. The original trademarked name belongs to one Louisville family's bakery, so home versions go by descriptions like this one.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 15 min</span><span class="m">Bake 45 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1 cup</span> sugar</li>
+              <li><span class="amt">½ cup</span> flour</li>
+              <li><span class="amt">2</span> eggs</li>
+              <li><span class="amt">½ cup</span> butter, melted</li>
+              <li><span class="amt">1 cup</span> chocolate chips</li>
+              <li><span class="amt">1 cup</span> chopped walnuts</li>
+              <li><span class="amt">2 tbsp</span> bourbon</li>
+              <li><span class="amt">1</span> single pie crust</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Whisk sugar and flour, then beat in eggs and melted butter.</li>
+              <li>Stir in chocolate chips, walnuts, and bourbon.</li>
+              <li>Pour into the crust.</li>
+              <li>Bake at 325°F (165°C) for 40–45 minutes until set at the edges but still slightly gooey in the center. Cool before slicing.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('derby-style-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="mississippi-mud-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#3A2A22;--crustdark:#241812;--filling:#5C3A28;--topping:#FBF3E7"><use href="#pie-slice"/></svg>
+          <div class="recipe-title-wrap"><h3>Mississippi Mud Pie</h3><span class="recipe-tag sweet">Sweet · Mississippi</span></div>
+        </div>
+        <p class="recipe-blurb">Chocolate on chocolate on chocolate — a cookie-crumb crust, dense chocolate filling, and whipped cream, named for the dark, silty banks of the Mississippi River.</p>
+        <div class="meta-row"><span class="m">Serves 10</span><span class="m">Prep 30 min</span><span class="m">Chill 4 hr</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">2 cups</span> chocolate cookie crumbs</li>
+              <li><span class="amt">6 tbsp</span> butter, melted</li>
+              <li><span class="amt">8 oz</span> dark chocolate</li>
+              <li><span class="amt">1 cup</span> sugar</li>
+              <li><span class="amt">4</span> eggs</li>
+              <li><span class="amt">½ cup</span> butter (filling)</li>
+              <li><span class="amt">2 cups</span> whipped cream, to finish</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Mix cookie crumbs and melted butter; press into a pie dish and chill.</li>
+              <li>Melt chocolate with the filling butter; beat in sugar and eggs.</li>
+              <li>Pour into the crust and bake at 350°F (175°C) for 25 minutes until just set; cool, then chill 4 hours.</li>
+              <li>Top with whipped cream and chocolate shavings before serving.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('mississippi-mud-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="sour-cream-raisin-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#D8C79A;--crustdark:#B39A5E;--filling:#C9A87A;--topping:#FBF3E7"><use href="#pie-slice"/></svg>
+          <div class="recipe-title-wrap"><h3>Sour Cream Raisin Pie</h3><span class="recipe-tag sweet">Sweet · Iowa &amp; the Midwest</span></div>
+        </div>
+        <p class="recipe-blurb">A tangy sour cream custard packed with plump raisins under fluffy meringue — a fixture of church potlucks and still a category at the Iowa State Fair baking contests.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 25 min</span><span class="m">Bake 15 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1½ cups</span> sour cream</li>
+              <li><span class="amt">1 cup</span> sugar</li>
+              <li><span class="amt">3 tbsp</span> flour</li>
+              <li><span class="amt">3</span> egg yolks (reserve whites)</li>
+              <li><span class="amt">1 cup</span> raisins</li>
+              <li><span class="amt">1 tsp</span> cinnamon</li>
+              <li><span class="amt">3</span> egg whites + 6 tbsp sugar (meringue)</li>
+              <li><span class="amt">1</span> single pie crust, blind-baked</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Cook sour cream, sugar, flour, and yolks over medium heat, stirring, until thick; stir in raisins and cinnamon.</li>
+              <li>Pour into the baked crust.</li>
+              <li>Beat egg whites with sugar to stiff, glossy peaks; spread over the filling, sealing to the crust.</li>
+              <li>Bake at 350°F (175°C) for 12–15 minutes until the meringue is golden. Chill before slicing.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('sour-cream-raisin-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="natchitoches-meat-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#8C4A2E"><use href="#pie-hand"/></svg>
+          <div class="recipe-title-wrap"><h3>Natchitoches Meat Pie</h3><span class="recipe-tag">Savory · Louisiana</span></div>
+        </div>
+        <p class="recipe-blurb">The official state meat pie of Louisiana: a crimped, empanada-like hand pie of spiced beef and pork, blending Spanish, French, Cajun, and Southern influences. Celebrated with its own annual festival in Natchitoches.</p>
+        <div class="meta-row"><span class="m">Makes 10</span><span class="m">Prep 35 min</span><span class="m">Fry/Bake 25 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">½ lb</span> ground beef</li>
+              <li><span class="amt">½ lb</span> ground pork</li>
+              <li><span class="amt">1</span> onion, minced</li>
+              <li><span class="amt">3</span> scallions, chopped</li>
+              <li><span class="amt">2 tbsp</span> flour (to bind)</li>
+              <li><span class="amt">1 tsp</span> cayenne, 1 tsp black pepper</li>
+              <li><span class="amt">2</span> double pie crusts</li>
+              <li><span class="amt">1</span> egg, beaten</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Brown beef, pork, onion, and scallions with the cayenne and pepper; stir in flour to bind, then cool.</li>
+              <li>Cut dough into circles; fill each, fold into a half-moon, and crimp firmly with a fork.</li>
+              <li>Brush with beaten egg.</li>
+              <li>Bake at 375°F (190°C) for 25 minutes until golden, or deep-fry until crisp.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('natchitoches-meat-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="marionberry-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#4A2A44"><use href="#pie-lattice"/></svg>
+          <div class="recipe-title-wrap"><h3>Marionberry Pie</h3><span class="recipe-tag sweet">Sweet · Oregon</span></div>
+        </div>
+        <p class="recipe-blurb">Built on the marionberry — a blackberry hybrid developed at Oregon State University and now the state's signature berry. Deep, wine-dark, and more complex than a plain blackberry.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 25 min</span><span class="m">Bake 55 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">6 cups</span> marionberries (or blackberries)</li>
+              <li><span class="amt">1 cup</span> sugar</li>
+              <li><span class="amt">¼ cup</span> cornstarch</li>
+              <li><span class="amt">1 tbsp</span> lemon juice</li>
+              <li><span class="amt">2</span> double pie crusts</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Toss berries with sugar, cornstarch, and lemon juice; rest 15 minutes.</li>
+              <li>Fill a crust-lined dish and top with a lattice.</li>
+              <li>Bake at 400°F (200°C) for 20 minutes, then reduce to 375°F (190°C) for 30–35 minutes more, until thickly bubbling.</li>
+              <li>Cool at least 3 hours before slicing.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('marionberry-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="huckleberry-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#2E3A5C"><use href="#pie-lattice"/></svg>
+          <div class="recipe-title-wrap"><h3>Huckleberry Pie</h3><span class="recipe-tag sweet">Sweet · Montana &amp; the Mountain West</span></div>
+        </div>
+        <p class="recipe-blurb">Made from wild huckleberries foraged in the mountains of Big Sky Country — tarter and more intense than a blueberry, and famously resistant to cultivation, so nearly all are still hand-picked.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 25 min</span><span class="m">Bake 50 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">5 cups</span> huckleberries (or wild blueberries)</li>
+              <li><span class="amt">¾ cup</span> sugar</li>
+              <li><span class="amt">3 tbsp</span> cornstarch</li>
+              <li><span class="amt">1 tbsp</span> lemon juice</li>
+              <li><span class="amt">Pinch</span> cinnamon</li>
+              <li><span class="amt">2</span> double pie crusts</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Toss huckleberries with sugar, cornstarch, lemon juice, and cinnamon.</li>
+              <li>Fill a crust-lined dish and top with lattice or a vented crust.</li>
+              <li>Bake at 400°F (200°C) for 45–50 minutes until the juices bubble thickly.</li>
+              <li>Cool at least 3 hours so the filling sets.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('huckleberry-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="concord-grape-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#3D2452"><use href="#pie-lattice"/></svg>
+          <div class="recipe-title-wrap"><h3>Concord Grape Pie</h3><span class="recipe-tag sweet">Sweet · New York (Finger Lakes)</span></div>
+        </div>
+        <p class="recipe-blurb">A deep-purple autumn pie from New York's Finger Lakes grape country — intensely grapey, made by slipping the skins off each Concord grape and cooking the pulp before recombining.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 45 min</span><span class="m">Bake 45 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">5 cups</span> Concord grapes</li>
+              <li><span class="amt">1 cup</span> sugar</li>
+              <li><span class="amt">¼ cup</span> flour</li>
+              <li><span class="amt">1 tbsp</span> lemon juice</li>
+              <li><span class="amt">1 tbsp</span> butter</li>
+              <li><span class="amt">2</span> double pie crusts</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Slip the skins off the grapes, reserving them. Simmer the pulp 5 minutes, then sieve out the seeds.</li>
+              <li>Combine the seedless pulp with the reserved skins, sugar, flour, and lemon juice.</li>
+              <li>Fill a crust-lined dish, dot with butter, and top with lattice.</li>
+              <li>Bake at 400°F (200°C) for 20 minutes, then 375°F (190°C) for 25 minutes more. Cool before slicing.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('concord-grape-pie')">🖶 Print recipe</button></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+<div class="lattice-divider"></div>
+
+<section class="section" id="europe">
+  <div class="wrap">
+    <div class="subsection-head"><h2>Europe</h2><span class="tally">8 recipes</span></div>
+    <p class="subsection-blurb">From a Derbyshire inn's happy accident to custard tarts baked by Lisbon monks — European pies and tarts tied to a single town or region.</p>
+    <div class="recipe-grid">
+
+      <article class="recipe-card" id="bakewell-tart">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#E8C24E;--center:#A8324A"><use href="#pie-tart"/></svg>
+          <div class="recipe-title-wrap"><h3>Bakewell Tart</h3><span class="recipe-tag sweet">Sweet · Derbyshire, England</span></div>
+        </div>
+        <p class="recipe-blurb">Shortcrust pastry, a layer of raspberry jam, and almond frangipane topped with flaked almonds. It evolved in the early 1900s from the older Bakewell pudding — itself said to be a 19th-century kitchen accident at a Bakewell inn.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 30 min</span><span class="m">Bake 35 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1</span> single shortcrust pastry shell</li>
+              <li><span class="amt">⅓ cup</span> raspberry jam</li>
+              <li><span class="amt">½ cup</span> butter, softened</li>
+              <li><span class="amt">½ cup</span> sugar</li>
+              <li><span class="amt">2</span> eggs</li>
+              <li><span class="amt">1 cup</span> ground almonds</li>
+              <li><span class="amt">½ tsp</span> almond extract</li>
+              <li><span class="amt">¼ cup</span> flaked almonds</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Spread the jam over the base of the pastry shell.</li>
+              <li>Cream butter and sugar, beat in eggs, then fold in ground almonds and almond extract.</li>
+              <li>Spread the frangipane over the jam and scatter with flaked almonds.</li>
+              <li>Bake at 350°F (175°C) for 30–35 minutes until golden and set. Serve warm or cool.</li>
+            </ol>
+          </div>
+        </div>
+        <p class="recipe-note"><b>Historical note:</b> The first printed Bakewell pudding recipe appeared in Eliza Acton's 1845 <em>Modern Cookery for Private Families</em>; the shortcrust-and-frangipane tart is the 20th-century descendant.</p>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('bakewell-tart')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="pastel-de-nata">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E8C77A;--crustdark:#B97F3A;--filling:#F1D34E;--topping:#8C5A2E"><use href="#pie-slice"/></svg>
+          <div class="recipe-title-wrap"><h3>Pastel de Nata</h3><span class="recipe-tag sweet">Sweet · Lisbon, Portugal</span></div>
+        </div>
+        <p class="recipe-blurb">Portugal's iconic custard tart: crisp, blistered puff pastry cradling a caramelized egg custard, dusted with cinnamon. First made by monks in Belém, Lisbon, before the 18th century — from the yolks left over after egg whites were used to starch laundry and clarify wine.</p>
+        <div class="meta-row"><span class="m">Makes 12</span><span class="m">Prep 30 min</span><span class="m">Bake 15 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1 sheet</span> puff pastry</li>
+              <li><span class="amt">1 cup</span> milk</li>
+              <li><span class="amt">¾ cup</span> sugar</li>
+              <li><span class="amt">3 tbsp</span> flour</li>
+              <li><span class="amt">6</span> egg yolks</li>
+              <li><span class="amt">1</span> strip lemon peel</li>
+              <li><span class="amt">1</span> cinnamon stick</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Roll the puff pastry into a log, slice into 12, and press each into a muffin cup, pushing dough up the sides.</li>
+              <li>Whisk flour into a little of the milk; heat the rest with sugar, lemon peel, and cinnamon, then combine and cook until thick.</li>
+              <li>Off heat, whisk in the yolks; strain, then fill each pastry cup.</li>
+              <li>Bake at 475°F (245°C) — as hot as your oven allows — for 12–15 minutes until the tops are scorched and blistered.</li>
+            </ol>
+          </div>
+        </div>
+        <p class="recipe-note"><b>Historical note:</b> Only tarts from the original Belém bakery may be called <em>pastéis de Belém</em>; its exact recipe is a closely guarded secret. Everywhere else, they're <em>pastéis de nata</em>.</p>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('pastel-de-nata')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="karelian-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#C9A24A;--crustdark:#8C5A2E;--filling:#F3E7C9"><use href="#pie-canoe"/></svg>
+          <div class="recipe-title-wrap"><h3>Karelian Pie (Karjalanpiirakka)</h3><span class="recipe-tag">Savory · Karelia, Finland</span></div>
+        </div>
+        <p class="recipe-blurb">Thin rye pastry pinched into a little "canoe" around a creamy rice-porridge filling, brushed with butter and served with <em>munavoi</em> (egg butter). So culturally specific it holds EU Traditional Speciality Guaranteed status — only pies made the traditional way may use the name.</p>
+        <div class="meta-row"><span class="m">Makes 12</span><span class="m">Prep 50 min</span><span class="m">Bake 15 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1½ cups</span> rye flour</li>
+              <li><span class="amt">½ cup</span> water</li>
+              <li><span class="amt">½ tsp</span> salt</li>
+              <li><span class="amt">⅔ cup</span> short-grain rice</li>
+              <li><span class="amt">2½ cups</span> milk</li>
+              <li><span class="amt">4 tbsp</span> butter, melted (to brush)</li>
+              <li><span class="amt">3</span> hard-boiled eggs + 3 tbsp butter (egg butter)</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Simmer rice in the milk 40 minutes into a thick porridge; cool.</li>
+              <li>Mix rye flour, water, and salt into a stiff dough; divide into 12 and roll each paper-thin into an oval.</li>
+              <li>Spread porridge down the center of each; fold and crimp the long edges up, leaving the filling exposed.</li>
+              <li>Bake at 475°F (245°C) for 12–15 minutes, then brush hot with melted butter. Serve topped with mashed egg-and-butter.</li>
+            </ol>
+          </div>
+        </div>
+        <p class="recipe-note"><b>Historical note:</b> First recorded in the 1680s in the Karelia region spanning Finland and Russia; the name evokes the pie's canoe-like shape.</p>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('karelian-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="russian-cabbage-pirog">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E8C77A;--crustdark:#B97F3A;--filling:#8BA05E"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Russian Cabbage Pirog</h3><span class="recipe-tag">Savory · Russia</span></div>
+        </div>
+        <p class="recipe-blurb">A large enriched-yeast-dough pie filled with buttery braised cabbage and egg — the classic savory <em>pirog</em>, so central to Russian home cooking that baking a good one was once a mark of a capable housekeeper.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 40 min + rise</span><span class="m">Bake 40 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">3½ cups</span> flour</li>
+              <li><span class="amt">1 packet</span> yeast</li>
+              <li><span class="amt">1 cup</span> warm milk</li>
+              <li><span class="amt">3 tbsp</span> butter (dough)</li>
+              <li><span class="amt">1</span> small cabbage, shredded</li>
+              <li><span class="amt">4 tbsp</span> butter (filling)</li>
+              <li><span class="amt">3</span> hard-boiled eggs, chopped</li>
+              <li><span class="amt">1</span> egg, beaten (glaze)</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Make a soft yeast dough with flour, yeast, milk, and butter; let rise until doubled.</li>
+              <li>Braise the cabbage in butter until soft and golden; cool and fold in the chopped egg.</li>
+              <li>Roll two-thirds of the dough into a base, add the filling, and cover with the remaining dough; seal and glaze.</li>
+              <li>Bake at 375°F (190°C) for 35–40 minutes until deep gold.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('russian-cabbage-pirog')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="galaktoboureko">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E8D9A0;--crustdark:#C9B26C;--filling:#F1E3B8"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Galaktoboureko</h3><span class="recipe-tag sweet">Sweet · Greece</span></div>
+        </div>
+        <p class="recipe-blurb">A Greek custard pie: semolina custard wrapped in crisp, butter-brushed phyllo, then soaked in citrus-scented syrup while still hot. The name roughly means "milk pastry."</p>
+        <div class="meta-row"><span class="m">Serves 12</span><span class="m">Prep 40 min</span><span class="m">Bake 45 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">4 cups</span> milk</li>
+              <li><span class="amt">¾ cup</span> fine semolina</li>
+              <li><span class="amt">¾ cup</span> sugar (custard)</li>
+              <li><span class="amt">4</span> eggs</li>
+              <li><span class="amt">1 package</span> phyllo dough</li>
+              <li><span class="amt">¾ cup</span> butter, melted</li>
+              <li><span class="amt">1½ cups</span> sugar + 1 cup water + lemon (syrup)</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Heat milk, whisk in semolina and sugar until thick; off heat, beat in eggs. Cool slightly.</li>
+              <li>Layer half the phyllo in a buttered dish, brushing each sheet; add custard, then top with remaining buttered phyllo.</li>
+              <li>Score into pieces and bake at 350°F (175°C) for 40–45 minutes until golden.</li>
+              <li>Boil the syrup ingredients and pour over the hot pie; let it soak and cool before serving.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('galaktoboureko')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="yorkshire-curd-tart">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#F1E7C9;--center:#C9A24A"><use href="#pie-tart"/></svg>
+          <div class="recipe-title-wrap"><h3>Yorkshire Curd Tart</h3><span class="recipe-tag sweet">Sweet · Yorkshire, England</span></div>
+        </div>
+        <p class="recipe-blurb">A shortcrust tart filled with curd cheese, currants, sugar, and nutmeg. Historically made at Whitsuntide fairs with <em>beestings</em> — the rich first milk of a newly calved cow — with curd cheese as the modern stand-in.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 20 min</span><span class="m">Bake 35 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1</span> single shortcrust pastry shell</li>
+              <li><span class="amt">1½ cups</span> curd cheese (or ricotta)</li>
+              <li><span class="amt">⅓ cup</span> sugar</li>
+              <li><span class="amt">3 tbsp</span> butter, melted</li>
+              <li><span class="amt">2</span> eggs</li>
+              <li><span class="amt">½ cup</span> currants</li>
+              <li><span class="amt">½ tsp</span> nutmeg</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Beat curd cheese with sugar, melted butter, and eggs until smooth.</li>
+              <li>Stir in the currants and nutmeg.</li>
+              <li>Pour into the pastry shell.</li>
+              <li>Bake at 350°F (175°C) for 30–35 minutes until set and lightly golden. Serve warm or cold.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('yorkshire-curd-tart')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="gypsy-tart">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#B0824E;--center:#8C5A2E"><use href="#pie-tart"/></svg>
+          <div class="recipe-title-wrap"><h3>Gypsy Tart</h3><span class="recipe-tag sweet">Sweet · Kent, England</span></div>
+        </div>
+        <p class="recipe-blurb">Just two ingredients in the filling — evaporated milk and dark muscovado sugar, whipped until light and baked into a deep caramel. A Kentish classic and a fixture of British school dinners from the 1960s to the 1980s.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 15 min</span><span class="m">Bake 12 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1</span> single shortcrust pastry shell, blind-baked</li>
+              <li><span class="amt">1 can (12 oz)</span> evaporated milk, chilled</li>
+              <li><span class="amt">1⅓ cups</span> dark muscovado sugar</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Whisk the chilled evaporated milk and muscovado sugar together on high speed for a full 10–12 minutes, until thick, fluffy, and light coffee-colored.</li>
+              <li>Pour into the blind-baked pastry shell.</li>
+              <li>Bake at 400°F (200°C) for just 10–12 minutes — it should still look slightly wobbly and sticky.</li>
+              <li>Cool completely; the filling sets to a soft fudge as it stands.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('gypsy-tart')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="flamiche">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E8C77A;--crustdark:#B97F3A;--filling:#9CB06E"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Flamiche aux Poireaux</h3><span class="recipe-tag">Savory · Picardy, France</span></div>
+        </div>
+        <p class="recipe-blurb">A leek pie from the Picardy region of northern France (and neighboring Belgium): sweet, slow-cooked leeks bound in a light cream-and-egg custard, in a savory pastry shell — a rustic cousin of quiche.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 30 min</span><span class="m">Bake 35 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">4</span> large leeks, sliced</li>
+              <li><span class="amt">4 tbsp</span> butter</li>
+              <li><span class="amt">3</span> eggs</li>
+              <li><span class="amt">1 cup</span> crème fraîche or heavy cream</li>
+              <li><span class="amt">¼ tsp</span> nutmeg</li>
+              <li><span class="amt">1</span> single pie crust, blind-baked</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Sweat the leeks gently in butter 15–20 minutes until meltingly soft, without browning; cool.</li>
+              <li>Whisk eggs, cream, nutmeg, salt, and pepper, then stir in the leeks.</li>
+              <li>Pour into the blind-baked crust.</li>
+              <li>Bake at 375°F (190°C) for 30–35 minutes until set and golden. Serve warm.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('flamiche')">🖶 Print recipe</button></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+<div class="lattice-divider"></div>
+
+<section class="section" id="states">
+  <div class="wrap">
+    <div class="subsection-head"><h2>All 50 states</h2><span class="tally">51 entries</span></div>
+    <p class="subsection-blurb">Every state, matched to a pie — its official state pie or dessert where one has actually been legislated, otherwise the pie it's most genuinely known for. A few states' "official dessert" isn't a pie at all (Wisconsin's kringle, Wyoming's cowboy cookies, Utah's Jell-O) — we've noted that honestly and given the best pie candidate instead. Fourteen states get a full recipe below; the rest link out to a recipe already living elsewhere on the site.</p>
+
+    <div class="region-label">Northeast</div>
+    <div class="state-grid">
+      <div class="state-item" id="state-CT"><span class="state-name">Connecticut</span><span class="state-pie">Pumpkin Pie</span><span class="state-note">The "Nutmeg State" has baked pumpkin since the Pilgrims; one town postponed Thanksgiving 1705 for lack of molasses to make enough.</span></div>
+      <div class="state-item" id="state-ME"><span class="state-name">Maine</span><span class="state-pie">Wild Blueberry Pie</span><span class="state-note">Official state dessert, from the low-bush blueberries Maine grows more of than anywhere else.</span><a class="state-link" href="sweet.html#blueberry-pie">Get the recipe →</a></div>
+      <div class="state-item" id="state-MA"><span class="state-name">Massachusetts</span><span class="state-pie">Boston Cream Pie</span><span class="state-note">Official state dessert; technically a cake, invented at the Parker House in 1856.</span><a class="state-link" href="regional.html#boston-cream-pie">Get the recipe →</a></div>
+      <div class="state-item" id="state-NH"><span class="state-name">New Hampshire</span><span class="state-pie">Maple Pie</span><span class="state-note">Built on New England's oldest sweetener, tapped and boiled from sugar maples every spring.</span><a class="state-link" href="#nh-maple-pie">Get the recipe ↓</a></div>
+      <div class="state-item" id="state-NJ"><span class="state-name">New Jersey</span><span class="state-pie">Jersey Tomato Pie</span><span class="state-note">Sweet-savory, built on the Garden State's famously good summer tomatoes.</span><a class="state-link" href="#nj-tomato-pie">Get the recipe ↓</a></div>
+      <div class="state-item" id="state-NY"><span class="state-name">New York</span><span class="state-pie">Concord Grape Pie</span><span class="state-note">From the Finger Lakes' grape country — deep purple, intensely grapey.</span><a class="state-link" href="regional.html#concord-grape-pie">Get the recipe →</a></div>
+      <div class="state-item" id="state-PA"><span class="state-name">Pennsylvania</span><span class="state-pie">Shoofly Pie</span><span class="state-note">Official state dessert territory: a Pennsylvania Dutch molasses pie from Lancaster County, c. 1876.</span><a class="state-link" href="sweet.html#shoofly-pie">Get the recipe →</a></div>
+      <div class="state-item" id="state-RI"><span class="state-name">Rhode Island</span><span class="state-pie">Ricotta Pie</span><span class="state-note">An Italian-American Easter tradition from Providence's large Italian community.</span><a class="state-link" href="#ri-ricotta-pie">Get the recipe ↓</a></div>
+      <div class="state-item" id="state-VT"><span class="state-name">Vermont</span><span class="state-pie">Apple Pie (with cheddar)</span><span class="state-note">Genuinely Vermont's official state pie — served the New England way, with a slice of sharp cheddar.</span><a class="state-link" href="#vt-cheddar-apple-pie">Get the recipe ↓</a></div>
+    </div>
+
+    <div class="region-label">South</div>
+    <div class="state-grid">
+      <div class="state-item" id="state-AL"><span class="state-name">Alabama</span><span class="state-pie">Buttermilk Pie</span><span class="state-note">The official dessert is Lane Cake, but Alabama's pie safes run on tangy buttermilk custard.</span></div>
+      <div class="state-item" id="state-AR"><span class="state-name">Arkansas</span><span class="state-pie">Possum Pie</span><span class="state-note">No possum involved — a whipped-cream layer "plays possum," hiding chocolate and cream cheese underneath.</span><a class="state-link" href="#ar-possum-pie">Get the recipe ↓</a></div>
+      <div class="state-item" id="state-DE"><span class="state-name">Delaware</span><span class="state-pie">Peach Pie</span><span class="state-note">Official state dessert since 2009 — Delaware was the country's top peach producer in the 1870s.</span></div>
+      <div class="state-item" id="state-FL"><span class="state-name">Florida</span><span class="state-pie">Key Lime Pie</span><span class="state-note">Official state dessert since 2006 — tart Key limes on a graham crust.</span><a class="state-link" href="sweet.html#key-lime-pie">Get the recipe →</a></div>
+      <div class="state-item" id="state-GA"><span class="state-name">Georgia</span><span class="state-pie">Peach Pie</span><span class="state-note">The Peach State's obvious choice, though sweet potato pie has just as strong a claim in Atlanta's soul-food kitchens.</span></div>
+      <div class="state-item" id="state-KY"><span class="state-name">Kentucky</span><span class="state-pie">Chocolate-Walnut (Derby) Pie</span><span class="state-note">Bourbon-spiked and famous at Derby time; the trademarked name belongs to one Louisville family.</span><a class="state-link" href="regional.html#derby-style-pie">Get the recipe →</a></div>
+      <div class="state-item" id="state-LA"><span class="state-name">Louisiana</span><span class="state-pie">Natchitoches Meat Pie</span><span class="state-note">Louisiana's official state meat pie — spiced beef and pork in a crimped hand pie.</span><a class="state-link" href="regional.html#natchitoches-meat-pie">Get the recipe →</a></div>
+      <div class="state-item" id="state-MD"><span class="state-name">Maryland</span><span class="state-pie">Chesapeake Crab Pie</span><span class="state-note">Savory, built on Maryland blue crab — the state's most defining ingredient.</span><a class="state-link" href="#md-crab-pie">Get the recipe ↓</a></div>
+      <div class="state-item" id="state-MS"><span class="state-name">Mississippi</span><span class="state-pie">Mississippi Mud Pie</span><span class="state-note">Chocolate on chocolate, named for the river's dark banks.</span><a class="state-link" href="regional.html#mississippi-mud-pie">Get the recipe →</a></div>
+      <div class="state-item" id="state-NC"><span class="state-name">North Carolina</span><span class="state-pie">Sweet Potato Pie</span><span class="state-note">NC has led the nation in sweet potato production for decades.</span><a class="state-link" href="#nc-sweet-potato-pie">Get the recipe ↓</a></div>
+      <div class="state-item" id="state-OK"><span class="state-name">Oklahoma</span><span class="state-pie">Fried Pies</span><span class="state-note">Hand-held half-moon pies fried over open campfires by Arbuckle Mountains ranchers since the late 1800s.</span><a class="state-link" href="#ok-fried-pies">Get the recipe ↓</a></div>
+      <div class="state-item" id="state-SC"><span class="state-name">South Carolina</span><span class="state-pie">Coconut Cream Pie</span><span class="state-note">A Southern classic, toasted coconut folded through vanilla custard.</span><a class="state-link" href="sweet.html#coconut-cream-pie">Get the recipe →</a></div>
+      <div class="state-item" id="state-TN"><span class="state-name">Tennessee</span><span class="state-pie">Jack Daniel's Chocolate Pecan Pie</span><span class="state-note">Chocolate, pecans, and a shot of the state's famous Lynchburg whiskey.</span><a class="state-link" href="#tn-jack-daniels-pie">Get the recipe ↓</a></div>
+      <div class="state-item" id="state-TX"><span class="state-name">Texas</span><span class="state-pie">Pecan Pie</span><span class="state-note">Made the official state pie by the Texas Legislature in 2013; pecan is also the state's official nut.</span><a class="state-link" href="#tx-pecan-pie">Get the recipe ↓</a></div>
+      <div class="state-item" id="state-VA"><span class="state-name">Virginia</span><span class="state-pie">Chess Pie</span><span class="state-note">Traces to an 1824 recipe titled "transparent pudding" in Mary Randolph's <em>The Virginia Housewife</em> — one of the earliest chess pie recipes in print.</span><a class="state-link" href="sweet.html#chess-pie">Get the recipe →</a></div>
+      <div class="state-item" id="state-WV"><span class="state-name">West Virginia</span><span class="state-pie">Vinegar Pie</span><span class="state-note">Appalachian "desperation pie" — apple cider vinegar mimicking lemon when citrus wasn't available.</span><a class="state-link" href="historical.html#desperation-vinegar-pie">Get the recipe →</a></div>
+      <div class="state-item" id="state-DC"><span class="state-name">Washington, D.C.</span><span class="state-pie">Cherry Pie</span><span class="state-note">Cherries have been D.C.'s official fruit since 2006, honoring the National Cherry Blossom Festival.</span><a class="state-link" href="#dc-cherry-pie">Get the recipe ↓</a></div>
+    </div>
+
+    <div class="region-label">Midwest</div>
+    <div class="state-grid">
+      <div class="state-item" id="state-IL"><span class="state-name">Illinois</span><span class="state-pie">Pumpkin Pie</span><span class="state-note">Official state pie since 2015 — Illinois grows roughly 85% of the pumpkin canned in America.</span></div>
+      <div class="state-item" id="state-IN"><span class="state-name">Indiana</span><span class="state-pie">Sugar Cream (Hoosier) Pie</span><span class="state-note">Official state pie since 2009, an eggless cream custard from Quaker and Amish settlers.</span><a class="state-link" href="historical.html#sugar-cream-pie">Get the recipe →</a></div>
+      <div class="state-item" id="state-IA"><span class="state-name">Iowa</span><span class="state-pie">Sour Cream Raisin Pie</span><span class="state-note">A tangy meringue-topped custard, a fixture at Iowa State Fair baking contests.</span><a class="state-link" href="regional.html#sour-cream-raisin-pie">Get the recipe →</a></div>
+      <div class="state-item" id="state-KS"><span class="state-name">Kansas</span><span class="state-pie">Custard Pie</span><span class="state-note">A no-frills, quality-ingredients-only classic that fits Kansas's plainspoken pie reputation.</span></div>
+      <div class="state-item" id="state-MI"><span class="state-name">Michigan</span><span class="state-pie">Cherry Pie</span><span class="state-note">Michigan is a top U.S. producer of tart cherries, especially around Traverse City.</span><a class="state-link" href="sweet.html#cherry-pie">Get the recipe →</a></div>
+      <div class="state-item" id="state-MN"><span class="state-name">Minnesota</span><span class="state-pie">Banana Cream Pie</span><span class="state-note">The first recorded American banana pie recipe appeared in an 1880 Minneapolis cookbook, <em>Buckeye Cookery</em>.</span><a class="state-link" href="sweet.html#banana-cream-pie">Get the recipe →</a></div>
+      <div class="state-item" id="state-MO"><span class="state-name">Missouri</span><span class="state-pie">Battleship Missouri Pie</span><span class="state-note">A custard pie named for the USS Missouri, once served to President Truman by his steward.</span><a class="state-link" href="#mo-battleship-pie">Get the recipe ↓</a></div>
+      <div class="state-item" id="state-NE"><span class="state-name">Nebraska</span><span class="state-pie">Tin Roof Sundae Pie</span><span class="state-note">A frozen ice-cream pie riffing on the classic sundae, with fudge and peanuts.</span><a class="state-link" href="#ne-tin-roof-pie">Get the recipe ↓</a></div>
+      <div class="state-item" id="state-ND"><span class="state-name">North Dakota</span><span class="state-pie">Chokecherry Pie</span><span class="state-note">Chokecherry is North Dakota's official state fruit, celebrated at Williston's annual festival.</span></div>
+      <div class="state-item" id="state-OH"><span class="state-name">Ohio</span><span class="state-pie">Buckeye Pie</span><span class="state-note">Chocolate and peanut butter, echoing the candy named for the state's official tree.</span><a class="state-link" href="#oh-buckeye-pie">Get the recipe ↓</a></div>
+      <div class="state-item" id="state-SD"><span class="state-name">South Dakota</span><span class="state-pie">Kuchen</span><span class="state-note">German for "cake," but a custard-and-fruit pastry in practice — official state dessert since 2000.</span><a class="state-link" href="#sd-kuchen">Get the recipe ↓</a></div>
+      <div class="state-item" id="state-WI"><span class="state-name">Wisconsin</span><span class="state-pie">Cranberry Pie</span><span class="state-note">Cranberry has been Wisconsin's official state fruit since 2003; the state leads the nation in cranberry production.</span><a class="state-link" href="#wi-cranberry-pie">Get the recipe ↓</a></div>
+    </div>
+
+    <div class="region-label">West</div>
+    <div class="state-grid">
+      <div class="state-item" id="state-AK"><span class="state-name">Alaska</span><span class="state-pie">Wild Berry Pie</span><span class="state-note">Blueberries, salmonberries, and crowberries foraged in a short, intense arctic growing season.</span><a class="state-link" href="#ak-wild-berry-pie">Get the recipe ↓</a></div>
+      <div class="state-item" id="state-AZ"><span class="state-name">Arizona</span><span class="state-pie">Prickly Pear Pie</span><span class="state-note">Made from the magenta fruit of the desert prickly pear cactus, spines carefully removed.</span><a class="state-link" href="#az-prickly-pear-pie">Get the recipe ↓</a></div>
+      <div class="state-item" id="state-CA"><span class="state-name">California</span><span class="state-pie">Boysenberry Pie</span><span class="state-note">The boysenberry was cross-bred in Southern California and popularized by Walter Knott — of Knott's Berry Farm.</span><a class="state-link" href="#ca-boysenberry-pie">Get the recipe ↓</a></div>
+      <div class="state-item" id="state-CO"><span class="state-name">Colorado</span><span class="state-pie">Palisade Peach Pie</span><span class="state-note">Colorado's Western Slope, especially Palisade, produces some of the country's most prized peaches.</span></div>
+      <div class="state-item" id="state-HI"><span class="state-name">Hawaii</span><span class="state-pie">Haupia Pie</span><span class="state-note">Chocolate pudding pie layered with haupia, a traditional Hawaiian coconut milk pudding.</span><a class="state-link" href="#hi-haupia-pie">Get the recipe ↓</a></div>
+      <div class="state-item" id="state-ID"><span class="state-name">Idaho</span><span class="state-pie">Huckleberry Pie</span><span class="state-note">Huckleberry has been Idaho's state fruit since 2000 and its official pie since 2018.</span></div>
+      <div class="state-item" id="state-MT"><span class="state-name">Montana</span><span class="state-pie">Huckleberry Pie</span><span class="state-note">Wild-foraged in the mountains of Big Sky Country — nearly impossible to farm commercially.</span><a class="state-link" href="regional.html#huckleberry-pie">Get the recipe →</a></div>
+      <div class="state-item" id="state-NV"><span class="state-name">Nevada</span><span class="state-pie">Basque Cake Pie</span><span class="state-note">A tart-like pastry from Nevada's long-established Basque immigrant community.</span><a class="state-link" href="#nv-basque-cake-pie">Get the recipe ↓</a></div>
+      <div class="state-item" id="state-NM"><span class="state-name">New Mexico</span><span class="state-pie">Green Chile Apple Pie</span><span class="state-note">Classic apple pie with a jolt of roasted Hatch green chile — sweet heat, New Mexico-style.</span><a class="state-link" href="#nm-green-chile-apple-pie">Get the recipe ↓</a></div>
+      <div class="state-item" id="state-OR"><span class="state-name">Oregon</span><span class="state-pie">Marionberry Pie</span><span class="state-note">Oregon's official state pie since 2017; the berry is a cross bred at Oregon State University.</span><a class="state-link" href="regional.html#marionberry-pie">Get the recipe →</a></div>
+      <div class="state-item" id="state-UT"><span class="state-name">Utah</span><span class="state-pie">Razzleberry Pie</span><span class="state-note">A cheerful mixed-berry pie (raspberry plus whatever else is on hand) — Utah's favorite by search trends.</span></div>
+      <div class="state-item" id="state-WA"><span class="state-name">Washington</span><span class="state-pie">Apple Pie</span><span class="state-note">The nation's top apple-producing state, unsurprisingly devoted to the classic.</span><a class="state-link" href="sweet.html#apple-pie">Get the recipe →</a></div>
+      <div class="state-item" id="state-WY"><span class="state-name">Wyoming</span><span class="state-pie">Rhubarb Pie</span><span class="state-note">Wild rhubarb thrives around Jackson Hole and Sheridan — often paired with strawberry or raspberry.</span></div>
+    </div>
+
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    <div class="subsection-head"><h2>Twenty-two more, in full</h2><span class="tally">22 recipes</span></div>
+    <p class="subsection-blurb">The states from the grid above that don't yet have a recipe anywhere else on the site — each one baked out in full.</p>
+    <div class="recipe-grid">
+
+      <article class="recipe-card" id="nh-maple-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#A85A1E"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>New Hampshire Maple Pie</h3><span class="recipe-tag sweet">Sweet · New Hampshire</span></div>
+        </div>
+        <p class="recipe-blurb">A single-crust custard built entirely on real maple syrup — New England's oldest sweetener, tapped from sugar maples every March using a method colonists learned from Indigenous communities.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 15 min</span><span class="m">Bake 40 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1¼ cups</span> pure maple syrup</li>
+              <li><span class="amt">3 tbsp</span> flour</li>
+              <li><span class="amt">3</span> eggs</li>
+              <li><span class="amt">4 tbsp</span> butter, melted</li>
+              <li><span class="amt">½ cup</span> chopped walnuts (optional)</li>
+              <li><span class="amt">1</span> single pie crust</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Whisk maple syrup and flour, then beat in eggs and melted butter.</li>
+              <li>Scatter walnuts in the crust, if using, and pour in the filling.</li>
+              <li>Bake at 375°F (190°C) for 35–40 minutes until puffed and set with a slight wobble.</li>
+              <li>Cool at least an hour before slicing — the filling firms as it cools.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('nh-maple-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="nj-tomato-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E8C77A;--crustdark:#B97F3A;--filling:#B5432E"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Jersey Tomato Pie</h3><span class="recipe-tag">Savory-sweet · New Jersey</span></div>
+        </div>
+        <p class="recipe-blurb">A summer showcase for the Garden State's famously sweet, sun-ripened tomatoes: sliced thick over a mustard-and-mayo base, baked until just set, with a crumb topping that keeps it somewhere between a pie and a tart.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 20 min</span><span class="m">Bake 40 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">4</span> ripe Jersey tomatoes, thickly sliced</li>
+              <li><span class="amt">1 tsp</span> salt (to drain tomatoes)</li>
+              <li><span class="amt">¼ cup</span> mayonnaise</li>
+              <li><span class="amt">1 tbsp</span> Dijon mustard</li>
+              <li><span class="amt">1 cup</span> shredded cheddar</li>
+              <li><span class="amt">2 tbsp</span> fresh basil, chopped</li>
+              <li><span class="amt">1</span> single pie crust, blind-baked</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Salt the tomato slices and drain on paper towels for 15 minutes.</li>
+              <li>Spread mayonnaise and mustard over the blind-baked crust.</li>
+              <li>Layer in the tomatoes, scatter with cheddar and basil.</li>
+              <li>Bake at 375°F (190°C) for 35–40 minutes until the cheese is bubbling and golden. Cool slightly before slicing.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('nj-tomato-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="ri-ricotta-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#F3E7C9;--center:#E8C24E"><use href="#pie-tart"/></svg>
+          <div class="recipe-title-wrap"><h3>Rhode Island Ricotta Pie</h3><span class="recipe-tag sweet">Sweet · Rhode Island</span></div>
+        </div>
+        <p class="recipe-blurb">A cheesecake-like Easter tradition from Providence's large Italian-American community — sweet ricotta, citrus zest, and a hint of cinnamon in a shortcrust shell.</p>
+        <div class="meta-row"><span class="m">Serves 10</span><span class="m">Prep 20 min</span><span class="m">Bake 50 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">2 lb</span> whole-milk ricotta</li>
+              <li><span class="amt">1 cup</span> sugar</li>
+              <li><span class="amt">4</span> eggs</li>
+              <li><span class="amt">2 tbsp</span> flour</li>
+              <li><span class="amt">1</span> lemon &amp; 1 orange, zested</li>
+              <li><span class="amt">½ tsp</span> cinnamon</li>
+              <li><span class="amt">1</span> single pie crust</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Beat ricotta with sugar until smooth; beat in eggs one at a time, then flour, zests, and cinnamon.</li>
+              <li>Pour into the crust.</li>
+              <li>Bake at 350°F (175°C) for 45–50 minutes until set with a slight jiggle.</li>
+              <li>Cool completely, then chill before slicing.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('ri-ricotta-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="vt-cheddar-apple-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#D98A3D"><use href="#pie-lattice"/></svg>
+          <div class="recipe-title-wrap"><h3>Vermont Apple Pie with Cheddar</h3><span class="recipe-tag sweet">Sweet · Vermont</span></div>
+        </div>
+        <p class="recipe-blurb">Vermont's genuinely official state pie — a classic double-crust apple pie, served the New England way, with a slice of sharp cheddar melting into each warm piece. As the old rhyme goes, apple pie without cheese is like a kiss without a squeeze.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 30 min</span><span class="m">Bake 50 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">6–7</span> Vermont apples, peeled, sliced</li>
+              <li><span class="amt">¾ cup</span> sugar</li>
+              <li><span class="amt">2 tbsp</span> flour</li>
+              <li><span class="amt">1 tsp</span> cinnamon</li>
+              <li><span class="amt">2</span> double pie crusts</li>
+              <li><span class="amt">8 oz</span> sharp Vermont cheddar, sliced, to serve</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Toss apples with sugar, flour, and cinnamon.</li>
+              <li>Fill a crust-lined dish, top with a second crust, seal, and vent.</li>
+              <li>Bake at 400°F (200°C) for 20 minutes, then reduce to 375°F (190°C) for 25–30 minutes more.</li>
+              <li>Serve warm with a slice of sharp cheddar laid right on top of each piece.</li>
+            </ol>
+          </div>
+        </div>
+        <p class="recipe-note"><b>Fact check:</b> Vermont has formally designated apple pie its official state pie — one of the few states where "state pie" isn't an informal title.</p>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('vt-cheddar-apple-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="ar-possum-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#8C5A2E;--crustdark:#5C3A1E;--filling:#5C3A28;--topping:#FBF3E7"><use href="#pie-slice"/></svg>
+          <div class="recipe-title-wrap"><h3>Arkansas Possum Pie</h3><span class="recipe-tag sweet">Sweet · Arkansas</span></div>
+        </div>
+        <p class="recipe-blurb">No possum anywhere near it — the name comes from "playing possum," since a thick layer of whipped cream hides the rich chocolate and cream cheese layers underneath. A pecan crust and toasted pecans finish it off.</p>
+        <div class="meta-row"><span class="m">Serves 10</span><span class="m">Prep 30 min</span><span class="m">Chill 4 hr</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1</span> single pecan shortcrust shell, baked</li>
+              <li><span class="amt">8 oz</span> cream cheese, softened</li>
+              <li><span class="amt">1 cup</span> powdered sugar</li>
+              <li><span class="amt">2 cups</span> chocolate pudding</li>
+              <li><span class="amt">2 cups</span> whipped cream, divided</li>
+              <li><span class="amt">½ cup</span> toasted pecans, chopped</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Beat cream cheese with powdered sugar and fold in 1 cup whipped cream; spread over the baked crust.</li>
+              <li>Spread the chocolate pudding over the cream cheese layer.</li>
+              <li>Top with the remaining whipped cream, sealing to the edges.</li>
+              <li>Chill at least 4 hours; scatter with toasted pecans before serving.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('ar-possum-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="md-crab-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E8C77A;--crustdark:#B97F3A;--filling:#C97A4A"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Chesapeake Crab Pie</h3><span class="recipe-tag">Savory · Maryland</span></div>
+        </div>
+        <p class="recipe-blurb">Maryland's signature blue crab, lightly bound with egg and a touch of Old Bay, baked in a single crust — a dressier, sliceable cousin of the crab cake.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 20 min</span><span class="m">Bake 35 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1 lb</span> lump crabmeat</li>
+              <li><span class="amt">4</span> eggs</li>
+              <li><span class="amt">1 cup</span> heavy cream</li>
+              <li><span class="amt">1½ tsp</span> Old Bay seasoning</li>
+              <li><span class="amt">2</span> scallions, chopped</li>
+              <li><span class="amt">1 cup</span> shredded gruyère or cheddar</li>
+              <li><span class="amt">1</span> single pie crust, blind-baked</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Whisk eggs, cream, and Old Bay together.</li>
+              <li>Scatter crabmeat, scallions, and half the cheese in the blind-baked crust.</li>
+              <li>Pour the egg mixture over and top with the remaining cheese.</li>
+              <li>Bake at 350°F (175°C) for 30–35 minutes until puffed and set. Cool 10 minutes before slicing.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('md-crab-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="nc-sweet-potato-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#D97B3D"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>North Carolina Sweet Potato Pie</h3><span class="recipe-tag sweet">Sweet · North Carolina</span></div>
+        </div>
+        <p class="recipe-blurb">North Carolina has led the country in sweet potato production for decades, and its version of this Southern staple leans on brown sugar and warm spice rather than the corn syrup shortcuts some recipes use.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 20 min</span><span class="m">Bake 50 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">2 cups</span> mashed cooked North Carolina sweet potato</li>
+              <li><span class="amt">⅔ cup</span> brown sugar</li>
+              <li><span class="amt">½ cup</span> evaporated milk</li>
+              <li><span class="amt">2</span> eggs</li>
+              <li><span class="amt">4 tbsp</span> butter, melted</li>
+              <li><span class="amt">1 tsp</span> cinnamon, ½ tsp nutmeg</li>
+              <li><span class="amt">1</span> single pie crust</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Beat sweet potato with brown sugar, milk, eggs, butter, cinnamon, and nutmeg until smooth.</li>
+              <li>Pour into an unbaked crust.</li>
+              <li>Bake at 350°F (175°C) for 45–50 minutes until set with a slight jiggle at the center.</li>
+              <li>Cool before slicing; good with whipped cream.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('nc-sweet-potato-pie')">🖶 Print recipe</button></div>
+      </article>
+
+<article class="recipe-card" id="ok-fried-pies">
+  <div class="recipe-top">
+    <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#C9962C;--crustdark:#8C5A2E;--filling:#A8324A"><use href="#pie-hand"/></svg>
+    <div class="recipe-title-wrap"><h3>Oklahoma Fried Pies</h3><span class="recipe-tag sweet">Sweet · Oklahoma</span></div>
+  </div>
+  <p class="recipe-blurb">Hand-held, deep-fried half-moon pies filled with fruit, born in the Arbuckle Mountains where ranchers fried them over open campfires. Still sold at truck stops and roadside stands across the state.</p>
+  <div class="meta-row"><span class="m">Makes 8</span><span class="m">Prep 30 min</span><span class="m">Fry 4 min each</span></div>
+  <div class="recipe-body">
+    <div><h4>Ingredients</h4>
+      <ul class="ingredients">
+        <li><span class="amt">2 cups</span> dried apples or peaches, chopped</li>
+        <li><span class="amt">⅓ cup</span> sugar</li>
+        <li><span class="amt">1 tsp</span> cinnamon</li>
+        <li><span class="amt">2</span> double pie crusts, cut into 8 circles</li>
+        <li><span class="amt">3 cups</span> oil, for frying</li>
+      </ul>
+    </div>
+    <div><h4>Method</h4>
+      <ol class="steps">
+        <li>Simmer dried fruit in water to cover until soft, drain, then mash with sugar and cinnamon.</li>
+        <li>Spoon filling onto half of each dough circle, fold over, and crimp the edge tightly with a fork.</li>
+        <li>Fry in 350°F (175°C) oil, 2 minutes per side, until deep golden.</li>
+        <li>Drain on paper towels and cool slightly before eating.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="card-actions"><button class="print-btn" onclick="printRecipe('ok-fried-pies')">🖶 Print recipe</button></div>
+</article>
+
+<article class="recipe-card" id="tn-jack-daniels-pie">
+  <div class="recipe-top">
+    <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#B97F3A;--crustdark:#6B3F2A;--filling:#3A2818"><use href="#pie-solid"/></svg>
+    <div class="recipe-title-wrap"><h3>Tennessee Chocolate Pecan Pie</h3><span class="recipe-tag sweet">Sweet · Tennessee</span></div>
+  </div>
+  <p class="recipe-blurb">A Lynchburg specialty: chocolate chips and pecans in a rich corn-syrup filling, given a shot of Tennessee whiskey — a boozier cousin of pecan pie that trades on the state's most famous export.</p>
+  <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 15 min</span><span class="m">Bake 50 min</span></div>
+  <div class="recipe-body">
+    <div><h4>Ingredients</h4>
+      <ul class="ingredients">
+        <li><span class="amt">1 cup</span> corn syrup</li>
+        <li><span class="amt">½ cup</span> sugar</li>
+        <li><span class="amt">3</span> eggs</li>
+        <li><span class="amt">3 tbsp</span> Tennessee whiskey</li>
+        <li><span class="amt">3 tbsp</span> butter, melted</li>
+        <li><span class="amt">1 cup</span> pecan halves</li>
+        <li><span class="amt">¾ cup</span> chocolate chips</li>
+        <li><span class="amt">1</span> single pie crust</li>
+      </ul>
+    </div>
+    <div><h4>Method</h4>
+      <ol class="steps">
+        <li>Whisk corn syrup, sugar, eggs, whiskey, and melted butter until smooth.</li>
+        <li>Scatter pecans and chocolate chips in the crust, then pour the filling over.</li>
+        <li>Bake at 350°F (175°C) for 45–50 minutes until set with a slight jiggle.</li>
+        <li>Cool at least 2 hours before slicing.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="card-actions"><button class="print-btn" onclick="printRecipe('tn-jack-daniels-pie')">🖶 Print recipe</button></div>
+</article>
+
+<article class="recipe-card" id="tx-pecan-pie">
+  <div class="recipe-top">
+    <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#B97F3A;--crustdark:#8C5A2E;--filling:#6B3F2A"><use href="#pie-solid"/></svg>
+    <div class="recipe-title-wrap"><h3>Texas Pecan Pie</h3><span class="recipe-tag sweet">Sweet · Texas</span></div>
+  </div>
+  <p class="recipe-blurb">Named the official state pie of Texas by the legislature in 2013 — fitting, since the pecan is also the state's official tree and nut, and pecan trees grow commercially on roughly 70,000 acres across the state.</p>
+  <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 15 min</span><span class="m">Bake 50 min</span></div>
+  <div class="recipe-body">
+    <div><h4>Ingredients</h4>
+      <ul class="ingredients">
+        <li><span class="amt">1 cup</span> corn syrup</li>
+        <li><span class="amt">¾ cup</span> brown sugar</li>
+        <li><span class="amt">3</span> eggs</li>
+        <li><span class="amt">3 tbsp</span> butter, melted</li>
+        <li><span class="amt">1 tsp</span> vanilla</li>
+        <li><span class="amt">1½ cups</span> Texas pecan halves</li>
+        <li><span class="amt">1</span> single pie crust</li>
+      </ul>
+    </div>
+    <div><h4>Method</h4>
+      <ol class="steps">
+        <li>Whisk corn syrup, brown sugar, eggs, melted butter, and vanilla until smooth.</li>
+        <li>Arrange pecans in the crust and pour the filling over.</li>
+        <li>Bake at 350°F (175°C) for 45–50 minutes until set with a slight center jiggle.</li>
+        <li>Cool at least 2 hours before slicing.</li>
+      </ol>
+    </div>
+  </div>
+  <p class="recipe-note"><b>Fact check:</b> House Concurrent Resolution 32 named pecan pie the official state pie of Texas in 2013.</p>
+  <div class="card-actions"><button class="print-btn" onclick="printRecipe('tx-pecan-pie')">🖶 Print recipe</button></div>
+</article>
+
+<article class="recipe-card" id="dc-cherry-pie">
+  <div class="recipe-top">
+    <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#A8324A"><use href="#pie-lattice"/></svg>
+    <div class="recipe-title-wrap"><h3>Washington, D.C. Cherry Pie</h3><span class="recipe-tag sweet">Sweet · Washington, D.C.</span></div>
+  </div>
+  <p class="recipe-blurb">The cherry has been D.C.'s official fruit since 2006, honoring the National Cherry Blossom Festival — born from a 1912 gift of 3,000 cherry trees from the mayor of Tokyo.</p>
+  <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 25 min</span><span class="m">Bake 50 min</span></div>
+  <div class="recipe-body">
+    <div><h4>Ingredients</h4>
+      <ul class="ingredients">
+        <li><span class="amt">5 cups</span> pitted sour cherries</li>
+        <li><span class="amt">1 cup</span> sugar</li>
+        <li><span class="amt">3 tbsp</span> cornstarch</li>
+        <li><span class="amt">1 tbsp</span> lemon juice</li>
+        <li><span class="amt">2</span> double pie crusts</li>
+      </ul>
+    </div>
+    <div><h4>Method</h4>
+      <ol class="steps">
+        <li>Toss cherries with sugar, cornstarch, and lemon juice; rest 15 minutes.</li>
+        <li>Fill a crust-lined dish and top with a lattice.</li>
+        <li>Bake at 400°F (200°C) for 45–50 minutes until thickly bubbling.</li>
+        <li>Cool at least 3 hours before slicing.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="card-actions"><button class="print-btn" onclick="printRecipe('dc-cherry-pie')">🖶 Print recipe</button></div>
+</article>
+
+<article class="recipe-card" id="mo-battleship-pie">
+  <div class="recipe-top">
+    <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#E8C77A"><use href="#pie-solid"/></svg>
+    <div class="recipe-title-wrap"><h3>Battleship Missouri Pie</h3><span class="recipe-tag sweet">Sweet · Missouri</span></div>
+  </div>
+  <p class="recipe-blurb">A custard-like pie named for the USS Missouri, said to have been served to President Harry Truman — a Missouri native — by his Master Chief Steward Harry Hightower.</p>
+  <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 15 min</span><span class="m">Bake 45 min</span></div>
+  <div class="recipe-body">
+    <div><h4>Ingredients</h4>
+      <ul class="ingredients">
+        <li><span class="amt">1 cup</span> sugar</li>
+        <li><span class="amt">¼ cup</span> flour</li>
+        <li><span class="amt">3</span> eggs</li>
+        <li><span class="amt">½ cup</span> butter, melted</li>
+        <li><span class="amt">1 cup</span> buttermilk</li>
+        <li><span class="amt">1 tsp</span> vanilla</li>
+        <li><span class="amt">1</span> single pie crust</li>
+      </ul>
+    </div>
+    <div><h4>Method</h4>
+      <ol class="steps">
+        <li>Whisk sugar and flour, then beat in eggs.</li>
+        <li>Stir in melted butter, buttermilk, and vanilla.</li>
+        <li>Pour into an unbaked crust.</li>
+        <li>Bake at 350°F (175°C) for 40–45 minutes until golden and set with a slight wobble.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="card-actions"><button class="print-btn" onclick="printRecipe('mo-battleship-pie')">🖶 Print recipe</button></div>
+</article>
+
+<article class="recipe-card" id="ne-tin-roof-pie">
+  <div class="recipe-top">
+    <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#3A2A22;--crustdark:#241812;--filling:#F1E7C9;--topping:#5C3A28"><use href="#pie-slice"/></svg>
+    <div class="recipe-title-wrap"><h3>Nebraska Tin Roof Sundae Pie</h3><span class="recipe-tag sweet">Sweet · Nebraska</span></div>
+  </div>
+  <p class="recipe-blurb">An ice cream parlor classic turned into a frozen pie: a chocolate cookie crust, vanilla ice cream, hot fudge, and peanuts — the "tin roof sundae" reimagined for a fork.</p>
+  <div class="meta-row"><span class="m">Serves 10</span><span class="m">Prep 25 min</span><span class="m">Freeze 4 hr</span></div>
+  <div class="recipe-body">
+    <div><h4>Ingredients</h4>
+      <ul class="ingredients">
+        <li><span class="amt">2 cups</span> chocolate cookie crumbs</li>
+        <li><span class="amt">6 tbsp</span> butter, melted</li>
+        <li><span class="amt">1½ qt</span> vanilla ice cream, softened</li>
+        <li><span class="amt">¾ cup</span> hot fudge sauce</li>
+        <li><span class="amt">1 cup</span> salted peanuts, chopped</li>
+        <li><span class="amt">1 cup</span> whipped cream, to finish</li>
+      </ul>
+    </div>
+    <div><h4>Method</h4>
+      <ol class="steps">
+        <li>Mix cookie crumbs and melted butter; press into a pie dish and freeze 15 minutes.</li>
+        <li>Spread half the softened ice cream in the crust, drizzle with half the fudge and half the peanuts.</li>
+        <li>Repeat with the remaining ice cream, fudge, and peanuts; freeze at least 4 hours.</li>
+        <li>Top with whipped cream just before serving.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="card-actions"><button class="print-btn" onclick="printRecipe('ne-tin-roof-pie')">🖶 Print recipe</button></div>
+</article>
+
+<article class="recipe-card" id="oh-buckeye-pie">
+  <div class="recipe-top">
+    <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#3A2A22;--crustdark:#241812;--filling:#C9962C"><use href="#pie-solid"/></svg>
+    <div class="recipe-title-wrap"><h3>Ohio Buckeye Pie</h3><span class="recipe-tag sweet">Sweet · Ohio</span></div>
+  </div>
+  <p class="recipe-blurb">Named for the buckeye candy — a peanut butter ball dipped partway in chocolate to resemble the nut of Ohio's state tree. This pie layers the same chocolate-and-peanut-butter combination into a chocolate cookie crust.</p>
+  <div class="meta-row"><span class="m">Serves 10</span><span class="m">Prep 25 min</span><span class="m">Chill 4 hr</span></div>
+  <div class="recipe-body">
+    <div><h4>Ingredients</h4>
+      <ul class="ingredients">
+        <li><span class="amt">2 cups</span> chocolate cookie crumbs</li>
+        <li><span class="amt">6 tbsp</span> butter, melted</li>
+        <li><span class="amt">1 cup</span> peanut butter</li>
+        <li><span class="amt">8 oz</span> cream cheese, softened</li>
+        <li><span class="amt">1 cup</span> powdered sugar</li>
+        <li><span class="amt">2 cups</span> whipped cream, divided</li>
+        <li><span class="amt">4 oz</span> chocolate, melted, to finish</li>
+      </ul>
+    </div>
+    <div><h4>Method</h4>
+      <ol class="steps">
+        <li>Mix cookie crumbs and melted butter; press into a pie dish and chill.</li>
+        <li>Beat peanut butter, cream cheese, and powdered sugar until smooth; fold in half the whipped cream.</li>
+        <li>Spread into the crust and top with the remaining whipped cream.</li>
+        <li>Chill at least 4 hours; drizzle with melted chocolate before serving.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="card-actions"><button class="print-btn" onclick="printRecipe('oh-buckeye-pie')">🖶 Print recipe</button></div>
+</article>
+<article class="recipe-card" id="sd-kuchen">
+  <div class="recipe-top">
+    <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#F1E3B8;--center:#D98A3D"><use href="#pie-tart"/></svg>
+    <div class="recipe-title-wrap"><h3>South Dakota Kuchen</h3><span class="recipe-tag sweet">Sweet · South Dakota</span></div>
+  </div>
+  <p class="recipe-blurb">"Kuchen" is German for cake, but South Dakota's version — a sweet yeasted crust with a custard filling, often topped with fruit — is close enough to a pie to earn a spot here. Brought by Volga German settlers in the 1880s and named the official state dessert in 2000.</p>
+  <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 30 min + rise</span><span class="m">Bake 30 min</span></div>
+  <div class="recipe-body">
+    <div><h4>Ingredients</h4>
+      <ul class="ingredients">
+        <li><span class="amt">2 cups</span> flour</li>
+        <li><span class="amt">1 packet</span> yeast</li>
+        <li><span class="amt">⅓ cup</span> warm milk</li>
+        <li><span class="amt">4 tbsp</span> butter, softened</li>
+        <li><span class="amt">2</span> peaches or apples, sliced</li>
+        <li><span class="amt">1 cup</span> heavy cream</li>
+        <li><span class="amt">2</span> eggs, ¼ cup sugar (custard)</li>
+      </ul>
+    </div>
+    <div><h4>Method</h4>
+      <ol class="steps">
+        <li>Make a soft yeast dough with flour, yeast, milk, and butter; let rise 45 minutes, then press into a pie dish.</li>
+        <li>Arrange the fruit over the dough.</li>
+        <li>Whisk cream, eggs, and sugar; pour over the fruit.</li>
+        <li>Bake at 375°F (190°C) for 25–30 minutes until the custard is set and the edges are golden.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="card-actions"><button class="print-btn" onclick="printRecipe('sd-kuchen')">🖶 Print recipe</button></div>
+</article>
+
+<article class="recipe-card" id="wi-cranberry-pie">
+  <div class="recipe-top">
+    <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#8C1E2E"><use href="#pie-lattice"/></svg>
+    <div class="recipe-title-wrap"><h3>Wisconsin Cranberry Pie</h3><span class="recipe-tag sweet">Sweet · Wisconsin</span></div>
+  </div>
+  <p class="recipe-blurb">Cranberry has been Wisconsin's official state fruit since 2003, and for good reason — the state leads the nation in cranberry production. Orange zest balances the berries' natural tartness.</p>
+  <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 20 min</span><span class="m">Bake 50 min</span></div>
+  <div class="recipe-body">
+    <div><h4>Ingredients</h4>
+      <ul class="ingredients">
+        <li><span class="amt">4 cups</span> fresh cranberries</li>
+        <li><span class="amt">1¼ cups</span> sugar</li>
+        <li><span class="amt">3 tbsp</span> cornstarch</li>
+        <li><span class="amt">1</span> orange, zested and juiced</li>
+        <li><span class="amt">2</span> double pie crusts</li>
+      </ul>
+    </div>
+    <div><h4>Method</h4>
+      <ol class="steps">
+        <li>Toss cranberries with sugar, cornstarch, orange zest, and juice; rest 15 minutes.</li>
+        <li>Fill a crust-lined dish and top with lattice.</li>
+        <li>Bake at 400°F (200°C) for 20 minutes, then reduce to 375°F (190°C) for 25–30 minutes more.</li>
+        <li>Cool at least 3 hours before slicing.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="card-actions"><button class="print-btn" onclick="printRecipe('wi-cranberry-pie')">🖶 Print recipe</button></div>
+</article>
+
+<article class="recipe-card" id="ak-wild-berry-pie">
+  <div class="recipe-top">
+    <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#4A2A5C"><use href="#pie-lattice"/></svg>
+    <div class="recipe-title-wrap"><h3>Alaska Wild Berry Pie</h3><span class="recipe-tag sweet">Sweet · Alaska</span></div>
+  </div>
+  <p class="recipe-blurb">A mix of blueberries, salmonberries, and crowberries foraged during Alaska's short, intense arctic summer — locals famously guard their picking spots. Any wild-berry mix will do at home.</p>
+  <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 25 min</span><span class="m">Bake 50 min</span></div>
+  <div class="recipe-body">
+    <div><h4>Ingredients</h4>
+      <ul class="ingredients">
+        <li><span class="amt">5 cups</span> mixed wild berries (blueberry, blackberry, raspberry)</li>
+        <li><span class="amt">¾ cup</span> sugar</li>
+        <li><span class="amt">3 tbsp</span> cornstarch</li>
+        <li><span class="amt">1 tbsp</span> lemon juice</li>
+        <li><span class="amt">2</span> double pie crusts</li>
+      </ul>
+    </div>
+    <div><h4>Method</h4>
+      <ol class="steps">
+        <li>Toss berries with sugar, cornstarch, and lemon juice.</li>
+        <li>Fill a crust-lined dish and top with lattice.</li>
+        <li>Bake at 400°F (200°C) for 45–50 minutes until thickly bubbling.</li>
+        <li>Cool at least 3 hours so the filling sets.</li>
+      </ol>
+    </div>
+  </div>
+  <p class="recipe-note"><b>Savory alternative:</b> Alaska also has <em>perok</em>, a Russian-influenced salmon pie layered with cabbage, rice, and onion — worth trying if you'd rather go savory.</p>
+  <div class="card-actions"><button class="print-btn" onclick="printRecipe('ak-wild-berry-pie')">🖶 Print recipe</button></div>
+</article>
+
+<article class="recipe-card" id="az-prickly-pear-pie">
+  <div class="recipe-top">
+    <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#C2246B"><use href="#pie-lattice"/></svg>
+    <div class="recipe-title-wrap"><h3>Arizona Prickly Pear Pie</h3><span class="recipe-tag sweet">Sweet · Arizona</span></div>
+  </div>
+  <p class="recipe-blurb">Made from the vivid magenta fruit of the desert prickly pear cactus — spines carefully removed before the fruit is peeled and pureed. The flavor sits somewhere between watermelon and bubblegum.</p>
+  <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 30 min</span><span class="m">Bake 40 min</span></div>
+  <div class="recipe-body">
+    <div><h4>Ingredients</h4>
+      <ul class="ingredients">
+        <li><span class="amt">2 cups</span> prickly pear puree (from ~8 fruits, seeded)</li>
+        <li><span class="amt">¾ cup</span> sugar</li>
+        <li><span class="amt">¼ cup</span> cornstarch</li>
+        <li><span class="amt">2 tbsp</span> lime juice</li>
+        <li><span class="amt">2</span> double pie crusts</li>
+      </ul>
+    </div>
+    <div><h4>Method</h4>
+      <ol class="steps">
+        <li>Simmer prickly pear puree with sugar, cornstarch, and lime juice until thickened.</li>
+        <li>Pour into a crust-lined dish and top with a lattice or vented crust.</li>
+        <li>Bake at 375°F (190°C) for 35–40 minutes until set.</li>
+        <li>Cool fully before slicing — the color deepens as it cools.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="card-actions"><button class="print-btn" onclick="printRecipe('az-prickly-pear-pie')">🖶 Print recipe</button></div>
+</article>
+
+<article class="recipe-card" id="ca-boysenberry-pie">
+  <div class="recipe-top">
+    <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#5C2A44"><use href="#pie-lattice"/></svg>
+    <div class="recipe-title-wrap"><h3>California Boysenberry Pie</h3><span class="recipe-tag sweet">Sweet · California</span></div>
+  </div>
+  <p class="recipe-blurb">The boysenberry — a cross of loganberry, raspberry, and blackberry — was developed by farmer Rudolph Boysen in Southern California and popularized by Walter Knott, whose berry stand grew into Knott's Berry Farm.</p>
+  <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 25 min</span><span class="m">Bake 50 min</span></div>
+  <div class="recipe-body">
+    <div><h4>Ingredients</h4>
+      <ul class="ingredients">
+        <li><span class="amt">6 cups</span> boysenberries (or blackberries)</li>
+        <li><span class="amt">1 cup</span> sugar</li>
+        <li><span class="amt">¼ cup</span> cornstarch</li>
+        <li><span class="amt">1 tbsp</span> lemon juice</li>
+        <li><span class="amt">2</span> double pie crusts</li>
+      </ul>
+    </div>
+    <div><h4>Method</h4>
+      <ol class="steps">
+        <li>Toss berries with sugar, cornstarch, and lemon juice; rest 15 minutes.</li>
+        <li>Fill a crust-lined dish and top with a lattice.</li>
+        <li>Bake at 400°F (200°C) for 20 minutes, then reduce to 375°F (190°C) for 30 minutes more.</li>
+        <li>Cool at least 3 hours before slicing.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="card-actions"><button class="print-btn" onclick="printRecipe('ca-boysenberry-pie')">🖶 Print recipe</button></div>
+</article>
+
+<article class="recipe-card" id="hi-haupia-pie">
+  <div class="recipe-top">
+    <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#3A2A22;--crustdark:#241812;--filling:#5C3A28;--topping:#F8F2E0"><use href="#pie-slice"/></svg>
+    <div class="recipe-title-wrap"><h3>Hawaii Haupia Pie</h3><span class="recipe-tag sweet">Sweet · Hawaii</span></div>
+  </div>
+  <p class="recipe-blurb">A chocolate pudding pie layered with haupia, a traditional Hawaiian coconut milk pudding, and topped with whipped cream — an island twist on the American cream pie.</p>
+  <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 30 min</span><span class="m">Chill 4 hr</span></div>
+  <div class="recipe-body">
+    <div><h4>Ingredients</h4>
+      <ul class="ingredients">
+        <li><span class="amt">2 cans (13.5 oz)</span> coconut milk</li>
+        <li><span class="amt">½ cup</span> sugar (haupia)</li>
+        <li><span class="amt">6 tbsp</span> cornstarch (haupia)</li>
+        <li><span class="amt">2 cups</span> chocolate pudding</li>
+        <li><span class="amt">1</span> single pie crust, blind-baked</li>
+        <li><span class="amt">1 cup</span> whipped cream, to finish</li>
+      </ul>
+    </div>
+    <div><h4>Method</h4>
+      <ol class="steps">
+        <li>Whisk coconut milk, sugar, and cornstarch in a saucepan; cook over medium heat, stirring, until very thick.</li>
+        <li>Spread the chocolate pudding in the baked crust, then pour the hot haupia over it and smooth flat.</li>
+        <li>Chill at least 4 hours until the haupia layer is fully set.</li>
+        <li>Top with whipped cream before serving.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="card-actions"><button class="print-btn" onclick="printRecipe('hi-haupia-pie')">🖶 Print recipe</button></div>
+</article>
+
+<article class="recipe-card" id="nv-basque-cake-pie">
+  <div class="recipe-top">
+    <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#F1D77E;--center:#8C5A2E"><use href="#pie-tart"/></svg>
+    <div class="recipe-title-wrap"><h3>Nevada Basque Cake Pie</h3><span class="recipe-tag sweet">Sweet · Nevada</span></div>
+  </div>
+  <p class="recipe-blurb">A tart-like pastry with pastry cream filling, brought by the Basque sheepherders who settled in Nevada from the mid-1800s onward and still celebrated at the state's annual Basque festivals.</p>
+  <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 30 min</span><span class="m">Bake 40 min</span></div>
+  <div class="recipe-body">
+    <div><h4>Ingredients</h4>
+      <ul class="ingredients">
+        <li><span class="amt">2½ cups</span> flour</li>
+        <li><span class="amt">1 cup</span> butter, softened</li>
+        <li><span class="amt">¾ cup</span> sugar</li>
+        <li><span class="amt">2</span> eggs (dough)</li>
+        <li><span class="amt">2 cups</span> pastry cream or thick jam</li>
+        <li><span class="amt">1</span> egg, beaten (glaze)</li>
+        <li><span class="amt">Powdered sugar</span>, to finish</li>
+      </ul>
+    </div>
+    <div><h4>Method</h4>
+      <ol class="steps">
+        <li>Cream butter and sugar, beat in eggs, then work in flour to a soft dough; chill 30 minutes.</li>
+        <li>Press two-thirds of the dough into a pie dish; fill with pastry cream or jam.</li>
+        <li>Roll the remaining dough as a lid, seal the edges, and brush with beaten egg.</li>
+        <li>Bake at 350°F (175°C) for 35–40 minutes until golden. Dust with powdered sugar to serve.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="card-actions"><button class="print-btn" onclick="printRecipe('nv-basque-cake-pie')">🖶 Print recipe</button></div>
+</article>
+
+<article class="recipe-card" id="nm-green-chile-apple-pie">
+  <div class="recipe-top">
+    <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#B5A23D"><use href="#pie-lattice"/></svg>
+    <div class="recipe-title-wrap"><h3>New Mexico Green Chile Apple Pie</h3><span class="recipe-tag sweet">Sweet · New Mexico</span></div>
+  </div>
+  <p class="recipe-blurb">Classic apple pie with a jolt of roasted Hatch green chile folded in — sweet, tart, and gently smoky-hot all at once. A distinctly New Mexican twist on the country's most familiar pie.</p>
+  <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 30 min</span><span class="m">Bake 50 min</span></div>
+  <div class="recipe-body">
+    <div><h4>Ingredients</h4>
+      <ul class="ingredients">
+        <li><span class="amt">6</span> apples, peeled, sliced</li>
+        <li><span class="amt">⅓ cup</span> roasted Hatch green chile, diced</li>
+        <li><span class="amt">¾ cup</span> sugar</li>
+        <li><span class="amt">2 tbsp</span> flour</li>
+        <li><span class="amt">1 tsp</span> cinnamon</li>
+        <li><span class="amt">1 tbsp</span> lemon juice</li>
+        <li><span class="amt">2</span> double pie crusts</li>
+      </ul>
+    </div>
+    <div><h4>Method</h4>
+      <ol class="steps">
+        <li>Toss apples with green chile, sugar, flour, cinnamon, and lemon juice.</li>
+        <li>Fill a crust-lined dish, top with a second crust, seal, and vent.</li>
+        <li>Bake at 425°F (220°C) for 20 minutes, then reduce to 375°F (190°C) for 30 minutes more.</li>
+        <li>Cool at least 2 hours before slicing.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="card-actions"><button class="print-btn" onclick="printRecipe('nm-green-chile-apple-pie')">🖶 Print recipe</button></div>
+</article>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="brand" style="color:var(--butter)">
+        <svg class="mark" viewBox="0 0 100 100"><use href="#pie-lattice" style="--crust:#F4C95D;--crustdark:#D9A93C;--filling:#A8324A"/></svg>
+        The Pie Atlas
+      </div>
+      <p class="fine">A field guide to pie: where it came from, how it's made, and why every<br>holiday on the calendar deserves a slice.</p>
+    </div>
+    <div>
+      <p class="fine">EVERY RECIPE PRINTS ON A SINGLE, IMAGE-FREE SHEET —<br>LOOK FOR THE <strong>PRINT RECIPE</strong> BUTTON ON ANY CARD.</p>
+      <p class="fine">&copy; <span id="year"></span> The Pie Atlas · built for people who believe dessert is a filing system.</p>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

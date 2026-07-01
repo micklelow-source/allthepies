@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World & Historical Pies — The Pie Atlas</title>
+<meta name="description" content="Historical and traditional pies from across Europe, Canada, and Asia — khachapuri, butter tarts, samsa, buko pie, and more.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%23E3A857%22/><circle cx=%2250%22 cy=%2250%22 r=%2234%22 fill=%22%23A8324A%22/></svg>">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a class="brand" href="index.html">
+      <svg class="mark" viewBox="0 0 100 100"><use href="#pie-lattice" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#A8324A"/></svg>
+      <span>The Pie Atlas<small>Est. whenever the first crust met the first fire</small></span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="historical.html">Historical</a>
+      <a href="savory.html">Savory</a>
+      <a href="sweet.html">Sweet</a>
+      <a href="regional.html">Regional</a>
+      <a href="world.html" class="active">World</a>
+      <a href="holidays.html">Holidays</a>
+    </nav>
+  </div>
+</header>
+<svg style="display:none" aria-hidden="true">
+<defs>
+
+<!-- ===== PIE GLYPHS (the site's signature illustrations) ===== -->
+
+<symbol id="pie-lattice" viewBox="0 0 100 100">
+  <clipPath id="clipL"><circle cx="50" cy="50" r="34"/></clipPath>
+  <circle cx="50" cy="50" r="45" fill="var(--crust,#E3A857)"/>
+  <g fill="var(--crustdark,#B97F3A)">
+    <circle cx="50" cy="6" r="3.4"/><circle cx="68" cy="10" r="3.4"/><circle cx="83" cy="21" r="3.4"/>
+    <circle cx="93" cy="37" r="3.4"/><circle cx="96" cy="55" r="3.4"/><circle cx="92" cy="73" r="3.4"/>
+    <circle cx="80" cy="87" r="3.4"/><circle cx="64" cy="95" r="3.4"/><circle cx="46" cy="96" r="3.4"/>
+    <circle cx="29" cy="92" r="3.4"/><circle cx="15" cy="81" r="3.4"/><circle cx="6" cy="66" r="3.4"/>
+    <circle cx="4" cy="48" r="3.4"/><circle cx="9" cy="31" r="3.4"/><circle cx="20" cy="17" r="3.4"/><circle cx="35" cy="8" r="3.4"/>
+  </g>
+  <circle cx="50" cy="50" r="34" fill="var(--filling,#A8324A)"/>
+  <g clip-path="url(#clipL)" stroke="var(--crust,#E3A857)" stroke-width="6.5" opacity=".92">
+    <line x1="4" y1="16" x2="96" y2="70"/><line x1="4" y1="40" x2="96" y2="94"/>
+    <line x1="4" y1="64" x2="70" y2="100"/><line x1="30" y1="4" x2="96" y2="46"/>
+    <line x1="4" y1="70" x2="96" y2="16"/><line x1="4" y1="94" x2="96" y2="40"/>
+    <line x1="4" y1="46" x2="70" y2="4"/><line x1="30" y1="100" x2="96" y2="64"/>
+  </g>
+</symbol>
+
+<symbol id="pie-solid" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="45" fill="var(--crustdark,#B97F3A)"/>
+  <g fill="var(--crust,#E3A857)">
+    <circle cx="50" cy="6" r="3.4"/><circle cx="68" cy="10" r="3.4"/><circle cx="83" cy="21" r="3.4"/>
+    <circle cx="93" cy="37" r="3.4"/><circle cx="96" cy="55" r="3.4"/><circle cx="92" cy="73" r="3.4"/>
+    <circle cx="80" cy="87" r="3.4"/><circle cx="64" cy="95" r="3.4"/><circle cx="46" cy="96" r="3.4"/>
+    <circle cx="29" cy="92" r="3.4"/><circle cx="15" cy="81" r="3.4"/><circle cx="6" cy="66" r="3.4"/>
+    <circle cx="4" cy="48" r="3.4"/><circle cx="9" cy="31" r="3.4"/><circle cx="20" cy="17" r="3.4"/><circle cx="35" cy="8" r="3.4"/>
+  </g>
+  <circle cx="50" cy="50" r="34" fill="var(--crust,#E3A857)"/>
+  <g stroke="var(--filling,#7C8B5E)" stroke-width="3.4" stroke-linecap="round" opacity=".85">
+    <line x1="50" y1="26" x2="43" y2="52"/><line x1="50" y1="26" x2="50" y2="54"/><line x1="50" y1="26" x2="57" y2="52"/>
+  </g>
+</symbol>
+
+<symbol id="pie-slice" viewBox="0 0 100 100">
+  <path d="M50 92 L10 30 A46 46 0 0 1 90 30 Z" fill="var(--crust,#E3A857)"/>
+  <path d="M50 78 L20 32 A38 38 0 0 1 80 32 Z" fill="var(--filling,#F4C95D)"/>
+  <path d="M50 30 L34 33 A18 8 0 0 0 66 33 Z" fill="var(--topping,#FBF3E7)"/>
+  <path d="M18 30 A46 46 0 0 1 82 30" fill="none" stroke="var(--crustdark,#B97F3A)" stroke-width="5" stroke-linecap="round"/>
+</symbol>
+
+<symbol id="pie-hand" viewBox="0 0 100 100">
+  <path d="M8 60 A46 40 0 0 1 92 60 A50 34 0 0 1 8 60 Z" fill="var(--crust,#E3A857)"/>
+  <path d="M18 58 A36 30 0 0 1 82 58 A40 26 0 0 1 18 58 Z" fill="var(--filling,#A8324A)"/>
+  <g fill="var(--crustdark,#B97F3A)">
+    <circle cx="14" cy="55" r="3"/><circle cx="24" cy="66" r="3"/><circle cx="36" cy="72" r="3"/>
+    <circle cx="50" cy="74" r="3"/><circle cx="64" cy="72" r="3"/><circle cx="76" cy="66" r="3"/><circle cx="86" cy="55" r="3"/>
+  </g>
+</symbol>
+
+<symbol id="pie-star" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="45" fill="var(--crust,#E3A857)"/>
+  <circle cx="50" cy="50" r="34" fill="var(--filling,#C9A24A)"/>
+  <g fill="var(--fish,#8A9BA8)" stroke="var(--crustdark,#B97F3A)" stroke-width="1.5">
+    <path d="M50 50 L58 30 Q50 26 42 30 Z"/>
+    <path d="M50 50 L70 42 Q72 50 68 58 Z"/>
+    <path d="M50 50 L58 70 Q50 74 42 70 Z"/>
+    <path d="M50 50 L30 58 Q28 50 32 42 Z"/>
+  </g>
+  <g fill="var(--crustdark,#B97F3A)">
+    <circle cx="54" cy="31" r="1.5"/><circle cx="67" cy="45" r="1.5"/><circle cx="54" cy="69" r="1.5"/><circle cx="33" cy="55" r="1.5"/>
+  </g>
+</symbol>
+
+<!-- ===== category marks (home tiles) ===== -->
+<symbol id="mark-history" viewBox="0 0 48 48">
+  <circle cx="24" cy="24" r="19" fill="none" stroke="currentColor" stroke-width="2.4"/>
+  <path d="M24 13v11l8 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+<symbol id="mark-savory" viewBox="0 0 48 48">
+  <path d="M14 10v14M18 10v14M14 24c0 2 4 2 4 0M16 24v14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M34 10c-5 3-5 10 0 14v14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+<symbol id="mark-sweet" viewBox="0 0 48 48">
+  <path d="M8 30 A16 13 0 0 1 40 30 Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M8 30h32" stroke="currentColor" stroke-width="2.4"/>
+  <circle cx="24" cy="12" r="3.4" fill="none" stroke="currentColor" stroke-width="2.2"/>
+  <path d="M24 8V4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+</symbol>
+<symbol id="mark-holiday" viewBox="0 0 48 48">
+  <path d="M24 6l4.2 9.4 10.2 1.2-7.6 7 2 10.1L24 28.6l-8.8 5.1 2-10.1-7.6-7 10.2-1.2z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+</symbol>
+<symbol id="mark-region" viewBox="0 0 48 48">
+  <path d="M24 4C16 4 10 10 10 18c0 10 14 26 14 26s14-16 14-26c0-8-6-14-14-14z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+  <circle cx="24" cy="18" r="5" fill="none" stroke="currentColor" stroke-width="2.4"/>
+</symbol>
+<symbol id="pie-canoe" viewBox="0 0 100 100">
+  <path d="M10 50 Q50 20 90 50 Q50 62 10 50 Z" fill="var(--crust,#E3A857)"/>
+  <path d="M24 50 Q50 34 76 50 Q50 56 24 50 Z" fill="var(--filling,#F3E7C9)"/>
+  <g fill="var(--crustdark,#B97F3A)">
+    <path d="M14 49 l4 -4 M22 46 l3 -4 M32 43 l3 -3 M50 41 l0 -4 M68 43 l-3 -3 M78 46 l-3 -4 M86 49 l-4 -4" stroke="var(--crustdark,#B97F3A)" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+</symbol>
+<symbol id="pie-tart" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="42" fill="var(--crustdark,#B97F3A)"/>
+  <circle cx="50" cy="50" r="42" fill="none" stroke="var(--crust,#E3A857)" stroke-width="6" stroke-dasharray="4 5"/>
+  <circle cx="50" cy="50" r="33" fill="var(--filling,#E8C24E)"/>
+  <circle cx="50" cy="50" r="12" fill="var(--center,#A8324A)"/>
+</symbol>
+
+<!-- ===== holiday line icons ===== -->
+<symbol id="ic-star" viewBox="0 0 48 48"><path d="M24 6l4.2 9.4 10.2 1.2-7.6 7 2 10.1L24 28.6l-8.8 5.1 2-10.1-7.6-7 10.2-1.2z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+<symbol id="ic-pi" viewBox="0 0 48 48"><circle cx="24" cy="24" r="19" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15 18h18M19 18v14M29 18l-2 10c0 2.6 2 3.6 4 2.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="ic-heart" viewBox="0 0 48 48"><path d="M24 40s-13-8.4-18-16.6C2.4 17 5 9 12 9c4 0 7 2.4 8.4 4.8C21.8 11.4 24.8 9 28.8 9c7 0 9.6 8 6.2 14.4C30 31.6 24 40 24 40z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+<symbol id="ic-shamrock" viewBox="0 0 48 48"><circle cx="18" cy="18" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="30" cy="18" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="24" cy="27" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M24 33v9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+<symbol id="ic-egg" viewBox="0 0 48 48"><path d="M24 8c8 8 14 18.4 14 26a14 14 0 0 1-28 0c0-7.6 6-18 14-26z" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M13 30l5 3-3 3 6 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="ic-sun" viewBox="0 0 48 48"><circle cx="24" cy="24" r="9" fill="none" stroke="currentColor" stroke-width="2.2"/><g stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="24" y1="4" x2="24" y2="10"/><line x1="24" y1="38" x2="24" y2="44"/><line x1="4" y1="24" x2="10" y2="24"/><line x1="38" y1="24" x2="44" y2="24"/><line x1="9" y1="9" x2="13" y2="13"/><line x1="35" y1="35" x2="39" y2="39"/><line x1="9" y1="39" x2="13" y2="35"/><line x1="35" y1="13" x2="39" y2="9"/></g></symbol>
+<symbol id="ic-flower" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.2"><ellipse cx="24" cy="13" rx="6" ry="9"/><ellipse cx="24" cy="35" rx="6" ry="9"/><ellipse cx="13" cy="24" rx="9" ry="6"/><ellipse cx="35" cy="24" rx="9" ry="6"/><circle cx="24" cy="24" r="4"/></g></symbol>
+<symbol id="ic-flag" viewBox="0 0 48 48"><path d="M12 6v36" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M12 8h26l-6 7 6 7H12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+<symbol id="ic-fireworks" viewBox="0 0 48 48"><g stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="24" y1="6" x2="24" y2="16"/><line x1="24" y1="32" x2="24" y2="42"/><line x1="6" y1="24" x2="16" y2="24"/><line x1="32" y1="24" x2="42" y2="24"/><line x1="11" y1="11" x2="18" y2="18"/><line x1="30" y1="30" x2="37" y2="37"/><line x1="11" y1="37" x2="18" y2="30"/><line x1="30" y1="18" x2="37" y2="11"/></g><circle cx="24" cy="24" r="4.5" fill="currentColor"/></symbol>
+<symbol id="ic-tools" viewBox="0 0 48 48"><rect x="8" y="18" width="32" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M17 18v-4a7 7 0 0 1 14 0v4" fill="none" stroke="currentColor" stroke-width="2.2"/></symbol>
+<symbol id="ic-apple" viewBox="0 0 48 48"><path d="M24 16c7-6 16-2 16 8 0 10-8 18-16 18S8 34 8 24c0-10 9-14 16-8z" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M24 16V9M24 9c2-3 6-3 7-1" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+<symbol id="ic-pumpkin" viewBox="0 0 48 48"><path d="M24 16c-9 0-15 7-15 15s6 11 15 11 15-4 15-11-6-15-15-15z" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M24 16v26M14 20c3 4 3 18 0 21M34 20c-3 4-3 18 0 21" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M24 16v-6M24 10c2-2 5-2 6 0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+<symbol id="ic-diya" viewBox="0 0 48 48"><path d="M8 30c0 6 7 10 16 10s16-4 16-10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M6 28c4 3 10 4 18 4s14-1 18-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M24 22c-3-4-1-8 0-10 1 2 3 6 0 10z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+<symbol id="ic-maple" viewBox="0 0 48 48"><path d="M24 6l3 9 8-5-3 9 9-1-7 7 8 4-9 2 3 9-8-5-4 8-4-8-8 5 3-9-9-2 8-4-7-7 9 1-3-9 8 5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+<symbol id="ic-menorah" viewBox="0 0 48 48"><g stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="24" y1="18" x2="24" y2="38"/><line x1="10" y1="38" x2="38" y2="38"/><line x1="16" y1="42" x2="32" y2="42"/><path d="M24 10v8M18 14v4M12 18v4M30 14v4M36 18v4" fill="none"/></g></symbol>
+<symbol id="ic-tree" viewBox="0 0 48 48"><path d="M24 6l8 12h-5l8 10h-6l7 10H12l7-10h-6l8-10h-5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><rect x="21" y="38" width="6" height="6" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="ic-candle" viewBox="0 0 48 48"><rect x="19" y="18" width="10" height="24" rx="1.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M24 18c-2-4 0-7 2-9-1 3 1 5 2 7 1 2-1 4-4 2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M15 42h18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+<symbol id="ic-gift" viewBox="0 0 48 48"><rect x="8" y="18" width="32" height="22" rx="1.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M8 26h32" stroke="currentColor" stroke-width="2.2"/><path d="M24 18v22" stroke="currentColor" stroke-width="2.2"/><path d="M24 18c-2-8-12-8-12-2 0 3 5 2 12 2zM24 18c2-8 12-8 12-2 0 3-5 2-12 2z" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="ic-clock" viewBox="0 0 48 48"><circle cx="24" cy="24" r="19" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M24 13v11l8 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+</defs>
+</svg>
+<section class="section" style="padding-bottom:0">
+  <div class="wrap">
+    <span class="eyebrow">Section six</span>
+    <h1>World &amp; Historical Pies</h1>
+    <p class="prose narrow" style="font-size:1.08rem;color:#463527">Pastry wrapped around a filling is one of the most independently reinvented ideas in cooking — nearly every culture that has flour and an oven (or a tandoor, or a frying pan) has arrived at some version of it. This page rounds out the atlas with pies and pie-adjacent pastries from thirty more countries and regions across Europe, Canada, Asia, and Latin America. It isn't literally every nation on Earth — some places simply don't have a strong native pie tradition — but it's a genuine attempt at the map. (Portugal, Finland, Russia, Italy, Greece, France, England, Argentina, Jamaica, and Chile already have entries on the <a href="regional.html">Regional</a> and <a href="savory.html">Savory</a> pages; this page picks up where those leave off.)</p>
+    <div class="tab-row">
+      <a href="#w-europe">Europe</a>
+      <a href="#w-canada">Canada</a>
+      <a href="#w-asia">Asia</a>
+      <a href="#w-latin-america">Latin America</a>
+    </div>
+<div class="map-menu-panel">
+  <div class="panel-head">
+    <div>
+      <h3>Jump straight to a country</h3>
+      <p class="panel-sub">Tap a pin below, or use the menu — no scrolling required.</p>
+    </div>
+<select class="jump-select" onchange="jumpFromSelect(this)">
+  <option value="">Jump to a country…</option>
+  <optgroup label="Europe">
+    <option value="german-zwiebelkuchen">Germany</option>
+    <option value="austrian-linzertorte">Austria</option>
+    <option value="irish-apple-amber-pie">Ireland</option>
+    <option value="welsh-leek-cheese-pie">Wales</option>
+    <option value="turkish-su-boregi">Turkey</option>
+    <option value="georgian-adjaruli-khachapuri">Georgia</option>
+    <option value="bosnian-burek">Bosnia</option>
+    <option value="armenian-spinach-byorek">Armenia</option>
+    <option value="dutch-limburgse-vlaai">Netherlands</option>
+  </optgroup>
+  <optgroup label="Canada">
+    <option value="ontario-butter-tart">Ontario</option>
+    <option value="saskatoon-berry-pie">Saskatchewan</option>
+    <option value="flapper-pie">The Prairies</option>
+    <option value="newfoundland-bakeapple-pie">Newfoundland</option>
+    <option value="quebec-tarte-au-sucre">Quebec — Sugar Pie</option>
+    <option value="nanaimo-freezer-pie">British Columbia</option>
+    <option value="cipaille">Quebec — Cipaille</option>
+    <option value="pate-chinois">Quebec — Pâté Chinois</option>
+  </optgroup>
+  <optgroup label="Asia">
+    <option value="mughal-sanbusak">India (historical)</option>
+    <option value="uzbek-somsa">Uzbekistan</option>
+    <option value="tibetan-shabhaley">Tibet</option>
+    <option value="chinese-xian-bing">China</option>
+    <option value="hong-kong-egg-tart">Hong Kong</option>
+    <option value="vietnamese-pate-chaud">Vietnam</option>
+    <option value="filipino-buko-pie">Philippines</option>
+  </optgroup>
+  <optgroup label="Latin America">
+    <option value="bolivian-saltena">Bolivia</option>
+    <option value="brazilian-empadao">Brazil</option>
+    <option value="puerto-rican-pastelon">Puerto Rico</option>
+    <option value="mexican-pay-de-limon">Mexico</option>
+    <option value="cuban-pastelitos-de-guayaba">Cuba</option>
+    <option value="ecuadorian-empanadas-de-viento">Ecuador</option>
+  </optgroup>
+</select>
+  </div>
+<div class="region-picker">
+  <div class="region-block">
+    <h4>Europe</h4>
+    <div class="pin-row">
+      <button type="button" class="pin-btn" onclick="jumpTo('german-zwiebelkuchen')">Germany</button>
+      <button type="button" class="pin-btn" onclick="jumpTo('austrian-linzertorte')">Austria</button>
+      <button type="button" class="pin-btn" onclick="jumpTo('irish-apple-amber-pie')">Ireland</button>
+      <button type="button" class="pin-btn" onclick="jumpTo('welsh-leek-cheese-pie')">Wales</button>
+      <button type="button" class="pin-btn" onclick="jumpTo('turkish-su-boregi')">Turkey</button>
+      <button type="button" class="pin-btn" onclick="jumpTo('georgian-adjaruli-khachapuri')">Georgia</button>
+      <button type="button" class="pin-btn" onclick="jumpTo('bosnian-burek')">Bosnia</button>
+      <button type="button" class="pin-btn" onclick="jumpTo('armenian-spinach-byorek')">Armenia</button>
+      <button type="button" class="pin-btn" onclick="jumpTo('dutch-limburgse-vlaai')">Netherlands</button>
+    </div>
+  </div>
+  <div class="region-block">
+    <h4>Canada</h4>
+    <div class="pin-row">
+      <button type="button" class="pin-btn" onclick="jumpTo('ontario-butter-tart')">Ontario</button>
+      <button type="button" class="pin-btn" onclick="jumpTo('saskatoon-berry-pie')">Saskatchewan</button>
+      <button type="button" class="pin-btn" onclick="jumpTo('flapper-pie')">The Prairies</button>
+      <button type="button" class="pin-btn" onclick="jumpTo('newfoundland-bakeapple-pie')">Newfoundland</button>
+      <button type="button" class="pin-btn" onclick="jumpTo('quebec-tarte-au-sucre')">Quebec — Sugar Pie</button>
+      <button type="button" class="pin-btn" onclick="jumpTo('nanaimo-freezer-pie')">British Columbia</button>
+      <button type="button" class="pin-btn" onclick="jumpTo('cipaille')">Quebec — Cipaille</button>
+      <button type="button" class="pin-btn" onclick="jumpTo('pate-chinois')">Quebec — Pâté Chinois</button>
+    </div>
+  </div>
+  <div class="region-block">
+    <h4>Asia</h4>
+    <div class="pin-row">
+      <button type="button" class="pin-btn" onclick="jumpTo('mughal-sanbusak')">India (historical)</button>
+      <button type="button" class="pin-btn" onclick="jumpTo('uzbek-somsa')">Uzbekistan</button>
+      <button type="button" class="pin-btn" onclick="jumpTo('tibetan-shabhaley')">Tibet</button>
+      <button type="button" class="pin-btn" onclick="jumpTo('chinese-xian-bing')">China</button>
+      <button type="button" class="pin-btn" onclick="jumpTo('hong-kong-egg-tart')">Hong Kong</button>
+      <button type="button" class="pin-btn" onclick="jumpTo('vietnamese-pate-chaud')">Vietnam</button>
+      <button type="button" class="pin-btn" onclick="jumpTo('filipino-buko-pie')">Philippines</button>
+    </div>
+  </div>
+  <div class="region-block">
+    <h4>Latin America</h4>
+    <div class="pin-row">
+      <button type="button" class="pin-btn" onclick="jumpTo('bolivian-saltena')">Bolivia</button>
+      <button type="button" class="pin-btn" onclick="jumpTo('brazilian-empadao')">Brazil</button>
+      <button type="button" class="pin-btn" onclick="jumpTo('puerto-rican-pastelon')">Puerto Rico</button>
+      <button type="button" class="pin-btn" onclick="jumpTo('mexican-pay-de-limon')">Mexico</button>
+      <button type="button" class="pin-btn" onclick="jumpTo('cuban-pastelitos-de-guayaba')">Cuba</button>
+      <button type="button" class="pin-btn" onclick="jumpTo('ecuadorian-empanadas-de-viento')">Ecuador</button>
+    </div>
+  </div>
+</div>
+</div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0" id="w-europe">
+  <div class="wrap">
+    <div class="subsection-head"><h2>Europe</h2><span class="tally">9 recipes</span></div>
+    <p class="subsection-blurb">German onion pie, Austrian lattice tart, and the family of paper-thin pastries — börek, khachapuri, byorek — that spread from Central Asia across the Ottoman world and the Caucasus.</p>
+    <div class="recipe-grid">
+
+      <article class="recipe-card" id="german-zwiebelkuchen">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E8C77A;--crustdark:#B97F3A;--filling:#C9A24A"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Zwiebelkuchen (German Onion Pie)</h3><span class="recipe-tag">Savory · Swabia, Germany</span></div>
+        </div>
+        <p class="recipe-blurb">A yeasted-crust onion pie from southern Germany, thick with slow-caramelized onions, bacon, and caraway in a creamy custard — traditionally eaten in autumn alongside <em>Federweisser</em>, the season's first cloudy young wine.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 40 min</span><span class="m">Bake 55 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">2¼ cups</span> flour</li>
+              <li><span class="amt">1 packet</span> yeast</li>
+              <li><span class="amt">⅔ cup</span> warm milk</li>
+              <li><span class="amt">3 lb</span> onions, thinly sliced</li>
+              <li><span class="amt">6 oz</span> bacon, diced</li>
+              <li><span class="amt">1 tsp</span> caraway seeds</li>
+              <li><span class="amt">3</span> eggs</li>
+              <li><span class="amt">¾ cup</span> sour cream</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Make a soft yeast dough with flour, yeast, and milk; let rise 45 minutes, then press into a deep tart pan.</li>
+              <li>Cook bacon until crisp, add onions and caraway, and cook low and slow until deeply softened, about 30 minutes. Cool slightly.</li>
+              <li>Whisk eggs and sour cream, then stir into the onion mixture; spread over the dough.</li>
+              <li>Bake at 400°F (200°C) for 50–55 minutes until the top is golden and the center is set.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('german-zwiebelkuchen')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="austrian-linzertorte">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#B97F3A;--crustdark:#8C5A2E;--filling:#8C1E2E"><use href="#pie-lattice"/></svg>
+          <div class="recipe-title-wrap"><h3>Linzertorte</h3><span class="recipe-tag sweet">Sweet · Linz, Austria</span></div>
+        </div>
+        <p class="recipe-blurb">A crumbly, spiced hazelnut pastry lattice over redcurrant or raspberry jam — often called the oldest cake still known by its original name, with a documented recipe from 1653 and another from 1696.</p>
+        <div class="meta-row"><span class="m">Serves 10</span><span class="m">Prep 35 min</span><span class="m">Bake 35 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1¾ cups</span> flour</li>
+              <li><span class="amt">1¼ cups</span> ground hazelnuts</li>
+              <li><span class="amt">¾ cup</span> butter, cold</li>
+              <li><span class="amt">⅔ cup</span> sugar</li>
+              <li><span class="amt">2</span> egg yolks</li>
+              <li><span class="amt">1 tsp</span> cinnamon</li>
+              <li><span class="amt">1</span> lemon, zested</li>
+              <li><span class="amt">1 cup</span> redcurrant or raspberry jam</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Combine flour, ground hazelnuts, cold butter, sugar, egg yolks, cinnamon, and lemon zest into a short, crumbly dough; chill 30 minutes.</li>
+              <li>Press two-thirds of the dough into a tart pan; spread jam over the top.</li>
+              <li>Roll the remaining dough into strips and weave a lattice over the jam.</li>
+              <li>Bake at 350°F (175°C) for 30–35 minutes until golden. Cool fully before slicing — it's traditionally eaten a day later, once the flavors settle.</li>
+            </ol>
+          </div>
+        </div>
+        <p class="recipe-note"><b>Historical note:</b> A 2005 discovery in an Admont Abbey archive pushed the Linzertorte's earliest known recipe back to 1653, making it one of the oldest cakes on record still made from a recognizable version of its original recipe.</p>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('austrian-linzertorte')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="irish-apple-amber-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#D98A3D;--topping:#FBF3E7"><use href="#pie-slice"/></svg>
+          <div class="recipe-title-wrap"><h3>Irish Apple Amber Pie</h3><span class="recipe-tag sweet">Sweet · Ireland</span></div>
+        </div>
+        <p class="recipe-blurb">A single-crust Irish classic: grated stewed apple sharpened with lemon, baked into a soft custard-like layer, then crowned with a tall, softly-peaked meringue — "amber" for the color the apple turns as it cooks down.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 30 min</span><span class="m">Bake 40 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">6</span> cooking apples, peeled and grated</li>
+              <li><span class="amt">1</span> lemon, zested and juiced</li>
+              <li><span class="amt">⅔ cup</span> sugar (filling)</li>
+              <li><span class="amt">3</span> egg yolks (reserve whites)</li>
+              <li><span class="amt">2 tbsp</span> butter</li>
+              <li><span class="amt">3</span> egg whites (reserved)</li>
+              <li><span class="amt">½ cup</span> sugar, for meringue</li>
+              <li><span class="amt">1</span> single pie crust, blind-baked</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Cook grated apple with lemon zest and juice and sugar until soft and thick, about 10 minutes.</li>
+              <li>Off heat, beat in egg yolks and butter; pour into the baked crust.</li>
+              <li>Beat egg whites to soft peaks, gradually adding sugar until glossy and stiff.</li>
+              <li>Pile the meringue over the apple layer and bake at 325°F (165°C) for 20–25 minutes until golden.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('irish-apple-amber-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="welsh-leek-cheese-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E8C77A;--crustdark:#B97F3A;--filling:#8BA05E"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Welsh Leek &amp; Cheese Pie</h3><span class="recipe-tag">Savory · Wales</span></div>
+        </div>
+        <p class="recipe-blurb">Leeks are Wales's national emblem, said to date to a battlefield custom of wearing one to tell allies apart — and this pie pairs them with sharp Welsh cheddar in a filling that leans on two of the country's proudest ingredients.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 25 min</span><span class="m">Bake 40 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">4</span> leeks, sliced</li>
+              <li><span class="amt">3 tbsp</span> butter</li>
+              <li><span class="amt">3</span> eggs</li>
+              <li><span class="amt">1 cup</span> cream</li>
+              <li><span class="amt">1½ cups</span> shredded sharp Welsh cheddar</li>
+              <li><span class="amt">1</span> single pie crust, blind-baked</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Sweat the leeks gently in butter until soft, about 12 minutes; cool slightly.</li>
+              <li>Whisk eggs and cream, then stir in the leeks and most of the cheese.</li>
+              <li>Pour into the blind-baked crust and scatter the remaining cheese on top.</li>
+              <li>Bake at 375°F (190°C) for 30–35 minutes until set and golden.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('welsh-leek-cheese-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="turkish-su-boregi">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E8D9A0;--crustdark:#C9B26C;--filling:#F1E7C9"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Su Böreği (Turkish "Water Börek")</h3><span class="recipe-tag">Savory · Turkey</span></div>
+        </div>
+        <p class="recipe-blurb">Layers of yufka dough boiled briefly before baking — the "water" in the name — giving this börek a softer, more lasagna-like texture than its crisp phyllo cousins. Filled with cheese and parsley, it anchors the vast Turkish börek family that spread with Turkic peoples from Central Asia across the Ottoman world.</p>
+        <div class="meta-row"><span class="m">Serves 10</span><span class="m">Prep 45 min</span><span class="m">Bake 35 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1 package</span> yufka or phyllo sheets</li>
+              <li><span class="amt">3</span> eggs</li>
+              <li><span class="amt">1 cup</span> milk</li>
+              <li><span class="amt">½ cup</span> olive oil</li>
+              <li><span class="amt">14 oz</span> feta or Turkish white cheese, crumbled</li>
+              <li><span class="amt">½ cup</span> parsley, chopped</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Boil each sheet of dough briefly in salted water, then lay flat to cool.</li>
+              <li>Whisk eggs, milk, and olive oil together.</li>
+              <li>Layer half the boiled sheets in a baking dish, brushing each with the egg mixture; scatter with cheese and parsley.</li>
+              <li>Layer the remaining sheets on top, brushing each, then pour any remaining egg mixture over the top.</li>
+              <li>Bake at 375°F (190°C) for 30–35 minutes until golden.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('turkish-su-boregi')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="georgian-adjaruli-khachapuri">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#F1E3B8"><use href="#pie-canoe"/></svg>
+          <div class="recipe-title-wrap"><h3>Adjaruli Khachapuri</h3><span class="recipe-tag">Savory · Adjara, Georgia</span></div>
+        </div>
+        <p class="recipe-blurb">A boat-shaped, open-topped bread pie from Georgia's Black Sea coast, filled with molten Imeretian and sulguni cheese and finished with a raw egg yolk and a pat of butter, stirred together tableside just before eating.</p>
+        <div class="meta-row"><span class="m">Makes 4</span><span class="m">Prep 40 min + rise</span><span class="m">Bake 15 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">4 cups</span> flour</li>
+              <li><span class="amt">1 packet</span> yeast</li>
+              <li><span class="amt">1¼ cups</span> warm water</li>
+              <li><span class="amt">2 tbsp</span> olive oil</li>
+              <li><span class="amt">3 cups</span> shredded mozzarella &amp; feta, mixed</li>
+              <li><span class="amt">4</span> egg yolks</li>
+              <li><span class="amt">4 tbsp</span> butter</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Make a soft yeast dough with flour, yeast, water, and olive oil; let rise 1 hour.</li>
+              <li>Divide into 4; roll each into an oval and pinch the long edges up into a boat shape, twisting the pointed ends.</li>
+              <li>Fill each boat with cheese and bake at 475°F (245°C) for 10–12 minutes until the crust is golden.</li>
+              <li>Pull out, crack a raw egg yolk into the center of each, add a pat of butter, and return to the oven just 2–3 minutes to warm the yolk without fully cooking it.</li>
+              <li>Serve immediately; stir the yolk and butter into the cheese at the table.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('georgian-adjaruli-khachapuri')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="bosnian-burek">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E8D9A0;--crustdark:#C9B26C;--filling:#8C4A2E"><use href="#pie-canoe"/></svg>
+          <div class="recipe-title-wrap"><h3>Bosnian Burek</h3><span class="recipe-tag">Savory · Balkans (Bosnia &amp; Serbia)</span></div>
+        </div>
+        <p class="recipe-blurb">Spiral-coiled phyllo filled with spiced ground beef, a Balkan staple that traces back to Ottoman-era börek. Serbia's version was reputedly brought to the city of Niš by an Istanbul baker in 1498, and the dish spread across former Yugoslavia from there.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 40 min</span><span class="m">Bake 40 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1 lb</span> ground beef</li>
+              <li><span class="amt">1</span> onion, grated</li>
+              <li><span class="amt">1 tsp</span> paprika</li>
+              <li><span class="amt">1 package</span> phyllo dough</li>
+              <li><span class="amt">½ cup</span> vegetable oil or melted butter</li>
+              <li><span class="amt">¼ cup</span> sparkling water, to brush</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Mix ground beef with onion, paprika, salt, and pepper.</li>
+              <li>Brush a phyllo sheet with oil, spread a thin line of filling along one edge, and roll into a long rope; coil it into a spiral in a round baking pan.</li>
+              <li>Repeat with remaining sheets, coiling each rope to extend the spiral outward.</li>
+              <li>Brush the top with oil and sparkling water (for extra crispness) and bake at 400°F (200°C) for 35–40 minutes until deep golden.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('bosnian-burek')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="armenian-spinach-byorek">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E8D9A0;--crustdark:#C9B26C;--filling:#5C7248"><use href="#pie-hand"/></svg>
+          <div class="recipe-title-wrap"><h3>Armenian Spinach Byorek</h3><span class="recipe-tag">Savory · Armenia</span></div>
+        </div>
+        <p class="recipe-blurb">Triangular hand pies of phyllo folded around spinach, onion, and a blend of Armenian cheeses like lori or chechil, often lifted with a splash of anise-flavored raki — a close cousin of Greek spanakopita, but with its own herb and cheese profile.</p>
+        <div class="meta-row"><span class="m">Makes 16</span><span class="m">Prep 35 min</span><span class="m">Bake 25 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1 lb</span> spinach, wilted and squeezed dry</li>
+              <li><span class="amt">8 oz</span> Armenian string cheese or feta, shredded</li>
+              <li><span class="amt">1</span> onion, finely chopped</li>
+              <li><span class="amt">1 tbsp</span> tarragon, chopped</li>
+              <li><span class="amt">1 tsp</span> raki or anise liqueur (optional)</li>
+              <li><span class="amt">8</span> phyllo sheets, halved lengthwise</li>
+              <li><span class="amt">½ cup</span> butter, melted</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Mix spinach, cheese, onion, tarragon, and raki, if using.</li>
+              <li>Brush a phyllo strip with butter, place a spoonful of filling at one end, and fold flag-style into a triangle.</li>
+              <li>Repeat with remaining strips and filling; brush the tops with butter.</li>
+              <li>Bake at 375°F (190°C) for 20–25 minutes until golden and crisp.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('armenian-spinach-byorek')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="dutch-limburgse-vlaai">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#8C1E2E"><use href="#pie-lattice"/></svg>
+          <div class="recipe-title-wrap"><h3>Limburgse Vlaai</h3><span class="recipe-tag sweet">Sweet · Limburg, Netherlands</span></div>
+        </div>
+        <p class="recipe-blurb">A wide, shallow, yeast-doughed fruit pie from the southern Dutch province of Limburg — legend holds that in 1189, townsfolk of Sint-Truiden ended a siege by presenting the attacking duke with a pastry called <em>plăcintă</em>, baked to an old local recipe. As of 2024, "Limburgse vlaai" is a protected EU name, and only pies baked whole, filling and all, within Limburg may use it.</p>
+        <div class="meta-row"><span class="m">Serves 12</span><span class="m">Prep 30 min + rise</span><span class="m">Bake 30 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">3 cups</span> flour</li>
+              <li><span class="amt">1 packet</span> yeast</li>
+              <li><span class="amt">¾ cup</span> warm milk</li>
+              <li><span class="amt">¼ cup</span> sugar</li>
+              <li><span class="amt">1</span> egg</li>
+              <li><span class="amt">4 tbsp</span> butter, softened</li>
+              <li><span class="amt">4 cups</span> pitted cherries or sliced apricots</li>
+              <li><span class="amt">3 tbsp</span> cornstarch, ⅓ cup sugar (filling)</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Make a soft yeast dough with flour, yeast, milk, sugar, egg, and butter; let rise 45 minutes.</li>
+              <li>Press the dough into a wide, shallow tart pan, building a slight rim.</li>
+              <li>Toss the fruit with cornstarch and sugar; spread over the dough.</li>
+              <li>Weave leftover dough scraps into a thin lattice over the top, if desired, and bake at 400°F (200°C) for 25–30 minutes until golden.</li>
+            </ol>
+          </div>
+        </div>
+        <p class="recipe-note"><b>See also:</b> Pennsylvania Dutch settlers carried the vlaai tradition to America, where "vlaai" is thought to have blurred into "shoofly" — see the <a href="sweet.html#shoofly-pie">Shoofly Pie</a> on the Sweet page.</p>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('dutch-limburgse-vlaai')">🖶 Print recipe</button></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+<div class="lattice-divider"></div>
+
+<section class="section" id="w-canada">
+  <div class="wrap">
+    <div class="subsection-head"><h2>Canada</h2><span class="tally">8 recipes</span></div>
+    <p class="subsection-blurb">Beyond Quebec's tourtière (already on the <a href="savory.html#tourtiere">Savory</a> page) — prairie berries, a Newfoundland bog fruit, and one genuinely historical layered pie built to feed a logging camp.</p>
+    <div class="recipe-grid">
+
+      <article class="recipe-card" id="ontario-butter-tart">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#B5432E;--center:#F1D34E"><use href="#pie-tart"/></svg>
+          <div class="recipe-title-wrap"><h3>Ontario Butter Tart</h3><span class="recipe-tag sweet">Sweet · Ontario, Canada</span></div>
+        </div>
+        <p class="recipe-blurb">A small, gooey tart of butter, brown sugar, and egg — one of the few dishes considered genuinely and uniquely Canadian in origin, with raisin-vs-plain and runny-vs-firm-filling debates that run as deep as any regional food rivalry.</p>
+        <div class="meta-row"><span class="m">Makes 12</span><span class="m">Prep 25 min</span><span class="m">Bake 18 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">2</span> single pie crusts, cut into 12 rounds</li>
+              <li><span class="amt">½ cup</span> butter, melted</li>
+              <li><span class="amt">1 cup</span> brown sugar</li>
+              <li><span class="amt">2</span> eggs</li>
+              <li><span class="amt">1 tsp</span> vanilla</li>
+              <li><span class="amt">1 tbsp</span> vinegar</li>
+              <li><span class="amt">⅓ cup</span> raisins (optional)</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Press the dough rounds into a muffin tin.</li>
+              <li>Whisk melted butter, brown sugar, eggs, vanilla, and vinegar until smooth.</li>
+              <li>Drop a few raisins into each shell if using, then fill two-thirds full with the butter mixture.</li>
+              <li>Bake at 400°F (200°C) for 15–18 minutes until the pastry is golden and the filling is bubbling but not fully set in the center.</li>
+              <li>Cool in the tin 10 minutes before removing.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('ontario-butter-tart')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="saskatoon-berry-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#5C2A5C"><use href="#pie-lattice"/></svg>
+          <div class="recipe-title-wrap"><h3>Saskatoon Berry Pie</h3><span class="recipe-tag sweet">Sweet · Saskatchewan &amp; the Prairies</span></div>
+        </div>
+        <p class="recipe-blurb">The berry that gave the city of Saskatoon its name — related to the apple and pear rather than the blueberry it resembles, with an almondy sweetness First Nations peoples once pounded into pemmican with dried bison.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 25 min</span><span class="m">Bake 50 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">5 cups</span> saskatoon berries (or blueberries)</li>
+              <li><span class="amt">¾ cup</span> sugar</li>
+              <li><span class="amt">¼ cup</span> flour</li>
+              <li><span class="amt">1 tbsp</span> lemon juice</li>
+              <li><span class="amt">2</span> double pie crusts</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Toss berries with sugar, flour, and lemon juice.</li>
+              <li>Fill a crust-lined dish and top with lattice.</li>
+              <li>Bake at 400°F (200°C) for 20 minutes, then reduce to 375°F (190°C) for 25–30 minutes more.</li>
+              <li>Cool at least 2 hours; serve with vanilla ice cream, whipped cream, or a slice of cheddar.</li>
+            </ol>
+          </div>
+        </div>
+        <p class="recipe-note"><b>Fact check:</b> Saskatoon berry pie appeared on a Canada Post "Sweet Canada" stamp in 2019, representing the Prairie provinces among five iconic Canadian desserts.</p>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('saskatoon-berry-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="flapper-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#D8C79A;--crustdark:#B39A5E;--filling:#F1E3B8;--topping:#FBF3E7"><use href="#pie-slice"/></svg>
+          <div class="recipe-title-wrap"><h3>Flapper Pie</h3><span class="recipe-tag sweet">Sweet · The Prairies, Canada</span></div>
+        </div>
+        <p class="recipe-blurb">A graham-crumb crust, vanilla custard, and meringue — the "forgotten Prairie pie," popular across Alberta, Saskatchewan, and Manitoba since the 1920s, when it picked up its flapper-era name.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 25 min</span><span class="m">Bake 15 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1½ cups</span> graham cracker crumbs</li>
+              <li><span class="amt">6 tbsp</span> butter, melted</li>
+              <li><span class="amt">⅔ cup</span> sugar (custard)</li>
+              <li><span class="amt">¼ cup</span> cornstarch</li>
+              <li><span class="amt">2½ cups</span> milk</li>
+              <li><span class="amt">3</span> egg yolks (reserve whites)</li>
+              <li><span class="amt">1 tsp</span> vanilla</li>
+              <li><span class="amt">3</span> egg whites + ½ cup sugar (meringue)</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Mix graham crumbs with melted butter; press into a pie dish, reserving 2 tbsp for topping.</li>
+              <li>Whisk sugar, cornstarch, milk, and egg yolks; cook over medium heat, stirring, until thick. Stir in vanilla and pour into the crust.</li>
+              <li>Beat egg whites with sugar to stiff peaks; spread over the hot custard, sealing to the edges.</li>
+              <li>Sprinkle with the reserved crumbs and bake at 350°F (175°C) for 12–15 minutes until the meringue is golden. Chill before slicing.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('flapper-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="newfoundland-bakeapple-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#E8944A"><use href="#pie-lattice"/></svg>
+          <div class="recipe-title-wrap"><h3>Newfoundland Bakeapple (Cloudberry) Pie</h3><span class="recipe-tag sweet">Sweet · Newfoundland &amp; Labrador</span></div>
+        </div>
+        <p class="recipe-blurb">Despite the name, no apples involved — "bakeapple" is the Newfoundland name for the wild cloudberry, a seedy, honey-colored bog fruit said to scent the boggy barrens where it grows with a smell like apple pie.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 20 min</span><span class="m">Bake 45 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">4 cups</span> bakeapples (cloudberries)</li>
+              <li><span class="amt">¾ cup</span> sugar</li>
+              <li><span class="amt">3 tbsp</span> flour</li>
+              <li><span class="amt">2</span> double pie crusts</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Toss cloudberries with sugar and flour.</li>
+              <li>Fill a crust-lined dish and top with lattice strips.</li>
+              <li>Bake at 375°F (190°C) for 40–45 minutes until the crust is golden and the filling bubbles.</li>
+              <li>Cool at least 2 hours before slicing.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('newfoundland-bakeapple-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="quebec-tarte-au-sucre">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#A85A1E"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Tarte au Sucre (Quebec Sugar Pie)</h3><span class="recipe-tag sweet">Sweet · Quebec, Canada</span></div>
+        </div>
+        <p class="recipe-blurb">The quintessential Québécois winter dessert: brown sugar and cream cooked down until they nearly set into a single, barely-sliceable, deeply caramel filling in a butter crust.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 15 min</span><span class="m">Bake 35 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">2 cups</span> brown sugar</li>
+              <li><span class="amt">3 tbsp</span> flour</li>
+              <li><span class="amt">1 cup</span> heavy cream</li>
+              <li><span class="amt">3 tbsp</span> butter</li>
+              <li><span class="amt">1 tsp</span> vanilla</li>
+              <li><span class="amt">1</span> single pie crust</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Whisk brown sugar and flour, then whisk in cream.</li>
+              <li>Cook over medium heat, stirring, until thick and glossy; stir in butter and vanilla.</li>
+              <li>Pour into an unbaked crust.</li>
+              <li>Bake at 375°F (190°C) for 30–35 minutes until the top is set with a slight jiggle. Cool completely — it firms considerably as it cools.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('quebec-tarte-au-sucre')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="nanaimo-freezer-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#3A2A22;--crustdark:#241812;--filling:#F1D77E;--topping:#5C3A28"><use href="#pie-slice"/></svg>
+          <div class="recipe-title-wrap"><h3>Nanaimo Freezer Pie</h3><span class="recipe-tag sweet">Sweet · Nanaimo, British Columbia</span></div>
+        </div>
+        <p class="recipe-blurb">A no-bake pie built from the three layers of a classic Nanaimo bar — a chocolate-coconut base, a custard-flavored buttercream middle, and a chocolate ganache top — reshaped into a sliceable frozen pie.</p>
+        <div class="meta-row"><span class="m">Serves 10</span><span class="m">Prep 30 min</span><span class="m">Freeze 4 hr</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1½ cups</span> graham crumbs</li>
+              <li><span class="amt">½ cup</span> shredded coconut</li>
+              <li><span class="amt">¼ cup</span> cocoa powder</li>
+              <li><span class="amt">½ cup</span> butter, melted (base)</li>
+              <li><span class="amt">½ cup</span> butter, softened (filling)</li>
+              <li><span class="amt">2 cups</span> powdered sugar</li>
+              <li><span class="amt">3 tbsp</span> custard powder or instant vanilla pudding mix</li>
+              <li><span class="amt">4 oz</span> chocolate, melted, for the top</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Mix graham crumbs, coconut, cocoa, and melted butter; press into a pie dish and chill.</li>
+              <li>Beat softened butter with powdered sugar and custard powder until fluffy; spread over the base.</li>
+              <li>Pour melted chocolate over the top in an even layer.</li>
+              <li>Freeze at least 4 hours. Let sit 10 minutes at room temperature before slicing.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('nanaimo-freezer-pie')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="cipaille">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#B97F3A;--crustdark:#6B3F2A;--filling:#7A4A2E"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Cipaille (Six-Pâtes)</h3><span class="recipe-tag">Savory · Quebec, Canada — historical</span></div>
+        </div>
+        <p class="recipe-blurb">A towering, multi-layered logging-camp pie — alternating layers of pastry and game meat (traditionally moose, hare, partridge, and pork) stacked several courses deep in a deep pot, with a hole in the top crust acting as a chimney so steam can escape during the long, slow bake.</p>
+        <div class="meta-row"><span class="m">Serves 10</span><span class="m">Prep 1 hr</span><span class="m">Bake 4 hr</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1 lb</span> each cubed pork, beef, and chicken (or game)</li>
+              <li><span class="amt">4</span> potatoes, cubed</li>
+              <li><span class="amt">2</span> onions, sliced</li>
+              <li><span class="amt">2 tsp</span> mixed savory spice (allspice, cloves, pepper)</li>
+              <li><span class="amt">3</span> double pie crusts</li>
+              <li><span class="amt">2 cups</span> stock</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Line a deep, oven-safe pot with a layer of crust.</li>
+              <li>Layer meat, potato, onion, and spice, then a sheet of crust; repeat to build three or more layers, finishing with a top crust.</li>
+              <li>Cut a small hole in the center of the top crust and pour stock in gradually as it bakes to keep the layers moist.</li>
+              <li>Bake at 250°F (120°C) for 4–5 hours, covering loosely with foil if the top browns too fast, until the meat is fork-tender.</li>
+            </ol>
+          </div>
+        </div>
+        <p class="recipe-note"><b>Historical note:</b> Also called <em>cipâte</em> or "sea pie," cipaille was built to feed logging and fishing crews for days — a single pot could be reheated meal after meal.</p>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('cipaille')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="pate-chinois">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crustdark:#D8C79A;--crust:#F1E7C9;--filling:#8C4A2E"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Pâté Chinois</h3><span class="recipe-tag">Savory · Quebec, Canada</span></div>
+        </div>
+        <p class="recipe-blurb">Ground beef, canned corn, and mashed potato layered like a shepherd's pie, with no pastry crust at all. Quebec folklore credits Chinese railway camp cooks with inventing an economical version of British cottage pie to feed 19th-century rail workers — a story food historians treat with some healthy skepticism, but one that's stuck to the dish's name regardless.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 25 min</span><span class="m">Bake 30 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1½ lb</span> ground beef</li>
+              <li><span class="amt">1</span> onion, diced</li>
+              <li><span class="amt">2 cans (15 oz)</span> creamed corn</li>
+              <li><span class="amt">2 lb</span> potatoes, boiled and mashed</li>
+              <li><span class="amt">4 tbsp</span> butter</li>
+              <li><span class="amt">¼ cup</span> milk</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Brown beef with onion; season and spread in a baking dish.</li>
+              <li>Layer the creamed corn over the beef.</li>
+              <li>Mash potatoes with butter and milk until smooth, then spread over the corn layer.</li>
+              <li>Bake at 400°F (200°C) for 25–30 minutes until golden in spots on top.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('pate-chinois')">🖶 Print recipe</button></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+<div class="lattice-divider"></div>
+
+<section class="section" id="w-asia">
+  <div class="wrap">
+    <div class="subsection-head"><h2>Asia</h2><span class="tally">7 recipes</span></div>
+    <p class="subsection-blurb">From a 13th-century Delhi Sultanate court pastry to a coconut pie invented in a Philippine bakery in 1965 — plus the Portuguese-to-Guangzhou-to-Hong Kong custard tart that may be the most well-traveled pastry on this whole site.</p>
+    <div class="recipe-grid">
+
+      <article class="recipe-card" id="mughal-sanbusak">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#8C4A2E"><use href="#pie-hand"/></svg>
+          <div class="recipe-title-wrap"><h3>Mughal-Era Sanbusak</h3><span class="recipe-tag">Savory · Delhi Sultanate, from the 1300s</span></div>
+        </div>
+        <p class="recipe-blurb">The historical ancestor of the modern samosa: a small pastry stuffed with minced meat, almonds, pistachios, and spice, recorded at the royal court of the Delhi Sultanate. The poet Amir Khusrau described nobles enjoying "samosa prepared from meat, ghee, onion" around 1300 CE, and traveler Ibn Battuta wrote of one served before a state banquet's third course.</p>
+        <div class="meta-row"><span class="m">Makes 16</span><span class="m">Prep 40 min</span><span class="m">Fry 3 min each</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1 lb</span> ground lamb or beef</li>
+              <li><span class="amt">1</span> onion, minced</li>
+              <li><span class="amt">¼ cup</span> almonds &amp; pistachios, chopped</li>
+              <li><span class="amt">1 tsp</span> garam masala</li>
+              <li><span class="amt">½ tsp</span> ground ginger</li>
+              <li><span class="amt">16</span> spring roll or samosa wrappers</li>
+              <li><span class="amt">3 cups</span> oil, for frying</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Cook meat and onion until browned; stir in nuts, garam masala, and ginger, then cool.</li>
+              <li>Fold each wrapper into a cone, fill, and seal the edge with a flour-water paste.</li>
+              <li>Fry in 350°F (175°C) oil, turning, until golden and crisp, about 3 minutes.</li>
+              <li>Drain and serve hot.</li>
+            </ol>
+          </div>
+        </div>
+        <p class="recipe-note"><b>Historical note:</b> The word "samosa" traces to the Middle Persian <em>sambosag</em>. The dish reached Delhi via Central Asian and Middle Eastern chefs working in the royal kitchens in the 13th–14th centuries, and is documented again in the 16th-century Mughal court text the <em>Ain-i-Akbari</em>.</p>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('mughal-sanbusak')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="uzbek-somsa">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#8C4A2E"><use href="#pie-hand"/></svg>
+          <div class="recipe-title-wrap"><h3>Uzbek Somsa</h3><span class="recipe-tag">Savory · Uzbekistan &amp; Central Asia</span></div>
+        </div>
+        <p class="recipe-blurb">A flaky, tandoor-baked pastry stuffed with lamb, onion, and cumin — related to the samosa by name and a shared Silk Road history, but baked rather than fried, traditionally stuck to the inner wall of a clay tandoor oven until golden.</p>
+        <div class="meta-row"><span class="m">Makes 12</span><span class="m">Prep 40 min</span><span class="m">Bake 30 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1 lb</span> ground lamb, with some fat</li>
+              <li><span class="amt">2</span> onions, finely chopped</li>
+              <li><span class="amt">1 tsp</span> cumin</li>
+              <li><span class="amt">2½ cups</span> flour</li>
+              <li><span class="amt">¾ cup</span> warm water</li>
+              <li><span class="amt">½ cup</span> ghee or melted butter</li>
+              <li><span class="amt">1</span> egg, beaten</li>
+              <li><span class="amt">Sesame seeds</span>, to finish</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Mix lamb, onion, cumin, salt, and pepper by hand until well combined.</li>
+              <li>Knead flour and water into a soft dough; rest 20 minutes, then roll thin and brush with ghee, folding into layers.</li>
+              <li>Divide the dough, wrap each piece around a portion of filling, and pinch closed into a square or triangle.</li>
+              <li>Brush with egg, sprinkle with sesame seeds, and bake at 400°F (200°C) for 25–30 minutes until deep golden and flaky.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('uzbek-somsa')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="tibetan-shabhaley">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#7A4A3A"><use href="#pie-hand"/></svg>
+          <div class="recipe-title-wrap"><h3>Tibetan Shabhaley (Sha Balep)</h3><span class="recipe-tag">Savory · Tibet</span></div>
+        </div>
+        <p class="recipe-blurb">A pan-fried meat-filled bread from Tibet's high plateau, made with a simple flour-and-water dough wrapped around spiced ground meat and greens, then shallow-fried until the crust turns crisp and blistered.</p>
+        <div class="meta-row"><span class="m">Makes 10</span><span class="m">Prep 35 min</span><span class="m">Fry 6 min each</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">2 cups</span> flour</li>
+              <li><span class="amt">¾ cup</span> cold water</li>
+              <li><span class="amt">½ lb</span> ground beef or yak</li>
+              <li><span class="amt">1 cup</span> cabbage or spinach, finely chopped</li>
+              <li><span class="amt">2</span> scallions, chopped</li>
+              <li><span class="amt">1 tsp</span> ginger, grated</li>
+              <li><span class="amt">3 tbsp</span> oil, for frying</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Knead flour and water into a smooth dough; rest 20 minutes.</li>
+              <li>Mix meat with cabbage, scallions, and ginger.</li>
+              <li>Roll dough into circles, fill with meat mixture, and fold in half, sealing the edge.</li>
+              <li>Pan-fry in oil over medium heat, 3 minutes per side, until golden and cooked through.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('tibetan-shabhaley')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="chinese-xian-bing">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E8C77A;--crustdark:#B97F3A;--filling:#8C4A2E"><use href="#pie-hand"/></svg>
+          <div class="recipe-title-wrap"><h3>Xian Bing (Chinese Meat Pie)</h3><span class="recipe-tag">Savory · Northern China</span></div>
+        </div>
+        <p class="recipe-blurb">A pan-fried stuffed flatbread from northern China, its thin dough wrapped around juicy ground beef and scallion, then griddled until the crust turns crisp and lightly charred in spots — closer to a large dumpling than a Western pie, but built on the same logic of pastry wrapped around a filling.</p>
+        <div class="meta-row"><span class="m">Makes 8</span><span class="m">Prep 40 min</span><span class="m">Fry 5 min each</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">2½ cups</span> flour</li>
+              <li><span class="amt">1 cup</span> hot water</li>
+              <li><span class="amt">1 lb</span> ground beef</li>
+              <li><span class="amt">3</span> scallions, chopped</li>
+              <li><span class="amt">1 tbsp</span> soy sauce</li>
+              <li><span class="amt">1 tsp</span> sesame oil</li>
+              <li><span class="amt">3 tbsp</span> oil, for frying</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Gradually mix hot water into flour to form a dough; knead until smooth, then rest 20 minutes.</li>
+              <li>Mix beef with scallions, soy sauce, and sesame oil.</li>
+              <li>Divide dough into 8; roll each thin, place filling in the center, and gather the edges up to seal, then flatten gently.</li>
+              <li>Pan-fry in oil over medium heat, 2–3 minutes per side, until golden and cooked through.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('chinese-xian-bing')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="hong-kong-egg-tart">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E8C77A;--crustdark:#B97F3A;--filling:#F1D34E;--center:#E8C24E"><use href="#pie-tart"/></svg>
+          <div class="recipe-title-wrap"><h3>Hong Kong Egg Tart (Dan Tat)</h3><span class="recipe-tag sweet">Sweet · Hong Kong &amp; Guangzhou</span></div>
+        </div>
+        <p class="recipe-blurb">A flaky-crusted custard tart with a genuinely global family tree: inspired by English custard tarts, first sold in Guangzhou department stores around 1927, and reintroduced in a Portuguese-style version by a British pharmacist's Macau bakery in 1989 — now a dim sum and bakery staple across the region.</p>
+        <div class="meta-row"><span class="m">Makes 12</span><span class="m">Prep 30 min</span><span class="m">Bake 18 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1</span> single pie crust or puff pastry, cut into 12 rounds</li>
+              <li><span class="amt">½ cup</span> sugar</li>
+              <li><span class="amt">⅔ cup</span> hot water</li>
+              <li><span class="amt">4</span> eggs</li>
+              <li><span class="amt">⅓ cup</span> evaporated milk</li>
+              <li><span class="amt">½ tsp</span> vanilla</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Press pastry rounds into a muffin tin, going slightly up the sides.</li>
+              <li>Dissolve sugar in hot water and let cool.</li>
+              <li>Whisk eggs, evaporated milk, sugar water, and vanilla; strain for a silky texture.</li>
+              <li>Fill each shell three-quarters full and bake at 400°F (200°C) for 15–18 minutes until the custard is just set with a slight jiggle. Cool before removing from the tin.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('hong-kong-egg-tart')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="vietnamese-pate-chaud">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E8C77A;--crustdark:#B97F3A;--filling:#8C4A2E"><use href="#pie-hand"/></svg>
+          <div class="recipe-title-wrap"><h3>Bánh Pâté Chaud</h3><span class="recipe-tag">Savory · Vietnam</span></div>
+        </div>
+        <p class="recipe-blurb">A flaky puff-pastry meat pie born from French colonial Vietnam, its name simply French for "hot pastry." Vietnamese bakers built their own version around ground pork, wood ear mushroom, and fish sauce — now a breakfast and bánh mì-shop staple across Vietnam and its diaspora.</p>
+        <div class="meta-row"><span class="m">Makes 12</span><span class="m">Prep 35 min</span><span class="m">Bake 25 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1 lb</span> ground pork</li>
+              <li><span class="amt">¼ cup</span> dried wood ear mushroom, soaked and chopped</li>
+              <li><span class="amt">1</span> shallot, minced</li>
+              <li><span class="amt">1 tbsp</span> fish sauce</li>
+              <li><span class="amt">1 tsp</span> sugar</li>
+              <li><span class="amt">2 sheets</span> puff pastry</li>
+              <li><span class="amt">1</span> egg, beaten</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Mix pork with mushroom, shallot, fish sauce, sugar, and pepper.</li>
+              <li>Cut puff pastry into 24 small rounds. Spoon filling onto 12, top with the remaining rounds, and crimp the edges.</li>
+              <li>Brush with beaten egg.</li>
+              <li>Bake at 400°F (200°C) for 20–25 minutes until puffed and golden.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('vietnamese-pate-chaud')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="filipino-buko-pie">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E3A857;--crustdark:#B97F3A;--filling:#F1E7C9"><use href="#pie-lattice"/></svg>
+          <div class="recipe-title-wrap"><h3>Filipino Buko Pie</h3><span class="recipe-tag sweet">Sweet · Laguna, Philippines</span></div>
+        </div>
+        <p class="recipe-blurb">Young coconut in a sweet condensed-milk custard, invented in 1965 by Nanette Pahud, who wanted to open a bakery but couldn't easily get apples in Laguna — so she substituted the region's abundant young coconuts and created what's now the Philippines' most iconic pie.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 25 min</span><span class="m">Bake 45 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">3 cups</span> young coconut meat, shredded</li>
+              <li><span class="amt">1 can (14 oz)</span> sweetened condensed milk</li>
+              <li><span class="amt">1 cup</span> young coconut water</li>
+              <li><span class="amt">3 tbsp</span> cornstarch</li>
+              <li><span class="amt">2</span> double pie crusts</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Whisk condensed milk, coconut water, and cornstarch together; fold in the shredded coconut.</li>
+              <li>Fill a crust-lined dish and top with a second crust; seal and vent.</li>
+              <li>Bake at 375°F (190°C) for 40–45 minutes until golden.</li>
+              <li>Cool before slicing; best served the day it's baked.</li>
+            </ol>
+          </div>
+        </div>
+        <p class="recipe-note"><b>Historical note:</b> Pahud's bakery, Orient — The Original Buko Pie Bakeshop, is still run by her family in Los Baños, Laguna, now widely considered the "buko pie capital" of the Philippines.</p>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('filipino-buko-pie')">🖶 Print recipe</button></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+<div class="lattice-divider"></div>
+
+<section class="section" id="w-latin-america">
+  <div class="wrap">
+    <div class="subsection-head"><h2>Latin America</h2><span class="tally">6 recipes</span></div>
+    <p class="subsection-blurb">A brothy Bolivian breakfast pastry, a Brazilian baked pie, and a Puerto Rican plantain "lasagna" — six more stops on the map. (Argentine beef empanadas, Jamaican patties, and Chilean pastel de choclo already have full recipes on the <a href="savory.html#latin-america">Savory</a> page.)</p>
+    <div class="recipe-grid">
+
+      <article class="recipe-card" id="bolivian-saltena">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E8C24E;--crustdark:#C9962C;--filling:#A8324A"><use href="#pie-hand"/></svg>
+          <div class="recipe-title-wrap"><h3>Bolivian Salteña</h3><span class="recipe-tag">Savory · Bolivia</span></div>
+        </div>
+        <p class="recipe-blurb">Bolivia's national pastry: a slightly sweet, empanada-like dough sealed around a juicy, gelatin-set stew of beef, potato, peas, and a touch of chili, which turns brothy again as the pie bakes. Eaten upright, in small bites from the top, so the stew doesn't spill. The name honors Juana Manuela Gorriti, a 19th-century writer from Salta, Argentina, who is said to have invented the dish while living in exile in Bolivia.</p>
+        <div class="meta-row"><span class="m">Makes 10</span><span class="m">Prep 1 hr + chill</span><span class="m">Bake 25 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1 lb</span> beef, diced small</li>
+              <li><span class="amt">1</span> onion, diced</li>
+              <li><span class="amt">1 cup</span> beef stock</li>
+              <li><span class="amt">1 tbsp</span> unflavored gelatin</li>
+              <li><span class="amt">1</span> potato, diced</li>
+              <li><span class="amt">½ cup</span> peas</li>
+              <li><span class="amt">1 tbsp</span> ají amarillo paste (or paprika + cayenne)</li>
+              <li><span class="amt">1</span> hard-boiled egg, chopped</li>
+              <li><span class="amt">3 cups</span> flour, ⅓ cup sugar, ½ cup lard (dough)</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Cook beef, onion, potato, and ají paste with stock until the potato is tender; season well.</li>
+              <li>Dissolve gelatin in a little warm water and stir into the hot filling; stir in peas and egg. Chill until firm, at least 4 hours (this jellied stew is the "juice" inside the baked pie).</li>
+              <li>Make a slightly sweet dough from flour, sugar, lard, and warm water; rest 20 minutes.</li>
+              <li>Roll into circles, spoon in a portion of the cold, firm filling, fold, and twist-seal the edge into a rope pattern.</li>
+              <li>Bake at 400°F (200°C) for 20–25 minutes until golden. Cool slightly — the filling will be very hot and liquid straight from the oven.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('bolivian-saltena')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="brazilian-empadao">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E8C77A;--crustdark:#B97F3A;--filling:#C9781F"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Empadão (Brazilian Chicken Pie)</h3><span class="recipe-tag">Savory · Brazil</span></div>
+        </div>
+        <p class="recipe-blurb">A deep, double-crusted pie of shredded chicken, hearts of palm, olives, and tomato — the full-size relative of Brazil's tiny individual <em>empadinhas</em>, sized for a family table instead of a single hand.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 30 min</span><span class="m">Bake 40 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">3 cups</span> cooked chicken, shredded</li>
+              <li><span class="amt">1</span> onion, diced</li>
+              <li><span class="amt">2</span> tomatoes, diced</li>
+              <li><span class="amt">½ cup</span> hearts of palm, sliced</li>
+              <li><span class="amt">¼ cup</span> green olives, sliced</li>
+              <li><span class="amt">3 tbsp</span> tomato paste</li>
+              <li><span class="amt">2</span> double pie crusts</li>
+              <li><span class="amt">1</span> egg, beaten</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Cook onion and tomato until soft; stir in tomato paste, then fold in chicken, hearts of palm, and olives. Season and cool.</li>
+              <li>Fill a crust-lined deep dish, top with a second crust, seal, and vent.</li>
+              <li>Brush with beaten egg.</li>
+              <li>Bake at 375°F (190°C) for 35–40 minutes until deep golden.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('brazilian-empadao')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="puerto-rican-pastelon">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E8C24E;--crustdark:#C9962C;--filling:#8C4A2E"><use href="#pie-solid"/></svg>
+          <div class="recipe-title-wrap"><h3>Pastelón (Puerto Rican Plantain Pie)</h3><span class="recipe-tag">Savory · Puerto Rico</span></div>
+        </div>
+        <p class="recipe-blurb">Sometimes called "Puerto Rican lasagna": layers of sweet, caramelized ripe plantain standing in for pasta, sandwiching a seasoned beef <em>picadillo</em> and melted cheese — no wheat pastry crust at all, but built and sliced exactly like a pie.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 40 min</span><span class="m">Bake 35 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">4</span> very ripe (black-skinned) plantains, sliced lengthwise</li>
+              <li><span class="amt">3 tbsp</span> oil, for frying</li>
+              <li><span class="amt">1 lb</span> ground beef</li>
+              <li><span class="amt">½ cup</span> tomato sauce</li>
+              <li><span class="amt">¼ cup</span> sofrito (onion, pepper, garlic, cilantro)</li>
+              <li><span class="amt">2</span> eggs, beaten</li>
+              <li><span class="amt">1½ cups</span> shredded mozzarella</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Fry the plantain slices in oil until soft and caramelized; drain on paper towels.</li>
+              <li>Cook beef with sofrito and tomato sauce until well seasoned.</li>
+              <li>Layer plantains in a baking dish, then beef, then cheese; repeat, finishing with plantain and cheese.</li>
+              <li>Pour beaten egg evenly over the top.</li>
+              <li>Bake at 375°F (190°C) for 30–35 minutes until set and golden. Rest 10 minutes before slicing.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('puerto-rican-pastelon')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="mexican-pay-de-limon">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#D8C79A;--crustdark:#B39A5E;--filling:#DDE87A;--topping:#FBF3E7"><use href="#pie-slice"/></svg>
+          <div class="recipe-title-wrap"><h3>Pay de Limón</h3><span class="recipe-tag sweet">Sweet · Mexico</span></div>
+        </div>
+        <p class="recipe-blurb">A Mexican household staple built on the same condensed-milk logic as Key Lime Pie, but made with everyday limón and often set into a crust of crushed Marie cookies instead of graham crackers — usually topped with a plain layer of whipped cream rather than meringue.</p>
+        <div class="meta-row"><span class="m">Serves 8</span><span class="m">Prep 15 min</span><span class="m">Chill 3 hr</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">1½ cups</span> crushed Marie or graham cookies</li>
+              <li><span class="amt">6 tbsp</span> butter, melted</li>
+              <li><span class="amt">1 can (14 oz)</span> sweetened condensed milk</li>
+              <li><span class="amt">1 cup</span> Mexican crema or sour cream</li>
+              <li><span class="amt">½ cup</span> lime juice</li>
+              <li><span class="amt">1 cup</span> whipped cream, to finish</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Mix cookie crumbs and melted butter; press into a pie dish and chill.</li>
+              <li>Whisk condensed milk, crema, and lime juice until thick and smooth.</li>
+              <li>Pour into the crust and chill at least 3 hours until set.</li>
+              <li>Top with whipped cream just before serving.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('mexican-pay-de-limon')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="cuban-pastelitos-de-guayaba">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E8C77A;--crustdark:#B97F3A;--filling:#C2246B"><use href="#pie-hand"/></svg>
+          <div class="recipe-title-wrap"><h3>Pastelitos de Guayaba</h3><span class="recipe-tag sweet">Sweet · Cuba</span></div>
+        </div>
+        <p class="recipe-blurb">Flaky puff-pastry hand pies filled with sweet guava paste and, in the most popular version, a slice of cream cheese to cut the sweetness — a fixture of Cuban and Cuban-American bakery cases, classically eaten alongside a strong coffee.</p>
+        <div class="meta-row"><span class="m">Makes 12</span><span class="m">Prep 20 min</span><span class="m">Bake 20 min</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">2 sheets</span> puff pastry</li>
+              <li><span class="amt">8 oz</span> guava paste, sliced</li>
+              <li><span class="amt">4 oz</span> cream cheese, sliced (optional)</li>
+              <li><span class="amt">1</span> egg, beaten</li>
+              <li><span class="amt">2 tbsp</span> coarse sugar, to finish</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Cut puff pastry into 24 small squares.</li>
+              <li>Place a slice of guava paste (and cream cheese, if using) on 12 squares, leaving a border.</li>
+              <li>Top with the remaining squares and crimp the edges with a fork.</li>
+              <li>Brush with beaten egg and sprinkle with coarse sugar.</li>
+              <li>Bake at 400°F (200°C) for 18–20 minutes until puffed and golden.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('cuban-pastelitos-de-guayaba')">🖶 Print recipe</button></div>
+      </article>
+
+      <article class="recipe-card" id="ecuadorian-empanadas-de-viento">
+        <div class="recipe-top">
+          <svg class="recipe-icon" viewBox="0 0 100 100" style="--crust:#E8C24E;--crustdark:#C9962C;--filling:#F1E7C9"><use href="#pie-hand"/></svg>
+          <div class="recipe-title-wrap"><h3>Empanadas de Viento</h3><span class="recipe-tag sweet">Sweet-savory · Ecuador</span></div>
+        </div>
+        <p class="recipe-blurb">"Wind empanadas" — named for how dramatically they puff up in the fryer. A simple wheat dough wrapped around melting mozzarella, fried until blistered and golden, then dusted with sugar while still hot: a beloved Andean breakfast street food that walks the sweet-savory line in a single bite.</p>
+        <div class="meta-row"><span class="m">Makes 10</span><span class="m">Prep 25 min</span><span class="m">Fry 3 min each</span></div>
+        <div class="recipe-body">
+          <div><h4>Ingredients</h4>
+            <ul class="ingredients">
+              <li><span class="amt">2½ cups</span> flour</li>
+              <li><span class="amt">2 tbsp</span> butter, melted</li>
+              <li><span class="amt">¾ cup</span> warm water</li>
+              <li><span class="amt">½ tsp</span> salt</li>
+              <li><span class="amt">2 cups</span> shredded mozzarella</li>
+              <li><span class="amt">3 cups</span> oil, for frying</li>
+              <li><span class="amt">Granulated sugar</span>, to finish</li>
+            </ul>
+          </div>
+          <div><h4>Method</h4>
+            <ol class="steps">
+              <li>Mix flour, melted butter, warm water, and salt into a smooth dough; rest 15 minutes.</li>
+              <li>Roll into thin circles, add a spoonful of cheese to each, fold in half, and seal the edges well.</li>
+              <li>Fry in 350°F (175°C) oil until puffed and golden, about 3 minutes, turning once.</li>
+              <li>Drain briefly, then dust generously with sugar while still hot.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card-actions"><button class="print-btn" onclick="printRecipe('ecuadorian-empanadas-de-viento')">🖶 Print recipe</button></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="brand" style="color:var(--butter)">
+        <svg class="mark" viewBox="0 0 100 100"><use href="#pie-lattice" style="--crust:#F4C95D;--crustdark:#D9A93C;--filling:#A8324A"/></svg>
+        The Pie Atlas
+      </div>
+      <p class="fine">A field guide to pie: where it came from, how it's made, and why every<br>holiday on the calendar deserves a slice.</p>
+    </div>
+    <div>
+      <p class="fine">EVERY RECIPE PRINTS ON A SINGLE, IMAGE-FREE SHEET —<br>LOOK FOR THE <strong>PRINT RECIPE</strong> BUTTON ON ANY CARD.</p>
+      <p class="fine">&copy; <span id="year"></span> The Pie Atlas · built for people who believe dessert is a filing system.</p>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
